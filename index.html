@@ -58,20 +58,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .bg-light{ background:var(--color-bg-light); }
   .is-center{ text-align:center; }
 
-  /* header */
-  #new-header{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:14px 24px; border-bottom:1px solid #eee; flex-wrap:wrap; gap:10px;
-  }
-  .new-h-logo{ margin:0; }
-  .new-h-logo img{ height:44px; width:auto; }
-  .new-h-menu .lang{ display:flex; align-items:center; gap:10px; margin:0; flex-wrap:wrap; }
-  .new-h-menu .lang dt{ font-weight:700; font-size:13px; color:var(--color-dark); }
-  .new-h-menu .lang dd{ margin:0; display:flex; gap:12px; flex-wrap:wrap; font-size:13px; }
-  .new-h-menu .lang dd a{ padding:2px 4px; }
-  .new-h-menu .lang dd a:hover{ color:var(--color-red); }
-  .lang-current{ color:var(--color-red); font-weight:700; border-bottom:2px solid var(--color-red); }
-
   /* mv-area */
   .mv-area{ position:relative; }
   .mv-img img{ width:100%; height:auto; }
@@ -81,6 +67,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-shadow:0 2px 10px rgba(0,0,0,.5);
   }
   .mv-copy p span{ font-size:clamp(28px,5vw,52px); font-weight:700; line-height:1.2; }
+  /* レスポンシブ改行専用クラス（画像切替用の pc-block/sp-block とは別系統。.mv-img配下に限定されず、どこでも使える） */
+  .sp-break{ display:none; }
 
   /* lead */
   .lead-area{ padding:40px 0 10px; }
@@ -155,10 +143,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .access-btn a:hover{ opacity:.85; }
 
-  /* banner-area */
-  .banner-area{ padding:50px 0; }
-  .banner-list{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-  .banner-list img{ border-radius:6px; }
 
   /* translation notice */
   .transInfo-area{ padding:30px 0 60px; }
@@ -177,15 +161,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .new-copy{ text-align:center; font-size:12px; color:#999; margin-top:30px; }
 
   @media (max-width:900px){
-    .tourist-list ul, .list-3col ul, .banner-list{ grid-template-columns:repeat(2,1fr); }
+    .tourist-list ul, .list-3col ul{ grid-template-columns:repeat(2,1fr); }
   }
   @media (max-width:640px){
     .mv-img .pc-block{ display:none; }
     .mv-img .sp-block{ display:block; }
     .about-area .list-2col ul{ grid-template-columns:1fr; }
     .about-area .list-2col ul.sp-reverse{ direction:ltr; }
-    .tourist-list ul, .list-3col ul, .banner-list{ grid-template-columns:repeat(2,1fr); }
+    .tourist-list ul, .list-3col ul{ grid-template-columns:repeat(2,1fr); }
     .new-f-menu{ gap:24px; }
+    .sp-break{ display:inline; }
   }
   /* iPhone等の縦持ちスマホ幅: タイル(カード)を1列に積んで見やすくする */
   @media (max-width:480px){
@@ -212,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img class="sp-block" src="https://kumamoto.guide/english/img/mv_sp.jpg" alt="คุมาโมโตะ ทัศนียภาพ">
     </div>
     <div class="mv-copy">
-      <h1><span>ยินดีต้อนรับสู่<br class="sp-block">คุมาโมโตะ</span></h1>
+      <h1><span>ยินดีต้อนรับสู่<br class="sp-break">คุมาโมโตะ</span></h1>
     </div>
   </div>
   <!-- mv-area -->
