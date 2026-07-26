@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เว็บไซต์การท่องเที่ยวอย่างเป็นทางการของจังหวัดคุมาโมโตะ: More, More, Kuma-Motto!</title>
+<meta name="description" content="เว็บไซต์การท่องเที่ยวอย่างเป็นทางการของจังหวัดคุมาโมโตะ แนะนำเสน่ห์นานัปการของคุมาโมโตะ ตั้งแต่ภูเขาอาโสะที่คุณจะได้สัมผัสธรรมชาติอย่างเต็มที่ ไปจนถึงการชมปลาวาฬ ออนเซ็น มรดกโลก และอื่นๆ อีกมากมาย ค้นหาข้อมูลทั้งหมดที่คุณต้องรู้สำหรับการเดินทางมาคุมาโมโตะ">
+<meta name="keywords" content="คุมาโมโตะ, จังหวัดคุมาโมโตะ, ท่องเที่ยว, ออนเซ็น, กิจกรรม, อาหารท้องถิ่น, ภูเขาอาโสะ, ปราสาทคุมาโมโตะ, มรดกโลก">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:locale" content="th_TH">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="เว็บไซต์การท่องเที่ยวอย่างเป็นทางการของจังหวัดคุมาโมโตะ">
+<meta property="og:title" content="เว็บไซต์การท่องเที่ยวอย่างเป็นทางการของจังหวัดคุมาโมโตะ: More, More, Kuma-Motto!">
+<meta property="og:description" content="แนะนำเสน่ห์นานัปการของคุมาโมโตะ ตั้งแต่ภูเขาอาโสะ ออนเซ็น ไปจนถึงมรดกโลก">
+<meta property="og:image" content="https://kumamoto.guide/en/img/ogp.png">
+<meta property="og:url" content="https://kumamoto.guide/thai/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://kumamoto.guide/favicon.ico" rel="shortcut icon">
+<link rel="apple-touch-icon" href="https://kumamoto.guide/apple-touch-icon.png">
+
+<!-- Thai向けフォント（本文表示に必須） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Discoverエリアのスライダー用 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+
+<!-- Google Tag Manager（英語版と同一のコンテナIDを維持） -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX9RXK6');</script>
+
+<style>
+  :root{
+    --color-red: #C8102E;
+    --color-green: #2E6B4F;
+    --color-dark: #262322;
+    --color-text: #3a3a3a;
+    --color-bg-light: #F7F5F0;
+    --font-th: 'Noto Sans Thai', 'Noto Sans JP', sans-serif;
+    --wrapper-l: 1080px;
+    --wrapper-s: 900px;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:var(--font-th); color:var(--color-text);
+    line-height:1.8; -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; margin:0; padding:0; }
+  .wrapper-l{ max-width:var(--wrapper-l); margin:0 auto; padding:0 20px; }
+  .wrapper-s{ max-width:var(--wrapper-s); margin:0 auto; padding:0 20px; }
+  .bg-light{ background:var(--color-bg-light); }
+  .is-center{ text-align:center; }
+
+  /* header */
+  #new-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; border-bottom:1px solid #eee; flex-wrap:wrap; gap:10px;
+  }
+  .new-h-logo{ margin:0; }
+  .new-h-logo img{ height:44px; width:auto; }
+  .new-h-menu .lang{ display:flex; align-items:center; gap:10px; margin:0; flex-wrap:wrap; }
+  .new-h-menu .lang dt{ font-weight:700; font-size:13px; color:var(--color-dark); }
+  .new-h-menu .lang dd{ margin:0; display:flex; gap:12px; flex-wrap:wrap; font-size:13px; }
+  .new-h-menu .lang dd a{ padding:2px 4px; }
+  .new-h-menu .lang dd a:hover{ color:var(--color-red); }
+  .lang-current{ color:var(--color-red); font-weight:700; border-bottom:2px solid var(--color-red); }
+
+  /* mv-area */
+  .mv-area{ position:relative; }
+  .mv-img img{ width:100%; height:auto; }
+  .mv-img .sp-block{ display:none; }
+  .mv-copy{
+    position:absolute; left:6%; bottom:8%; color:#fff;
+    text-shadow:0 2px 10px rgba(0,0,0,.5);
+  }
+  .mv-copy p span{ font-size:clamp(28px,5vw,52px); font-weight:700; line-height:1.2; }
+
+  /* lead */
+  .lead-area{ padding:40px 0 10px; }
+  .lead-txt{ text-align:center; font-size:17px; max-width:760px; margin:0 auto; }
+
+  /* about-area */
+  .about-area{ padding:50px 0; }
+  .about-area .list-2col ul{
+    display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center; margin-bottom:36px;
+  }
+  .about-area .list-2col ul.sp-reverse{ direction:rtl; }
+  .about-area .list-2col ul.sp-reverse > *{ direction:ltr; }
+  .ttl-top{ font-size:24px; font-weight:700; color:var(--color-dark); margin:0 0 16px; }
+  .ttl-top.is-underline{ display:inline-block; padding-bottom:10px; border-bottom:3px solid var(--color-red); }
+  .sentence-block p{ margin:0 0 14px; }
+  .about-img img, .txt-img img{ border-radius:6px; }
+  .txt-img{ max-width:160px; margin-bottom:10px; }
+
+  /* tourist-area */
+  .tourist-area{ padding:60px 0; }
+  .tourist-list ul{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:30px;
+  }
+  .tourist-item{ margin:0; }
+  .tourist-item .frame{ border-radius:8px; overflow:hidden; aspect-ratio:4/3; background:#ddd; }
+  .tourist-item .frame img{ width:100%; height:100%; object-fit:cover; }
+  .tourist-item figcaption{ text-align:center; margin-top:10px; font-size:14px; font-weight:500; }
+
+  /* cuisine-area */
+  .cuisine-area{ padding:60px 0; }
+  .cuisine-ttl{
+    display:inline-block; margin:36px 0 20px; font-size:16px; letter-spacing:.08em;
+    color:#fff; background:var(--color-green); padding:6px 22px; border-radius:20px;
+  }
+  .list-3col ul{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .cuisine-item{ transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .cuisine-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .cuisine-item .frame{ border-radius:8px; overflow:hidden; aspect-ratio:4/3; background:#ddd; }
+  .cuisine-item .frame img{
+    width:100%; height:100%; object-fit:cover;
+    transition: transform 0.3s ease;
+  }
+  .cuisine-item:hover .frame img{ transform: scale(1.05); }
+  .cuisine-item figcaption{ text-align:center; margin-top:8px; font-size:14px; }
+
+  /* discover-area */
+  .discover-area{ padding:60px 0; }
+  .slide-discover{ max-width:var(--wrapper-l); margin:30px auto 0; padding:0 40px; }
+  .slide-discover a{ display:block; transition: transform 0.3s ease; }
+  .slide-discover a:hover{ transform: translateY(-5px); }
+  .slide-discover figure{ margin:0; border-radius:8px; overflow:hidden; aspect-ratio:4/3; background:#ddd; }
+  .slide-discover figure img{ width:100%; height:100%; object-fit:cover; }
+  .slide-discover p{ text-align:center; margin-top:10px; font-weight:500; }
+  .slide-discover .slick-slide{ padding:0 10px; }
+  .slick-prev:before, .slick-next:before{ color:var(--color-red); }
+
+  /* access-area */
+  .access-area{ padding:60px 0; }
+  .access-info{ max-width:700px; margin:30px auto 0; }
+  .access-ttl{
+    font-weight:700; color:#fff; background:var(--color-dark); display:inline-block;
+    padding:5px 16px; border-radius:4px; margin-bottom:10px;
+  }
+  .access-txt{ margin:0 0 18px; }
+  .access-btn{ text-align:center; margin-top:20px; }
+  .access-btn a{
+    display:inline-block; background:var(--color-red); color:#fff; padding:12px 30px;
+    border-radius:30px; font-weight:700;
+  }
+  .access-btn a:hover{ opacity:.85; }
+
+  /* banner-area */
+  .banner-area{ padding:50px 0; }
+  .banner-list{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .banner-list img{ border-radius:6px; }
+
+  /* translation notice */
+  .transInfo-area{ padding:30px 0 60px; }
+  .translation-info{ text-align:center; font-size:13px; color:#777; margin:0; }
+  .info-ttl{ font-weight:700; margin-bottom:6px; }
+  .info-txt{ margin:0; }
+
+  /* pagetop */
+  .new-pagetop{ position:fixed; right:20px; bottom:20px; width:46px; z-index:10; }
+  .new-pagetop img{ background:#fff; border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.2); }
+
+  /* footer */
+  #new-footer{ background:var(--color-dark); color:#eee; padding:40px 24px 20px; }
+  .new-f-menu{ display:flex; gap:60px; flex-wrap:wrap; max-width:var(--wrapper-l); margin:0 auto; }
+  .new-f-menu p{ margin:0; font-size:13px; line-height:1.9; }
+  .new-copy{ text-align:center; font-size:12px; color:#999; margin-top:30px; }
+
+  @media (max-width:900px){
+    .tourist-list ul, .list-3col ul, .banner-list{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:640px){
+    .mv-img .pc-block{ display:none; }
+    .mv-img .sp-block{ display:block; }
+    .about-area .list-2col ul{ grid-template-columns:1fr; }
+    .about-area .list-2col ul.sp-reverse{ direction:ltr; }
+    .tourist-list ul, .list-3col ul, .banner-list{ grid-template-columns:repeat(2,1fr); }
+    .new-f-menu{ gap:24px; }
+  }
+  /* iPhone等の縦持ちスマホ幅: タイル(カード)を1列に積んで見やすくする */
+  @media (max-width:480px){
+    .list-3col ul{ grid-template-columns:1fr !important; gap:16px; }
+    .cuisine-item .frame{ aspect-ratio:16/10; }
+    .tourist-list ul{ grid-template-columns:1fr !important; max-width:320px !important; gap:16px; }
+    .cuisine-ttl{ font-size:14px; padding:5px 16px; margin:28px 0 14px; }
+    .slide-discover{ padding:0 16px; }
+    .ttl-top{ font-size:20px; }
+    .mv-copy{ left:5%; bottom:6%; }
+  }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX9RXK6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<main id="contents">
+
+  <!-- mv-area -->
+  <div class="mv-area">
+    <div class="mv-img">
+      <img class="pc-block" src="https://kumamoto.guide/english/img/mv.jpg" alt="คุมาโมโตะ ทัศนียภาพ">
+      <img class="sp-block" src="https://kumamoto.guide/english/img/mv_sp.jpg" alt="คุมาโมโตะ ทัศนียภาพ">
+    </div>
+    <div class="mv-copy">
+      <h1><span>ยินดีต้อนรับสู่<br class="sp-block">คุมาโมโตะ</span></h1>
+    </div>
+  </div>
+  <!-- mv-area -->
+
+  <div class="lead-area">
+    <div class="wrapper-l">
+      <p class="lead-txt">คุมาโมโตะตั้งอยู่ใจกลางเกาะคิวชู ทางตะวันตกเฉียงใต้ของประเทศญี่ปุ่น<br>
+        เป็นดินแดนที่อุดมสมบูรณ์ไปด้วยธรรมชาติอันงดงามระดับโลก<br>
+        ลองมาสัมผัสดินแดนที่วัฒนธรรมดั้งเดิมของญี่ปุ่นยังคงมีชีวิตอยู่กันไหม</p>
+    </div>
+  </div>
+
+  <!-- about-area -->
+  <section class="about-area">
+    <div class="wrapper-l">
+      <div class="list-2col">
+        <ul>
+          <li>
+            <h2 class="ttl-top">ออนเซ็นและอาหารรสเลิศ ของขวัญจากธรรมชาติอันยิ่งใหญ่</h2>
+            <div class="sentence-block">
+              <p>
+                ในจังหวัดคุมาโมโตะมีภูเขาอาโสะ ที่ตั้งของปล่องภูเขาไฟขนาดใหญ่ที่สุดแห่งหนึ่งของโลก<br>
+                และอามาคุสะ ที่มีเกาะเล็กเกาะน้อยกว่า 120 เกาะลอยอยู่กลางทะเลอันงดงาม<br>
+                ทั้งภูเขาของอาโสะและทะเลของอามาคุสะได้รับการกำหนดให้เป็นอุทยานแห่งชาติโดยรัฐบาลญี่ปุ่น<br>
+                คุมาโมโตะจึงเป็นพื้นที่ที่หาได้ยากในญี่ปุ่น เพราะมีอุทยานแห่งชาติทั้งฝั่งภูเขาและฝั่งทะเลอยู่ในที่เดียวกัน
+              </p>
+              <p>
+                อาโสะเป็นที่ตั้งของภูเขาไฟที่ยังคุกรุ่นอยู่และมีชื่อเสียงไปทั่วโลก<br>
+                ด้วยพลังงานจากภูเขาไฟนี้เอง ทำให้คุมาโมโตะมีเมืองออนเซ็นที่เต็มไปด้วยบรรยากาศอบอุ่นมากมาย<br>
+                คุมาโมโตะจึงเป็นหนึ่งในจุดหมายปลายทางออนเซ็นที่ได้รับความนิยมมากที่สุดในญี่ปุ่น<br>
+                การได้แช่ออนเซ็นท่ามกลางธรรมชาติอันอุดมสมบูรณ์ของคุมาโมโตะ จะช่วยเยียวยาทั้งร่างกายและจิตใจ
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="about-img">
+              <img src="https://kumamoto.guide/english/img/pct_img.svg" alt="">
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="about-img">
+              <img src="https://kumamoto.guide/english/img/pht_about01.jpg" alt="คุมาโมโตะ ออนเซ็น">
+            </div>
+          </li>
+          <li>
+            <div class="txt-img">
+              <img src="https://kumamoto.guide/english/img/txt_water.svg" alt="water">
+            </div>
+            <p>
+              พรจากภูเขาไฟอาโสะไม่ได้มีแค่ออนเซ็นเท่านั้น น้ำบริสุทธิ์ที่ผ่านการกรองจากชั้นดินที่เกิดจากการปะทุของภูเขาไฟ
+              ผุดขึ้นมาทั่วทั้งจังหวัด ทำให้พื้นที่แห่งนี้ขึ้นชื่อเรื่องน้ำที่สวยงามด้วยเช่นกัน
+              (อันที่จริงแล้ว เมืองคุมาโมโตะซึ่งเป็นเมืองที่มีประชากรมากที่สุดในจังหวัด ใช้น้ำใต้ดินธรรมชาติ 100% เป็นน้ำประปา)
+            </p>
+          </li>
+        </ul>
+        <ul class="sp-reverse">
+          <li>
+            <div class="txt-img">
+              <img src="https://kumamoto.guide/english/img/txt_food.svg" alt="food">
+            </div>
+            <p>ด้วยน้ำอันอุดมด้วยแร่ธาตุและธรรมชาติที่อุดมสมบูรณ์ คุมาโมโตะจึงมีวัตถุดิบมากมายที่มีรสชาติธรรมชาติโดดเด่น
+              ทั้ง "ผลผลิตจากภูเขา" เช่น ข้าว ผลไม้ตระกูลส้ม และเนื้อวัวอาคาอุชิ
+              และ "ผลผลิตจากทะเล" เช่น กุ้งคุรุมะ ปลาดาบ และปลากะพงแดง</p>
+            <p>คุมาโมโตะซึ่งอุดมไปด้วยวัตถุดิบแสนอร่อยเหล่านี้ พร้อมต้อนรับคุณด้วยอาหารท้องถิ่นสุดพิเศษที่ปรุงจากวัตถุดิบเหล่านั้น</p>
+          </li>
+          <li>
+            <div class="about-img">
+              <img src="https://kumamoto.guide/english/img/pht_about02.jpg" alt="อาหารท้องถิ่นของคุมาโมโตะ">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- about-area -->
+
+  <!-- tourist-area -->
+  <section class="tourist-area bg-light">
+    <div class="wrapper-s">
+      <h2 class="ttl-top is-center is-underline">โบรชัวร์ท่องเที่ยว</h2>
+      <div class="list-4col tourist-list">
+        <ul style="grid-template-columns: repeat(2, 1fr); max-width: 660px; margin-left: auto; margin-right: auto;">
+          <li>
+            <a href="https://kumamoto.guide/files/14c01811-9892-4091-9d01-a030ffefb562.pdf" target="_blank" rel="noopener noreferrer">
+              <figure class="tourist-item">
+                <div class="frame" style="aspect-ratio: auto;"><img src="https://kumamoto.guide/english/img/tmb_pam03.jpg" alt="KUMAMOTO GUIDE BOOK（ภาษาไทย）"></div>
+                <figcaption><span>KUMAMOTO GUIDE BOOK（ภาษาไทย）</span></figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="https://kumamoto.guide/files/d2f78e2d-2ea2-46fc-88a2-95ae37d026a2.pdf" target="_blank" rel="noopener noreferrer">
+              <figure class="tourist-item">
+                <div class="frame" style="aspect-ratio: auto;"><img src="https://kumamoto.guide/english/img/tmb_pam04.jpg" alt="เส้นทางแนะนำสำหรับการเที่ยวชมคุมาโมโตะ"></div>
+                <figcaption><span>เส้นทางแนะนำสำหรับการเที่ยวชมคุมาโมโตะ</span></figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- tourist-area -->
+
+  <!-- transInfo-area -->
+  <section class="transInfo-area">
+    <div class="wrapper-s">
+      <dl class="translation-info" style="background-color: #fffde7; border: 1px solid #fdd835; padding: 20px; border-radius: 8px;">
+        <dt class="info-ttl" style="color: #f57f17;">ประกาศเกี่ยวกับการแปลอัตโนมัติ</dt>
+        <dd class="info-txt" style="color: #424242;">เว็บไซต์การท่องเที่ยวจังหวัดคุมาโมโตะใช้บริการแปลภาษาอัตโนมัติในบางส่วน<br>
+          เพื่อเป็นการนำเสนอข้อมูลการท่องเที่ยวเพิ่มเติมให้แก่ทุกท่าน ลิงก์ด้านล่างนี้จะนำท่านไปยังหน้าเว็บไซต์ภาษาไทย ซึ่งแปลโดยใช้ระบบแปลภาษาอัตโนมัติของ Google
+        </dd>
+      </dl>
+    </div>
+  </section>
+  <!-- transInfo-area -->
+
+  <!-- discover-area -->
+  <section class="discover-area">
+    <div class="wrapper-s">
+      <h2 class="ttl-top is-center is-underline">ค้นพบคุมาโมโตะ</h2>
+    </div>
+    <div class="slide-discover">
+      <ul class="slide-6col">
+        <li>
+          <a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/spots/" target="_blank" rel="noopener noreferrer">
+            <figure><img src="https://kumamoto.guide/english/img/pht_discover01.jpg" alt="สถานที่ท่องเที่ยว"></figure>
+            <p>สถานที่ท่องเที่ยว</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/stay/" target="_blank" rel="noopener noreferrer">
+            <figure><img src="https://kumamoto.guide/english/img/pht_discover02.jpg" alt="ออนเซ็นและที่พัก"></figure>
+            <p>ออนเซ็นและที่พัก</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/" target="_blank" rel="noopener noreferrer">
+            <figure><img src="https://kumamoto.guide/english/img/pht_discover03.jpg" alt="อาหารและร้านอาหาร"></figure>
+            <p>อาหารและร้านอาหาร</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/souvenir.html" target="_blank" rel="noopener noreferrer">
+            <figure><img src="https://kumamoto.guide/english/img/pht_discover04.jpg" alt="ของฝาก"></figure>
+            <p>ของฝาก</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/events/" target="_blank" rel="noopener noreferrer">
+            <figure><img src="https://kumamoto.guide/english/img/pht_discover05.jpg" alt="กิจกรรม / อีเวนต์"></figure>
+            <p>กิจกรรม / อีเวนต์</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/look/" target="_blank" rel="noopener noreferrer">
+            <figure><img src="https://kumamoto.guide/english/img/pht_discover06.jpg" alt="บทความท่องเที่ยวแนะนำ"></figure>
+            <p>บทความท่องเที่ยวแนะนำ</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- discover-area -->
+
+  <!-- cuisine-area -->
+  <section class="cuisine-area">
+    <div class="wrapper-s">
+      <h2 class="ttl-top is-center is-underline">อาหารท้องถิ่นของ<br>จังหวัดคุมาโมโตะ</h2>
+
+      <div class="is-center"><h3 class="cuisine-ttl">อาหารท้องถิ่น</h3></div>
+      <div class="list-3col">
+        <ul>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_01.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine01.jpg" alt="ราเมนคุมาโมโตะ"></div>
+            <figcaption><span>ราเมนคุมาโมโตะ</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_02.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine02.jpg" alt="ข้าวหน้าเนื้อวัวอาคาอุชิ"></div>
+            <figcaption><span>ข้าวหน้าเนื้อวัวอาคาอุชิ</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_03.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine03.jpg" alt="ไทเปียน (Taipi En)"></div>
+            <figcaption><span>ไทเปียน (Taipi En)</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_04.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine04.jpg" alt="คาราชิ เร็นคง (รากบัวไส้มัสตาร์ด)"></div>
+            <figcaption><span>คาราชิ เร็นคง (รากบัวไส้มัสตาร์ด)</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_05.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine05.jpg" alt="ซุปดังโงะ, ข้าวผัดผักทาคานะ"></div>
+            <figcaption><span>ซุปดังโงะ, ข้าวผัดผักทาคานะ</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_06.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine06.jpg" alt="ข้าวหน้าซีฟู้ด"></div>
+            <figcaption><span>ข้าวหน้าซีฟู้ด</span></figcaption></figure></a></li>
+        </ul>
+      </div>
+
+      <div class="is-center"><h3 class="cuisine-ttl">ขนมหวานคุมาโมโตะ</h3></div>
+      <div class="list-3col">
+        <ul>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_07.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine07.jpg" alt="อิคินาริ ดังโงะ"></div>
+            <figcaption><span>อิคินาริ ดังโงะ</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_08.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine08.jpg" alt="ซอฟต์ครีม"></div>
+            <figcaption><span>ซอฟต์ครีม</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_09.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine09.jpg" alt="ขนมเกาลัด"></div>
+            <figcaption><span>ขนมเกาลัด</span></figcaption></figure></a></li>
+        </ul>
+      </div>
+
+      <div class="is-center"><h3 class="cuisine-ttl">วัตถุดิบคุมาโมโตะ</h3></div>
+      <div class="list-3col">
+        <ul>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_10.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine10.jpg" alt="เนื้อม้า (บาซาชิ)"></div>
+            <figcaption><span>เนื้อม้า (บาซาชิ)</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_11.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine11.jpg" alt="กุ้ง"></div>
+            <figcaption><span>กุ้ง</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_12.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine12.jpg" alt="มะเขือเทศ"></div>
+            <figcaption><span>มะเขือเทศ</span></figcaption></figure></a></li>
+        </ul>
+      </div>
+
+      <div class="is-center"><h3 class="cuisine-ttl">เครื่องดื่มแอลกอฮอล์คุมาโมโตะ</h3></div>
+      <div class="list-3col">
+        <ul>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_13.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine13.jpg" alt="โชจูคุมะ"></div>
+            <figcaption><span>โชจูคุมะ</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_14.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine14.jpg" alt="สาเกญี่ปุ่น"></div>
+            <figcaption><span>สาเกญี่ปุ่น</span></figcaption></figure></a></li>
+          <li><a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/brand/foods/foods_15.html" target="_blank" rel="noopener noreferrer">
+            <figure class="cuisine-item"><div class="frame"><img src="https://kumamoto.guide/english/img/pht_cuisine15.jpg" alt="ไวน์คิคุกะ"></div>
+            <figcaption><span>ไวน์คิคุกะ</span></figcaption></figure></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- cuisine-area -->
+
+  <!-- access-area -->
+  <section class="access-area bg-light">
+    <div class="wrapper-s">
+      <h2 class="ttl-top is-center is-underline">การเดินทาง</h2>
+      <div class="access-info">
+        <dl class="access-plane">
+          <dt class="access-ttl">ทางเครื่องบิน</dt>
+          <dd class="access-txt">
+            นักท่องเที่ยวจากประเทศไทยสามารถเดินทางเข้า-ออกญี่ปุ่นผ่านสนามบินฟุกุโอกะ (FUK)
+            ซึ่งมีเที่ยวบินตรงจากท่าอากาศยานสุวรรณภูมิ (กรุงเทพฯ) ให้บริการโดยหลายสายการบิน
+            ใช้เวลาบินประมาณ 5 ชั่วโมง จากนั้นจึงเดินทางต่อไปยังจังหวัดคุมาโมโตะโดยรถไฟชินคันเซ็นหรือทางรถยนต์
+          </dd>
+          <dd class="access-txt">
+            สำหรับรายละเอียดเที่ยวบิน กรุณาตรวจสอบที่เว็บไซต์สนามบินฟุกุโอกะ
+            <a href="https://www.fukuoka-airport.jp/en/" target="_blank" rel="noopener noreferrer">(ลิงก์ภายนอก)</a>
+          </dd>
+        </dl>
+        <dl class="access-rail">
+          <dt class="access-ttl">รถไฟ: JR และชินคันเซ็น</dt>
+          <dd class="access-txt">
+            จากสนามบินฟุกุโอกะ นั่งรถไฟใต้ดินสายคูโค (Fukuoka City Subway) ไปยังสถานีฮากาตะ ใช้เวลาประมาณ 5 นาที
+            จากนั้นต่อรถไฟชินคันเซ็นสายคิวชู (Kyushu Shinkansen) จากสถานีฮากาตะไปยังสถานีคุมาโมโตะ
+            ใช้เวลาประมาณ 35-50 นาที
+          </dd>
+        </dl>
+        <dl class="access-road">
+          <dt class="access-ttl">ทางถนน: ทางด่วนและรถบัส</dt>
+          <dd class="access-txt">
+            มีรถบัสทางไกล (Highway Bus) ให้บริการจากสถานีฮากาตะ / สนามบินฟุกุโอกะ ไปยังคุมาโมโตะโดยตรง
+            ใช้เวลาประมาณ 2 ชั่วโมง เหมาะสำหรับผู้ที่ไม่ต้องการต่อรถไฟ
+          </dd>
+          <dd class="access-txt">
+            หากเช่ารถขับเอง สามารถใช้เส้นทางทางด่วนคิวชู (Kyushu Expressway) จากบริเวณสนามบินฟุกุโอกะไปยังคุมาโมโตะ
+            ใช้เวลาขับรถประมาณ 1 ชั่วโมง 30 นาที ถึง 2 ชั่วโมง ขึ้นอยู่กับสภาพการจราจร
+          </dd>
+        </dl>
+        <div class="access-btn">
+          <a href="https://translate.google.com/translate?sl=ja&tl=th&u=https://kumamoto.guide/access/" target="_blank" rel="noopener noreferrer">วิธีเดินทางจากเมืองใหญ่อื่นๆ ในญี่ปุ่น</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- access-area -->
+
+</main>
+
+<!-- pagetop -->
+<div class="new-pagetop"><a href="#"><img src="https://kumamoto.guide/img/common/pagetop.svg" alt="กลับด้านบน"></a></div>
+
+<!-- footer -->
+<footer id="new-footer" role="contentinfo">
+  <div class="new-f-menu">
+    <div class="f-list-left">
+      <p>รัฐบาลจังหวัดคุมาโมโตะ กองส่งเสริมการท่องเที่ยว<br>
+      6-18-1 Suizenji, Kumamoto 862-8570, Japan<br>
+      TEL: +81-96-333-2315 &nbsp;FAX: +81-96-385-7077<br>
+      E-MAIL: kankoshinko@pref.kumamoto.lg.jp</p>
+    </div>
+    <div class="f-list-left">
+      <p>สหพันธ์การท่องเที่ยวจังหวัดคุมาโมโตะ<br>
+      6-5-19 Suizenji, Kumamoto 862-0950, Japan<br>
+      TEL: +81-96-382-2660 (เวลาทำการ 8:30–17:15)<br>
+      FAX: +81-96-382-2663</p>
+    </div>
+  </div>
+  <div class="new-copy">
+    <p>Copyright © Kumamoto Prefecture Tourist Federation. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.slide-discover ul').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      responsive: [
+        { breakpoint: 900, settings: { slidesToShow: 3 } },
+        { breakpoint: 600, settings: { slidesToShow: 2 } },
+        { breakpoint: 480, settings: { slidesToShow: 1, arrows: false } }
+      ]
+    });
+  });
+</script>
+
+</body>
+</html>
