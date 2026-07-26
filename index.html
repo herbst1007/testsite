@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://kumamoto.guide/favicon.ico" rel="shortcut icon">
 <link rel="apple-touch-icon" href="https://kumamoto.guide/apple-touch-icon.png">
+<link rel="canonical" href="https://kumamoto.guide/thai/">
 
 <!-- Thai向けフォント（本文表示に必須） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +62,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* mv-area */
   .mv-area{ position:relative; }
   .mv-img img{ width:100%; height:auto; }
-  .mv-img .sp-block{ display:none; }
   .mv-copy{
     position:absolute; left:6%; bottom:8%; color:#fff;
     text-shadow:0 2px 10px rgba(0,0,0,.5);
@@ -162,20 +162,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .new-f-menu p{ margin:0; font-size:13px; line-height:1.9; }
   .new-copy{ text-align:center; font-size:12px; color:#999; margin-top:30px; }
 
-  /* fb-banner-area (main末尾、右寄せの小さいアイコン。access-areaと同じ背景色) */
-  .fb-banner-area{ padding:20px 0 40px; }
-  .fb-banner-area .wrapper-l{ text-align:right; }
-  .fb-banner-area a{ display:inline-block; width:40px; transition:opacity 0.3s ease; }
-  .fb-banner-area a{ display:inline-block; transition:opacity 0.3s ease; }
-  .fb-banner-area a:hover{ opacity:.75; }
-  .fb-banner-area img{ width:100%; height:auto; display:block; }
-
   @media (max-width:900px){
     .tourist-list ul, .list-3col ul{ grid-template-columns:repeat(2,1fr); }
   }
   @media (max-width:640px){
-    .mv-img .pc-block{ display:none; }
-    .mv-img .sp-block{ display:block; }
     .about-area .list-2col ul{ grid-template-columns:1fr; }
     .about-area .list-2col ul.sp-reverse{ direction:ltr; }
     .tourist-list ul, .list-3col ul{ grid-template-columns:repeat(2,1fr); }
@@ -200,17 +190,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main id="contents">
 
-  <!-- mv-area -->
-  <div class="mv-area">
-    <div class="mv-img">
-      <img class="pc-block" src="https://kumamoto.guide/english/img/mv.jpg" alt="คุมาโมโตะ ทัศนียภาพ" fetchpriority="high">
-      <img class="sp-block" src="https://kumamoto.guide/english/img/mv_sp.jpg" alt="คุมาโมโตะ ทัศนียภาพ" fetchpriority="high">
-    </div>
-    <div class="mv-copy">
-      <h1><span>ยินดีต้อนรับสู่<br class="sp-break">คุมาโมโตะ</span></h1>
-    </div>
+<!-- mv-area -->
+<div class="mv-area">
+  <div class="mv-img">
+    <picture>
+      <source media="(max-width: 640px)" srcset="https://kumamoto.guide/english/img/mv_sp.jpg">
+      <img src="https://kumamoto.guide/english/img/mv.jpg" alt="คุมาโมโตะ ทัศนียภาพ" fetchpriority="high">
+    </picture>
   </div>
-  <!-- mv-area -->
+  <div class="mv-copy">
+    <h1><span>ยินดีต้อนรับสู่<br class="sp-break">คุมาโมโตะ</span></h1>
+  </div>
+</div>
+<!-- mv-area -->
 
   <div class="lead-area">
     <div class="wrapper-l">
@@ -495,7 +487,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
   <!-- access-area -->
-<!--
+
   <!-- pr-banner -->
   <div class="pr-banner-area bg-light" style="padding: 20px 0 40px; text-align: right;">
     <div class="wrapper-l" style="display: inline-flex; align-items: center; gap: 50px; justify-content: flex-end;">
@@ -513,7 +505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <!-- pr-banner -->
--->
+
 </main>
 
 <!-- pagetop -->
