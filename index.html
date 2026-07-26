@@ -150,6 +150,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .info-ttl{ font-weight:700; margin-bottom:6px; }
   .info-txt{ margin:0; }
 
+
+
   /* pagetop */
   .new-pagetop{ position:fixed; right:20px; bottom:20px; width:46px; z-index:10; }
   .new-pagetop img{ background:#fff; border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.2); }
@@ -159,6 +161,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .new-f-menu{ display:flex; gap:60px; flex-wrap:wrap; max-width:var(--wrapper-l); margin:0 auto; }
   .new-f-menu p{ margin:0; font-size:13px; line-height:1.9; }
   .new-copy{ text-align:center; font-size:12px; color:#999; margin-top:30px; }
+
+  /* fb-banner-area (main末尾、右寄せの小さいアイコン。access-areaと同じ背景色) */
+  .fb-banner-area{ padding:20px 0 40px; }
+  .fb-banner-area .wrapper-l{ text-align:right; }
+  .fb-banner-area a{ display:inline-block; width:40px; transition:opacity 0.3s ease; }
+  .fb-banner-area a:hover{ opacity:.75; }
+  .fb-banner-area img{ width:100%; height:auto; display:block; }
 
   @media (max-width:900px){
     .tourist-list ul, .list-3col ul{ grid-template-columns:repeat(2,1fr); }
@@ -485,6 +494,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
   <!-- access-area -->
+
+  <!-- fb-banner-area -->
+  <div class="fb-banner-area bg-light">
+    <div class="wrapper-l">
+      <a href="https://www.facebook.com/kumamoto.th.official/" target="_blank" rel="noopener noreferrer">
+        <img src="https://kumamoto.guide/img/common/pct_fb.svg?1680177997" alt="Facebook: Kumamoto Thailand Official">
+      </a>
+    </div>
+  </div>
+  <!-- fb-banner-area -->
 
 </main>
 
