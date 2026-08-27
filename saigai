@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>災害・交通情報｜熊本県公式観光サイト</title>
+    <style>
+        /* =========================================
+           リセット・ベーススタイル
+        ========================================= */
+        :root {
+            --primary-color: #B7282E; /* 信頼感のある落ち着いた赤（熊本県イメージ） */
+            --bg-color: #F7F9FA;
+            --card-bg: #FFFFFF;
+            --text-main: #222222;
+            --text-muted: #555555;
+            --border-color: #E0E0E0;
+            --hover-color: #FDF2F3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* =========================================
+           ヘッダー
+        ========================================= */
+        .page-header {
+            background-color: var(--primary-color);
+            color: #FFFFFF;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .page-header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+        }
+
+        .page-header p {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        /* =========================================
+           メインコンテンツ・レイアウト
+        ========================================= */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+
+        .info-section {
+            margin-bottom: 32px;
+        }
+
+        .info-section h2 {
+            font-size: 1.25rem;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            padding-left: 12px;
+            border-left: 6px solid var(--primary-color);
+            line-height: 1.2;
+        }
+
+        /* =========================================
+           リンクリスト（カード形式）
+        ========================================= */
+        .link-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            /* モバイルは1カラム、タブレット以上は後述のメディアクエリで2カラムに */
+            grid-template-columns: 1fr;
+        }
+
+        .link-list li {
+            width: 100%;
+        }
+
+        .link-list a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 16px 20px;
+            min-height: 60px; /* 指でタップしやすい高さを確保 */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* 矢印（シェブロン）をCSSで描画 */
+        .link-list a::after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid var(--primary-color);
+            border-right: 2px solid var(--primary-color);
+            transform: rotate(45deg);
+            margin-left: 16px;
+            flex-shrink: 0;
+        }
+
+        .link-list a:hover,
+        .link-list a:active {
+            background-color: var(--hover-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 2px 6px rgba(183, 40, 46, 0.1);
+        }
+
+        /* 外部リンク用の説明文（必要に応じて） */
+        .link-desc {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: normal;
+        }
+
+        /* =========================================
+           レスポンシブ対応（タブレット・PC向け）
+        ========================================= */
+        @media (min-width: 768px) {
+            .page-header {
+                padding: 32px 24px;
+            }
+            
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 40px 24px 60px;
+            }
+
+            /* リンク数が多いセクションは2カラムにして一覧性を高める */
+            .grid-2col {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>災害・交通情報</h1>
+        <p>最新の運行状況や道路の規制情報をご確認いただけます。</p>
+    </header>
+
+    <main class="container">
+        <!-- 道路情報 -->
+        <section class="info-section">
+            <h2>道路情報</h2>
+            <ul class="link-list">
+                <li>
+                    <a href="https://portal.bousai.pref.kumamoto.jp/?p=traffic&l=99-0" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            防災情報くまもと
+                            <span class="link-desc">通行規制情報など</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ihighway.jp/pcsite/map/?area=area09" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            NEXCO西日本
+                            <span class="link-desc">ハイウェイ交通情報</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 空港 -->
+        <section class="info-section">
+            <h2>空港</h2>
+            <ul class="link-list">
+                <li>
+                    <a href="https://www.kumamoto-airport.co.jp/" target="_blank" rel="noopener noreferrer">阿蘇くまもと空港</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 公共交通機関 -->
+        <section class="info-section">
+            <h2>公共交通機関</h2>
+            <!-- PC/タブレット閲覧時に2カラムになるよう grid-2col クラスを付与 -->
+            <ul class="link-list grid-2col">
+                <li><a href="https://www.jrkyushu.co.jp/" target="_blank" rel="noopener noreferrer">ＪＲ九州</a></li>
+                <li><a href="https://www.hs-orange.com/" target="_blank" rel="noopener noreferrer">肥薩おれんじ鉄道</a></li>
+                <li><a href="https://kumagawa-rail.com/" target="_blank" rel="noopener noreferrer">くま川鉄道</a></li>
+                <li><a href="https://www.mt-torokko.com/" target="_blank" rel="noopener noreferrer">南阿蘇鉄道</a></li>
+                <li><a href="https://www.kumamotodentetsu.co.jp/" target="_blank" rel="noopener noreferrer">熊本電気鉄道</a></li>
+                <li><a href="https://www.kotsu-kumamoto.jp/" target="_blank" rel="noopener noreferrer">熊本市交通局</a></li>
+                <li><a href="https://www.sankobus.jp/" target="_blank" rel="noopener noreferrer">産交バス</a></li>
+                <li><a href="https://www.kuma-bus.co.jp/" target="_blank" rel="noopener noreferrer">熊本バス</a></li>
+                <li><a href="https://www.kumamoto-toshibus.co.jp/" target="_blank" rel="noopener noreferrer">熊本都市バス</a></li>
+                <li><a href="https://www.kumamotoferry.co.jp/" target="_blank" rel="noopener noreferrer">熊本フェリー</a></li>
+                <li><a href="https://www.ariake-ferry.com/" target="_blank" rel="noopener noreferrer">有明フェリー</a></li>
+                <li><a href="https://www.kyusho-ferry.co.jp/" target="_blank" rel="noopener noreferrer">九商フェリー</a></li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>
