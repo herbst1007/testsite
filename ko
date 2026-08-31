@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="구마모토 안전 여행 공식 포털 사이트입니다. 실시간 재해 경보, 화산 최신 정보, 의료 지원, 교통 접근 안내, 구마모토 관광 명소 정보를 제공하여 외국인 여행객이 안심하고 일본 구마모토를 여행할 수 있도록 돕습니다.">
+  <title>구마모토 안전 여행 포털 | 공식 관광 및 방재 가이드</title>
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* =========================================
+       Base & CSS Variables / デザインシステム
+    ========================================= */
+    :root {
+      /* カラーパレット（熊本の自然と安心感を表現） */
+      --c-green-dark: #143e26;
+      --c-green-main: #246d3e;
+      --c-green-accent: #2e8b57;
+      --c-green-light: #f0f7f2;
+      --c-blue-dark: #1e3a8a;
+      --c-blue-main: #2563eb;
+      --c-blue-light: #eff6ff;
+      --c-red-main: #dc2626;
+      --c-red-dark: #991b1b;
+      --c-red-light: #fef2f2;
+      --c-amber: #d97706;
+      --c-amber-light: #fffbeb;
+      --c-text-primary: #1e293b;
+      --c-text-secondary: #475569;
+      --c-text-muted: #64748b;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --border-light: #f1f5f9;
+
+      /* UI トークン */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12), 0 4px 8px -2px rgba(15, 23, 42, 0.06);
+      --shadow-hover: 0 16px 32px -6px rgba(15, 23, 42, 0.15), 0 6px 12px -3px rgba(15, 23, 42, 0.08);
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--c-text-primary);
+      background-color: var(--bg-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-heading {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.01em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* =========================================
+       SVG Icon Utilities / アイコン共通スタイル
+    ========================================= */
+    .svg-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: inline-block;
+      vertical-align: middle;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .svg-icon-stroke {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: inline-block;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* =========================================
+       Hero Section / ヒーローヘッダー
+    ========================================= */
+    .hero {
+      position: relative;
+      background-image: url('https://kumamoto.guide/files/dfb31094-8fe8-4dc0-a28c-221482526649_l.jpg');
+      background-size: cover;
+      background-position: center 38%;
+      padding: 100px 20px 90px;
+      text-align: center;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(20, 62, 38, 0.75) 100%);
+      backdrop-filter: blur(1px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-badge-pulse {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #a7f3d0 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 680px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      color: #ffffff;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-hero svg {
+      width: 1.35rem;
+      height: 1.35rem;
+    }
+
+    .btn-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-hero-green {
+      background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-hero-green:hover {
+      background: linear-gradient(135deg, #388e3c 0%, #205739 100%);
+    }
+
+    .btn-hero-blue {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-hero-blue:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    }
+
+    /* =========================================
+       Main Content Container
+    ========================================= */
+    .container {
+      max-width: 1200px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--c-green-dark);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.2;
+    }
+
+    .section-title svg {
+      width: 28px;
+      height: 28px;
+      color: var(--c-green-accent);
+    }
+
+    .section-title-sub {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--c-text-muted);
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* =========================================
+       Explore Kumamoto Section / 観光ハイライト
+    ========================================= */
+    .explore-grid {
+      --explore-cols: 5;
+      --official-banner-w: 290px;
+      display: grid;
+      grid-template-columns: repeat(var(--explore-cols), 1fr) var(--official-banner-w);
+      gap: 16px;
+      margin-bottom: 54px;
+    }
+
+    .explore-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .explore-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .explore-card-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .explore-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .explore-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .explore-card-body {
+      padding: 14px 10px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .explore-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--c-text-primary);
+    }
+
+    .explore-card-sub {
+      font-size: 0.75rem;
+      color: var(--c-text-muted);
+      font-weight: 500;
+    }
+
+    .official-banner {
+      background: linear-gradient(145deg, #eaf5ee 0%, #d8ecdf 100%);
+      border: 1.5px solid #a3d9b3;
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .official-banner:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      background: linear-gradient(145deg, #e2f1e7 0%, #cee6d6 100%);
+    }
+
+    .official-banner-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--c-green-main);
+      margin-bottom: 6px;
+    }
+
+    .official-banner h3 {
+      color: var(--c-green-dark);
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .btn-official {
+      background: var(--c-green-dark);
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(20, 62, 38, 0.25);
+    }
+
+    .btn-official:hover {
+      background: var(--c-green-main);
+      color: #ffffff;
+      gap: 9px;
+    }
+
+    /* =========================================
+       SNS Section (Follow Kumamoto)
+    ========================================= */
+    .sns-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 54px;
+    }
+
+    .sns-card {
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .sns-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .sns-card-fb {
+      border-left: 4px solid #1877f2;
+    }
+
+    .sns-card-ig {
+      border-left: 4px solid #e1306c;
+    }
+
+    .sns-card-naver {
+      border-left: 4px solid #03c75a;
+
+    }
+    .sns-card-naver .sns-handle {
+      color: #03c75a;
+
+    }
+    .sns-icon-naver {
+      color: #03c75a;
+    }
+
+    .sns-card-yt {
+      border-left: 4px solid #ff0000;
+    }
+
+    .sns-card-x {
+      border-left: 4px solid #0f172a;
+    }
+
+    .sns-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--c-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+
+    .sns-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--c-text-primary);
+    }
+
+    .sns-handle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--c-blue-main);
+      margin-top: 3px;
+    }
+
+    .sns-card-ig .sns-handle {
+      color: #e1306c;
+    }
+
+    .sns-card-yt .sns-handle {
+      color: #ff0000;
+    }
+
+    .sns-card-x .sns-handle {
+      color: #334155;
+    }
+
+    .sns-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .sns-icon-fb {
+      color: #1877f2;
+    }
+
+    .sns-icon-ig {
+      color: #e1306c;
+    }
+
+    .sns-icon-yt {
+      color: #ff0000;
+    }
+
+    .sns-icon-x {
+      color: #0f172a;
+    }
+
+
+
+    /* =========================================
+       3-Column Information Grid (Safety, Medical, Transport)
+    ========================================= */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 54px;
+    }
+
+    .info-col {
+      background: var(--bg-card);
+      padding: 26px 22px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .info-col:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .info-col-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.25;
+    }
+
+    .info-col-title span {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--c-text-muted);
+      display: block;
+      margin-top: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .info-title-safety {
+      color: var(--c-blue-dark);
+      border-bottom-color: #bfdbfe;
+    }
+
+    .info-title-medical {
+      color: var(--c-red-dark);
+      border-bottom-color: #fecaca;
+    }
+
+    .info-title-transport {
+      color: var(--c-green-dark);
+      border-bottom-color: #bbf7d0;
+    }
+
+    /* Cards inside columns */
+    .info-card {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 16px;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .info-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-card:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      border-color: #cbd5e1;
+    }
+
+    .info-card-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--c-text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .info-card-desc {
+      font-size: 0.8rem;
+      color: var(--c-text-secondary);
+      margin-bottom: 12px;
+      line-height: 1.45;
+    }
+
+    .info-list {
+      font-size: 0.78rem;
+      text-align: left;
+      padding-left: 18px;
+      list-style: disc;
+      margin-bottom: 14px;
+      color: var(--c-text-secondary);
+      line-height: 1.6;
+    }
+
+    .btn-card-action {
+      background: var(--c-blue-main);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-card-action:hover {
+      opacity: 0.92;
+      gap: 8px;
+    }
+
+    /* Medical Customizations */
+    .medical-card {
+      background: #fff8f8;
+      border-color: #fecdd3;
+    }
+
+    .medical-card:hover {
+      background: #ffffff;
+      border-color: #fda4af;
+    }
+
+    .btn-medical {
+      background: var(--c-red-main);
+    }
+
+    .hotline-box {
+      background: linear-gradient(135deg, #fff1f2 0%, #fee2e2 100%);
+      border: 1.5px solid #fca5a5;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .hotline-box h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--c-red-dark);
+      margin-bottom: 4px;
+    }
+
+    .hotline-box p {
+      font-size: 0.76rem;
+      color: var(--c-text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .hotline-phone {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--c-red-main);
+      color: #ffffff;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      transition: var(--transition);
+      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
+    }
+
+    .hotline-phone:hover {
+      background: var(--c-red-dark);
+      transform: scale(1.02);
+    }
+
+    .emergency-dial-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .emergency-dial-btn {
+      background: #ffffff;
+      border: 1px solid #fecdd3;
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      text-align: center;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .emergency-dial-btn:hover {
+      border-color: var(--c-red-main);
+      background: #fff5f5;
+    }
+
+    .emergency-dial-num {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--c-red-main);
+      line-height: 1.1;
+    }
+
+    .emergency-dial-desc {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--c-text-muted);
+      margin-top: 2px;
+    }
+
+    /* Transportation List */
+    .transport-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .transport-list li a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .transport-list li a:hover {
+      color: var(--c-green-dark);
+      border-color: #86efac;
+      background: var(--c-green-light);
+      transform: translateX(3px);
+    }
+
+    .transport-list-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .transport-list-label svg {
+      width: 20px;
+      height: 20px;
+      color: var(--c-green-main);
+    }
+
+    .transport-badge {
+      font-size: 0.7rem;
+      background: #e2e8f0;
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      color: var(--c-text-muted);
+      font-weight: 500;
+    }
+
+    .transport-arrow {
+      color: #94a3b8;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+
+    .transport-list li a:hover .transport-arrow {
+      color: var(--c-green-dark);
+      transform: translateX(3px);
+    }
+
+    /* =========================================
+       Emergency Bottom Banner / 緊急リソースバナー
+    ========================================= */
+    .emergency-banner {
+      background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .emergency-header {
+      min-width: 200px;
+      line-height: 1.2;
+    }
+
+    .emergency-header h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .emergency-header span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-top: 6px;
+      display: block;
+      color: #fecaca;
+    }
+
+    .emergency-items {
+      display: flex;
+      flex: 1;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .em-item {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 16px 14px;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 140px;
+      flex: 1;
+      transition: var(--transition);
+      backdrop-filter: blur(4px);
+    }
+
+    .em-item:hover {
+      background: rgba(255, 255, 255, 0.24);
+      transform: translateY(-2px);
+    }
+
+    .em-item svg {
+      width: 26px;
+      height: 26px;
+      margin-bottom: 8px;
+      fill: #ffffff;
+    }
+
+    .em-item-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .em-item-sub {
+      font-size: 0.72rem;
+      color: #fecaca;
+      margin-top: 3px;
+    }
+
+    .em-item a {
+      color: #ffffff;
+      display: block;
+      width: 100%;
+    }
+
+    /* =========================================
+       Footer / フッター
+    ========================================= */
+    footer {
+      background: var(--c-green-dark);
+      color: #ffffff;
+      padding: 50px 24px 36px;
+      font-size: 0.85rem;
+      border-top: 4px solid var(--c-green-accent);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .footer-group-title {
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 8px;
+      color: #a7f3d0;
+    }
+
+    .footer-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+    }
+
+    .footer-links ul li a {
+      color: rgba(255, 255, 255, 0.85);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .footer-links ul li a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.78rem;
+    }
+
+    /* =========================================
+       Responsive Adjustments / レスポンシブ対応
+    ========================================= */
+    @media (max-width: 1024px) {
+      .explore-grid {
+        --explore-cols: 3;
+        --official-banner-w: 1fr;
+      }
+
+      .official-banner {
+        grid-column: span 3;
+      }
+
+      .sns-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 70px 16px 60px;
+      }
+
+      .explore-grid {
+        --explore-cols: 2;
+        --official-banner-w: 1fr;
+        gap: 12px;
+      }
+
+      .official-banner {
+        grid-column: span 2;
+      }
+
+      .emergency-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 18px;
+      }
+
+      .emergency-header {
+        min-width: 100%;
+        text-align: center;
+      }
+
+      .emergency-items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .em-item {
+        min-width: auto;
+      }
+
+      .sns-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .emergency-items {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================
+       Hero Section
+  ========================================= -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-pulse"></span>
+        공식 여행 및 안전 포털
+      </div>
+      <h1 class="hero-title">구마모토 <span>탐방하기</span></h1>
+      <p class="hero-lead">안심하고 여행하며, 편안하게 구마모토를 둘러보세요.</p>
+      <p class="hero-desc">
+        일본 구마모토 여행에 꼭 필요한 가이드입니다. 웅장한 화산 절경과 수백 년의 사무라이 역사, 그리고 지역 미식을 만나보세요. 실시간 안전·의료·교통 정보가 여러분의 여행을 든든하게 지원합니다.
+      </p>
+      <div class="hero-buttons">
+        <!-- 観光情報ボタン -->
+        <a href="#explore" class="btn-hero btn-hero-green">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <span>관광 정보 보기</span>
+        </a>
+        <!-- 防災情報ボタン -->
+        <a href="#safety" class="btn-hero btn-hero-blue">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>안전·방재 정보</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- =========================================
+         Follow Kumamoto (Official Social Media)
+    ========================================= -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <div>
+            구마모토 팔로우하기
+            <span class="section-title-sub">공식 소셜 미디어 — 최신 소식을 팔로우하세요</span>
+          </div>
+        </h2>
+      </div>
+
+      <div class="sns-container">
+        <!-- 1. Facebook English -->
+        <a href="https://www.facebook.com/kumamoto.en" target="_blank" rel="noopener noreferrer"
+          class="sns-card sns-card-fb">
+          <div>
+            <div class="sns-label">ENGLISH</div>
+            <div class="sns-name">Facebook</div>
+            <div class="sns-handle">@kumamoto.en</div>
+          </div>
+          <svg class="svg-icon sns-icon sns-icon-fb" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+          </svg>
+        </a>
+
+        <!-- 4. Instagram KR -->
+        <a href="https://www.instagram.com/kumamotto_kr/" target="_blank" rel="noopener noreferrer"
+          class="sns-card sns-card-ig">
+          <div>
+            <div class="sns-label">한국어</div>
+            <div class="sns-name">Instagram</div>
+            <div class="sns-handle sns-handle-ig">@kumamotto_kr</div>
+          </div>
+          <svg class="svg-icon sns-icon sns-icon-ig" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+          </svg>
+        </a>
+
+        <a href="https://blog.naver.com/prologue/PrologueList.naver?blogId=kumamoto_official" target="_blank" rel="noopener noreferrer"
+          class="sns-card sns-card-naver">
+          <div>
+            <div class="sns-label">한국어</div>
+            <div class="sns-name">네이버 블로그 (NAVER)</div>
+            <div class="sns-handle">@kumamoto_official</div>
+          </div>
+          <svg class="svg-icon sns-icon sns-icon-naver" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"/>
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- =========================================
+         Information 3 Columns (Safety, Medical, Transport)
+    ========================================= -->
+    <section class="info-grid">
+
+      <!-- Column 1: Disaster & Safety -->
+      <div id="safety" class="info-col">
+        <h3 class="info-col-title info-title-safety">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <div>
+            재해 및 안전 정보
+            <span>실시간 경보 및 재해 현황</span>
+          </div>
+        </h3>
+
+        <!-- Kumamoto Disaster Portal -->
+        <a href="https://portal.bousai.pref.kumamoto.jp/#googtrans(ko)" target="_blank" rel="noopener noreferrer"
+          class="info-card">
+          <div class="info-card-title">
+            구마모토현 방재 포털
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" style="width:16px;height:16px;" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </div>
+          <ul class="info-list">
+            <li>대피 권고 및 대피소 위치</li>
+            <li>지역별 재해 지도 및 하천 수위</li>
+            <li>실시간 교통 상황 및 도로 통제</li>
+            <li>산사태 및 폭우 경보</li>
+          </ul>
+          <span class="btn-card-action">방재 포털 바로가기 ↗</span>
+        </a>
+
+        <!-- Mt. Aso Volcano Center -->
+        <a href="https://aso-volcano.jp/korean/index.html" target="_blank" rel="noopener noreferrer" class="info-card">
+          <div class="info-card-title">
+            아소산 화산 경보 정보
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" style="width:16px;height:16px;" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </div>
+          <div class="info-card-desc">
+            아소산 분화구 주변의 현재 경보 단계 및 출입 제한 정보입니다.
+          </div>
+          <span class="btn-card-action">화산 상태 확인 ↗</span>
+        </a>
+
+        <!--
+        <a href="https://www.jma.go.jp/bosai/map.html#contents=warning&lang=en" target="_blank"
+          rel="noopener noreferrer" class="info-card">
+          <div class="info-card-title">
+            기상 및 지진 경보
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" style="width:16px;height:16px;" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </div>
+          <div class="info-card-desc">
+            실시간 지진 진도 정보, 쓰나미 주의보, 태풍 경로, 긴급 기상 속보를 제공합니다.
+          </div>
+          <span class="btn-card-action">기상청 날씨 지도 보기 ↗</span>
+        </a>
+        -->
+      </div>
+
+      <!-- Column 2: Medical & Support -->
+      <div id="medical" class="info-col">
+        <h3 class="info-col-title info-title-medical">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
+          </svg>
+          <div>
+            의료 및 지원 정보
+            <span>의료 서비스 및 여행자 상담 핫라인</span>
+          </div>
+        </h3>
+
+        <!-- Medical Facility Search -->
+        <a href="https://www.jnto.go.jp/emergency/kor/mi_guide.html" target="_blank" rel="noopener noreferrer"
+          class="info-card medical-card">
+          <div class="info-card-title">
+            의료기관 검색
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" style="width:16px;height:16px;" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </div>
+          <div class="info-card-desc">
+            구마모토현 내 영어로 진료 가능한 병원과 클리닉을 찾고, 일본에서 진료받는 방법을 확인하며, 증상 전달 시트를 다운로드할 수 있습니다.
+          </div>
+          <span class="btn-card-action btn-medical">병원 찾기 ↗</span>
+        </a>
+
+        <!-- Japan Visitor Hotline -->
+        <div class="hotline-box">
+          <h4>일본 여행자 핫라인 (JNTO)</h4>
+          <p>연중무휴 24시간 다국어 여행 상담 및 긴급 지원</p>
+          <a href="tel:050-3816-2787" class="hotline-phone">
+            <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            050-3816-2787
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Column 3: Transportation Access -->
+      <div id="transportation" class="info-col">
+        <h3 class="info-col-title info-title-transport">
+          <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" />
+          </svg>
+          <div>
+            교통 정보
+            <span>최신 교통 소식 및 이용 안내</span>
+          </div>
+        </h3>
+
+        <ul class="transport-list">
+          <!-- Aso Kumamoto Airport -->
+          <li>
+            <a href="https://www.kumamoto-airport.co.jp/ko/" target="_blank" rel="noopener noreferrer">
+              <div class="transport-list-label">
+                <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+                </svg>
+                <span>아소 구마모토 공항 (KMJ)</span>
+              </div>
+              <span class="transport-arrow">&gt;</span>
+            </a>
+          </li>
+
+          <!-- Kyushu Shinkansen (JR Kyushu) -->
+          <li>
+            <a href="https://www.jrkyushu.co.jp/korean/" target="_blank" rel="noopener noreferrer">
+              <div class="transport-list-label">
+                <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2c-4.42 0-8 0.5-8 4v9.5c0 1.93 1.57 3.5 3.5 3.5L6 20.5v0.5h12v-0.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6C20 2.5 16.42 2 12 2zM7.5 17C6.67 17 6 16.33 6 15.5S6.67 14 7.5 14S9 14.67 9 15.5S8.33 17 7.5 17zM16.5 17c-0.83 0-1.5-0.67-1.5-1.5s0.67-1.5 1.5-1.5s1.5 0.67 1.5 1.5S17.33 17 16.5 17zM18 10H6V5h12V10z" />
+                </svg>
+                <span>JR 규슈 & 규슈 신칸센</span>
+              </div>
+              <span class="transport-arrow">&gt;</span>
+            </a>
+          </li>
+
+          <!-- Kumamoto City Tram -->
+          <li>
+            <a href="https://www.kotsu-kumamoto.jp/" target="_blank" rel="noopener noreferrer">
+              <div class="transport-list-label">
+                <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" />
+                </svg>
+                <span>구마모토 시내 노면전차</span>
+              </div>
+              <span class="transport-arrow">&gt;</span>
+            </a>
+          </li>
+
+          <!-- Kyushu Sanko Highway Bus -->
+          <li>
+            <a href="https://www.sankobus.jp/" target="_blank" rel="noopener noreferrer">
+              <div class="transport-list-label">
+                <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" />
+                </svg>
+                <span>규슈 산코 버스 & 노선 안내</span>
+              </div>
+              <span class="transport-arrow">&gt;</span>
+            </a>
+          </li>
+
+          <!-- SUNQ Pass (Unlimited Bus Pass) -->
+          <li>
+            <a href="https://www.sunqpass.jp/kr/" target="_blank" rel="noopener noreferrer">
+              <div class="transport-list-label">
+                <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                  <line x1="2" y1="10" x2="22" y2="10"></line>
+                </svg>
+                <span>SUNQ 패스 (규슈 버스 무제한 이용권)</span>
+              </div>
+              <span class="transport-arrow">&gt;</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================
+         Emergency Bottom Banner (Crisis Quick Access)
+    ========================================= -->
+    <section id="emergency" class="emergency-banner">
+      <div class="emergency-header">
+        <h3>긴급 정보 모음</h3>
+        <span>긴급 상황 시 빠른 접속</span>
+      </div>
+
+      <div class="emergency-items">
+        <!-- 1. Safety Tips App -->
+        <div class="em-item">
+          <a href="https://www.jnto.go.jp/safety-tips/kor/app.html" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+            </svg>
+            <div class="em-item-label">세이프티 팁스</div>
+            <div class="em-item-sub">재해 경보 앱</div>
+          </a>
+        </div>
+
+        <!-- 2. Disaster Safety Guide -->
+        <div class="em-item">
+          <a href="https://www.jnto.go.jp/safety-tips/kor/emergency/index.html" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM11 18.49c-1.2-.8-3.3-1.49-4.5-1.49-1.3 0-2.7.2-4 .7V7.21c1.3-.5 2.7-.7 4-.7 1.2 0 3.3.69 4.5 1.49v10.49zm10-.7c-1.3-.5-2.7-.7-4-.7-1.2 0-3.3.69-4.5 1.49V7.21c1.2-.8 3.3-1.49 4.5-1.49 1.3 0 2.7.2 4 .7v10.48z" />
+            </svg>
+            <div class="em-item-label">행동 요령 가이드</div>
+            <div class="em-item-sub">재난 대응 안내</div>
+          </a>
+        </div>
+
+        <!-- 3. NHK WORLD-JAPAN -->
+        <div class="em-item">
+          <a href="https://www3.nhk.or.jp/nhkworld/ko/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.34.16-2h4.68c.09.66.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" />
+            </svg>
+            <div class="em-item-label">NHK WORLD</div>
+            <div class="em-item-sub">실시간 뉴스 및 속보</div>
+          </a>
+        </div>
+
+        <!-- 4. Japan Safe Travel (X) -->
+        <div class="em-item">
+          <a href="https://x.com/JapanSafeTravel" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+            </svg>
+            <div class="em-item-label">안전 정보 업데이트</div>
+            <div class="em-item-sub">X (@JapanSafeTravel)</div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================
+         Explore Kumamoto (Sightseeing Highlights)
+    ========================================= -->
+    <section id="explore">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          <div>
+            구마모토 둘러보기
+            <span class="section-title-sub">인기 명소, 아름다운 자연, 그리고 문화를 만나보세요</span>
+          </div>
+        </h2>
+      </div>
+
+      <div class="explore-grid">
+        <!-- 1. Sightseeing -->
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/spots/?_gl=1*mf8a9o*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+          <div class="explore-card-img-wrap">
+            <img src="https://kumamoto.guide/english/img/pht_discover01.jpg" alt="관광 명소"
+              loading="lazy">
+          </div>
+          <div class="explore-card-body">
+            <div class="explore-card-title">관광 명소</div>
+          </div>
+        </a>
+
+        <!-- 2. Hot Springs & accomodations -->
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/stay/?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+          <div class="explore-card-img-wrap">
+            <img src="https://kumamoto.guide/english/img/pht_discover02.jpg" alt="온천 숙박"
+              loading="lazy">
+          </div>
+          <div class="explore-card-body">
+            <div class="explore-card-title">온천 & 숙박시설</div>
+          </div>
+        </a>
+
+        <!-- 3. Local Gourmet -->
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+          <div class="explore-card-img-wrap">
+            <img src="https://kumamoto.guide/english/img/pht_discover03.jpg" alt="지역 미식"
+              loading="lazy">
+          </div>
+          <div class="explore-card-body">
+            <div class="explore-card-title">지역 미식</div>
+          </div>
+        </a>
+
+        <!-- 4. Souvenirs -->
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/souvenir.html?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+          <div class="explore-card-img-wrap">
+            <img src="https://kumamoto.guide/english/img/pht_discover04.jpg" alt="기념품"
+              loading="lazy">
+          </div>
+          <div class="explore-card-body">
+            <div class="explore-card-title">기념품</div>
+          </div>
+        </a>
+
+        <!-- 5. Events -->
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/events/?_gl=1*pxb7f1*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+          <div class="explore-card-img-wrap">
+            <img src="https://kumamoto.guide/english/img/pht_discover05.jpg" alt="이벤트 정보"
+              loading="lazy">
+          </div>
+          <div class="explore-card-body">
+            <div class="explore-card-title">이벤트 정보</div>
+          </div>
+        </a>
+
+        <!-- Official Guide Banner -->
+        <div class="official-banner">
+          <div class="official-banner-tag">공식 관광 포털</div>
+          <h3>구마모토의 매력을 더 알아보기</h3>
+          <a href="https://kumamoto.guide/korean/" target="_blank" rel="noopener noreferrer" class="btn-official">
+            공식 관광 가이드 바로가기
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" style="width:16px;height:16px;" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       Footer
+  ========================================= -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <div>
+          <ul>
+            <li>
+              <a href="https://www.pref.kumamoto.jp/" target="_blank" rel="noopener noreferrer">
+                구마모토현청
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 구마모토현 관광연맹. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
