@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="熊本安心旅遊官方入口網站。提供即時災害警報、火山最新狀況、醫療支援資訊、交通接駁指南，以及熊本觀光重點介紹，協助國際旅客安心暢遊日本熊本。">
+  <meta name="description" content="熊本安心旅遊官方入口網站。提供即時災害警報、火山最新狀況、醫療支援資訊、交通接駁指南，以及熊本觀光重點介紹，協助國際旅客安心暢遊日本熊本。">
   <title>熊本安心旅遊入口網站｜官方觀光暨防災指南</title>
 
   <!-- Google Web Fonts -->
@@ -65,7 +64,7 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Plus Jakarta Sans', 'PingFang TC', 'Hiragino Sans CNS', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--c-text-primary);
       background-color: var(--bg-body);
       line-height: 1.6;
@@ -78,7 +77,7 @@
     h3,
     h4,
     .font-heading {
-      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Outfit', 'Plus Jakarta Sans', 'PingFang TC', 'Hiragino Sans CNS', 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
       letter-spacing: -0.01em;
     }
 
@@ -201,6 +200,7 @@
 
     .hero-title span {
       background: linear-gradient(135deg, #a7f3d0 0%, #ffffff 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -444,7 +444,7 @@
     ========================================= */
     .sns-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
       margin-bottom: 54px;
     }
@@ -1128,7 +1128,7 @@
         <a href="https://www.facebook.com/kumamoto.twhk" target="_blank" rel="noopener noreferrer"
           class="sns-card sns-card-fb">
           <div>
-            <div class="sns-label">繁體中文（台湾・香港）</div>
+            <div class="sns-label">繁體中文（台灣／香港）</div>
             <div class="sns-name">Facebook</div>
             <div class="sns-handle">@kumamoto.twhk</div>
           </div>
@@ -1248,7 +1248,7 @@
         <div class="hotline-box">
           <h4>日本旅客服務專線（JNTO）</h4>
           <p>全年無休・多語言旅客諮詢與緊急支援</p>
-          <a href="tel:050-3816-2787" class="hotline-phone">
+          <a href="tel:+815038162787" class="hotline-phone">
             <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;">
               <path
                 d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
@@ -1429,10 +1429,10 @@
 
       <div class="explore-grid">
         <!-- 1. Sightseeing -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/w1/jazhb/https://kumamoto.guide/spots/" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/spots/&SLANG=ja&TLANG=zhb&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover01.jpg" alt="觀光景點"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover01.jpg" alt="觀光景點" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">觀光景點</div>
@@ -1440,10 +1440,10 @@
         </a>
 
         <!-- 2. Hot Springs & accomodations -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/w1/jazhb/https://kumamoto.guide/stay/" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/stay/&SLANG=ja&TLANG=zhb&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover02.jpg" alt="溫泉住宿"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover02.jpg" alt="溫泉住宿" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">溫泉與住宿</div>
@@ -1451,10 +1451,10 @@
         </a>
 
         <!-- 3. Local Gourmet -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=zh-tw&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/&SLANG=ja&TLANG=zhb&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover03.jpg" alt="在地美食"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover03.jpg" alt="在地美食" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">在地美食</div>
@@ -1462,10 +1462,10 @@
         </a>
 
         <!-- 4. Souvenirs -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/souvenir.html?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=zh-tw&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/souvenir.html&SLANG=ja&TLANG=zhb&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover04.jpg" alt="伴手禮"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover04.jpg" alt="伴手禮" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">伴手禮</div>
@@ -1473,10 +1473,10 @@
         </a>
 
         <!-- 5. Events -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/events/?_gl=1*pxb7f1*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=zh-tw&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/events/&SLANG=ja&TLANG=zhb&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover05.jpg" alt="活動資訊"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover05.jpg" alt="活動資訊" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">活動資訊</div>
