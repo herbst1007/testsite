@@ -65,7 +65,7 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       color: var(--c-text-primary);
       background-color: var(--bg-body);
       line-height: 1.6;
@@ -78,7 +78,7 @@
     h3,
     h4,
     .font-heading {
-      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Outfit', 'Plus Jakarta Sans', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
       letter-spacing: -0.01em;
     }
 
@@ -201,6 +201,7 @@
 
     .hero-title span {
       background: linear-gradient(135deg, #a7f3d0 0%, #ffffff 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -444,7 +445,7 @@
     ========================================= */
     .sns-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
       margin-bottom: 54px;
     }
@@ -479,10 +480,12 @@
       border-left: 4px solid #03c75a;
 
     }
+
     .sns-card-naver .sns-handle {
       color: #03c75a;
 
     }
+
     .sns-icon-naver {
       color: #03c75a;
     }
@@ -1144,7 +1147,7 @@
           <div>
             <div class="sns-label">한국어</div>
             <div class="sns-name">Instagram</div>
-            <div class="sns-handle sns-handle-ig">@kumamotto_kr</div>
+            <div class="sns-handle">@kumamotto_kr</div>
           </div>
           <svg class="svg-icon sns-icon sns-icon-ig" viewBox="0 0 24 24" aria-hidden="true">
             <path
@@ -1152,7 +1155,7 @@
           </svg>
         </a>
 
-        <a href="https://blog.naver.com/prologue/PrologueList.naver?blogId=kumamoto_official" target="_blank" rel="noopener noreferrer"
+        <a href="https://blog.naver.com/kumamoto_official" target="_blank" rel="noopener noreferrer"
           class="sns-card sns-card-naver">
           <div>
             <div class="sns-label">한국어</div>
@@ -1160,7 +1163,7 @@
             <div class="sns-handle">@kumamoto_official</div>
           </div>
           <svg class="svg-icon sns-icon sns-icon-naver" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"/>
+            <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z" />
           </svg>
         </a>
 
@@ -1274,7 +1277,7 @@
         <div class="hotline-box">
           <h4>일본 여행자 핫라인 (JNTO)</h4>
           <p>연중무휴 24시간 다국어 여행 상담 및 긴급 지원</p>
-          <a href="tel:050-3816-2787" class="hotline-phone">
+          <a href="tel:+815038162787" class="hotline-phone">
             <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;">
               <path
                 d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
@@ -1455,10 +1458,10 @@
 
       <div class="explore-grid">
         <!-- 1. Sightseeing -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/spots/?_gl=1*mf8a9o*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/spots/&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover01.jpg" alt="관광 명소"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover01.jpg" alt="관광 명소" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">관광 명소</div>
@@ -1466,10 +1469,10 @@
         </a>
 
         <!-- 2. Hot Springs & accomodations -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/stay/?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/stay/&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover02.jpg" alt="온천 숙박"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover02.jpg" alt="온천 숙박" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">온천 & 숙박시설</div>
@@ -1477,10 +1480,10 @@
         </a>
 
         <!-- 3. Local Gourmet -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover03.jpg" alt="지역 미식"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover03.jpg" alt="지역 미식" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">지역 미식</div>
@@ -1488,10 +1491,10 @@
         </a>
 
         <!-- 4. Souvenirs -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/souvenir.html?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/souvenir.html&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover04.jpg" alt="기념품"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover04.jpg" alt="기념품" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">기념품</div>
@@ -1499,10 +1502,10 @@
         </a>
 
         <!-- 5. Events -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/events/?_gl=1*pxb7f1*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/events/&SLANG=ja&TLANG=ko&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover05.jpg" alt="이벤트 정보"
-              loading="lazy">
+            <img src="https://kumamoto.guide/english/img/pht_discover05.jpg" alt="이벤트 정보" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">이벤트 정보</div>
