@@ -926,47 +926,143 @@
       margin: 0 auto;
     }
 
-    .footer-links {
+    .footer-main {
       display: flex;
-      flex-direction: column;
-      gap: 24px;
-      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 28px;
     }
 
-    .footer-group-title {
-      margin-bottom: 12px;
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-org-title {
+      font-size: 1.05rem;
       font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding-bottom: 8px;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    .footer-org-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-org-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.875rem;
+      transition: var(--transition);
+      padding: 4px 0;
+      text-decoration: none;
+    }
+
+    .footer-org-link:hover {
       color: #a7f3d0;
     }
 
-    .footer-links ul {
+    .footer-org-link svg {
+      opacity: 0.7;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .footer-org-link:hover svg {
+      opacity: 1;
+      transform: translate(2px, -2px);
+    }
+
+    /* 言語切替エリア / Language Switcher */
+    .footer-lang-section {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer-lang-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-lang-icon {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+
+    .footer-lang-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 28px;
+      gap: 8px;
     }
 
-    .footer-links ul li a {
-      color: rgba(255, 255, 255, 0.85);
-      transition: var(--transition);
+    .footer-lang-btn {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.55);
+      border: 1px solid transparent;
+      transition: var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+      line-height: 1.3;
     }
 
-    .footer-links ul li a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-      text-underline-offset: 4px;
+    .footer-lang-btn .lang-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: var(--transition);
+    }
+
+    .footer-lang-btn:hover {
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-lang-btn:hover .lang-dot {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-lang-btn.active {
+      color: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.12);
+      font-weight: 600;
+    }
+
+    .footer-lang-btn.active .lang-dot {
+      background: #a7f3d0;
     }
 
     .footer-bottom {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 8px;
       padding-top: 24px;
       border-top: 1px solid rgba(255, 255, 255, 0.12);
       color: rgba(255, 255, 255, 0.65);
@@ -1037,6 +1133,28 @@
         grid-template-columns: 1fr;
         gap: 10px;
       }
+
+      .footer-main {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+      }
+
+      .footer-lang-section {
+        width: 100%;
+      }
+
+      .footer-lang-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+      }
+
+      .footer-lang-btn {
+        justify-content: center;
+        padding: 7px 4px;
+        font-size: 0.72rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1044,9 +1162,8 @@
         grid-template-columns: 1fr;
       }
 
-      .footer-links ul {
-        flex-direction: column;
-        gap: 10px;
+      .footer-lang-list {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   </style>
@@ -1534,26 +1651,50 @@
   ========================================= -->
   <footer>
     <div class="footer-inner">
-      <div class="footer-links">
-        <div>
-          <ul>
-            <li>
-              <a href="https://www.pref.kumamoto.jp/" target="_blank" rel="noopener noreferrer">
-                Kumamoto Prefectural Government
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-lang-nav">
-          <span class="footer-lang-label">Languages:</span>
-          <div class="footer-lang-list">
-            <a href="en.html" class="active" aria-current="page" hreflang="en" lang="en">English</a>
-            <a href="cn.html" hreflang="zh-CN" lang="zh-CN">简体中文</a>
-            <a href="tw.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a>
-            <a href="ko.html" hreflang="ko" lang="ko">한국어</a>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-org-links">
+            <a href="https://www.pref.kumamoto.jp/" target="_blank" rel="noopener noreferrer" class="footer-org-link">
+              <span>Kumamoto Prefectural Government</span>
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" style="width:14px;height:14px;" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
           </div>
         </div>
+
+        <div class="footer-lang-section" aria-label="Language selector">
+          <div class="footer-lang-header">
+            <svg class="svg-icon-stroke footer-lang-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span class="footer-lang-label">Languages</span>
+          </div>
+          <nav class="footer-lang-list" aria-label="Footer language navigation">
+            <a href="en.html" class="footer-lang-btn active" aria-current="page" hreflang="en" lang="en">
+              <span class="lang-dot"></span>
+              <span>English</span>
+            </a>
+            <a href="cn.html" class="footer-lang-btn" hreflang="zh-CN" lang="zh-CN">
+              <span class="lang-dot"></span>
+              <span>简体中文</span>
+            </a>
+            <a href="tw.html" class="footer-lang-btn" hreflang="zh-TW" lang="zh-TW">
+              <span class="lang-dot"></span>
+              <span>繁體中文</span>
+            </a>
+            <a href="ko.html" class="footer-lang-btn" hreflang="ko" lang="ko">
+              <span class="lang-dot"></span>
+              <span>한국어</span>
+            </a>
+          </nav>
+        </div>
       </div>
+
       <div class="footer-bottom">
         &copy; Kumamoto Prefecture Tourism Federation. All Rights Reserved.
       </div>
