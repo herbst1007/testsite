@@ -5,22 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Official Kumamoto Safe Travel Portal. Real-time disaster alerts, volcano updates, English medical support, transport access, and sightseeing highlights for international travelers in Kumamoto, Japan.">
-  <title>Kumamoto Safe Travel Portal | Official Sightseeing & Safety Guide</title>
+    content="Plan your Kumamoto trip with confidence — real-time disaster alerts, Aso volcano updates, English-speaking hospitals, transport guides & top sightseeing spots.">
+  <title>Kumamoto Safe Travel Guide | Disaster Alerts & Volcano Status</title>
 
-  <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
+  <link rel="canonical" href="https://kumamoto.guide/safetytrip/en.html">
+
+  <link rel="alternate" hreflang="en" href="https://kumamoto.guide/safetytrip/en.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://kumamoto.guide/safetytrip/cn.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://kumamoto.guide/safetytrip/tw.html">
+  <link rel="alternate" hreflang="ko" href="https://kumamoto.guide/safetytrip/ko.html">
+  <link rel="alternate" hreflang="x-default" href="https://kumamoto.guide/safetytrip/en.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kumamoto Safe Travel Guide | Disaster Alerts & Volcano Status">
+  <meta property="og:description"
+    content="Plan your Kumamoto trip with confidence — real-time disaster alerts, Aso volcano updates, English-speaking hospitals, transport guides & top sightseeing spots.">
+  <meta property="og:url" content="https://kumamoto.guide/safetytrip/en.html">
+  <meta property="og:image" content="https://kumamoto.guide/safetytrip/img/kumamotocastle.jpg">
+  <meta property="og:site_name" content="Kumamoto Safe Travel Portal">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kumamoto Safe Travel Guide | Disaster Alerts & Volcano Status">
+  <meta name="twitter:description"
+    content="Plan your Kumamoto trip with confidence — real-time disaster alerts, Aso volcano updates, English-speaking hospitals, transport guides & top sightseeing spots.">
+  <meta name="twitter:image" content="https://kumamoto.guide/safetytrip/img/kumamotocastle.jpg">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="img/kumamotocastle.jpg">
+
   <style>
-    /* =========================================
-       Base & CSS Variables / デザインシステム
-    ========================================= */
+    /* Design System & Variables */
     :root {
-      /* カラーパレット（熊本の自然と安心感を表現） */
       --c-green-dark: #143e26;
       --c-green-main: #246d3e;
       --c-green-accent: #2e8b57;
@@ -41,7 +63,6 @@
       --border-color: #e2e8f0;
       --border-light: #f1f5f9;
 
-      /* UI トークン */
       --radius-sm: 6px;
       --radius-md: 12px;
       --radius-lg: 18px;
@@ -97,9 +118,7 @@
       display: block;
     }
 
-    /* =========================================
-       SVG Icon Utilities / アイコン共通スタイル
-    ========================================= */
+    /* SVG Icons */
     .svg-icon {
       width: 1.25rem;
       height: 1.25rem;
@@ -122,12 +141,10 @@
       flex-shrink: 0;
     }
 
-    /* =========================================
-       Hero Section / ヒーローヘッダー
-    ========================================= */
+    /* Hero Section */
     .hero {
       position: relative;
-      background-image: url('https://kumamoto.guide/files/dfb31094-8fe8-4dc0-a28c-221482526649_l.jpg');
+      background-image: url('img/kumamotocastle.jpg');
       background-size: cover;
       background-position: center 38%;
       padding: 100px 20px 90px;
@@ -201,6 +218,7 @@
 
     .hero-title span {
       background: linear-gradient(135deg, #a7f3d0 0%, #ffffff 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -269,9 +287,7 @@
       background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
     }
 
-    /* =========================================
-       Main Content Container
-    ========================================= */
+    /* Content Container */
     .container {
       max-width: 1200px;
       margin: 48px auto;
@@ -311,9 +327,7 @@
       margin-top: 4px;
     }
 
-    /* =========================================
-       Explore Kumamoto Section / 観光ハイライト
-    ========================================= */
+    /* Sightseeing Highlights */
     .explore-grid {
       --explore-cols: 5;
       --official-banner-w: 290px;
@@ -439,9 +453,7 @@
       gap: 9px;
     }
 
-    /* =========================================
-       SNS Section (Follow Kumamoto)
-    ========================================= */
+    /* Social Links */
     .sns-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -538,9 +550,7 @@
       color: #0f172a;
     }
 
-    /* =========================================
-       3-Column Information Grid (Safety, Medical, Transport)
-    ========================================= */
+    /* Information Grid */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -600,7 +610,6 @@
       border-bottom-color: #bbf7d0;
     }
 
-    /* Cards inside columns */
     .info-card {
       background: var(--bg-body);
       border: 1px solid var(--border-color);
@@ -668,7 +677,6 @@
       gap: 8px;
     }
 
-    /* Medical Customizations */
     .medical-card {
       background: #fff8f8;
       border-color: #fecdd3;
@@ -762,7 +770,6 @@
       margin-top: 2px;
     }
 
-    /* Transportation List */
     .transport-list {
       display: flex;
       flex-direction: column;
@@ -821,9 +828,7 @@
       transform: translateX(3px);
     }
 
-    /* =========================================
-       Emergency Bottom Banner / 緊急リソースバナー
-    ========================================= */
+    /* Emergency Resources */
     .emergency-banner {
       background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
       color: #ffffff;
@@ -910,9 +915,7 @@
       width: 100%;
     }
 
-    /* =========================================
-       Footer / フッター
-    ========================================= */
+    /* Footer */
     footer {
       background: var(--c-green-dark);
       color: #ffffff;
@@ -979,7 +982,6 @@
       transform: translate(2px, -2px);
     }
 
-    /* 言語切替エリア / Language Switcher */
     .footer-lang-section {
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1069,9 +1071,7 @@
       font-size: 0.78rem;
     }
 
-    /* =========================================
-       Responsive Adjustments / レスポンシブ対応
-    ========================================= */
+    /* Responsive */
     @media (max-width: 1024px) {
       .explore-grid {
         --explore-cols: 3;
@@ -1167,13 +1167,54 @@
       }
     }
   </style>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Kumamoto Safe Travel Guide",
+    "description": "Official safe travel portal for international visitors to Kumamoto, Japan. Provides real-time disaster alerts, Aso volcano status, English-speaking medical facilities, transportation guides, and sightseeing highlights.",
+    "url": "https://kumamoto.guide/safetytrip/en.html",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Kumamoto Guide",
+      "url": "https://kumamoto.guide/"
+    },
+    "publisher": {
+      "@type": "GovernmentOrganization",
+      "name": "Kumamoto Prefecture Tourism Federation",
+      "alternateName": "熊本県観光連盟",
+      "url": "https://kumamoto.guide/",
+      "parentOrganization": {
+        "@type": "GovernmentOrganization",
+        "name": "Kumamoto Prefectural Government",
+        "url": "https://www.pref.kumamoto.jp/"
+      }
+    },
+    "about": [
+      { "@type": "Thing", "name": "Disaster preparedness" },
+      { "@type": "Thing", "name": "Tourism in Kumamoto" },
+      { "@type": "Thing", "name": "Medical support for travelers" },
+      { "@type": "Thing", "name": "Transportation access" },
+      { "@type": "Thing", "name": "Aso volcano status" }
+    ],
+    "keywords": "Kumamoto Safe Travel, Disaster alerts Kumamoto, English hospital Kumamoto, Aso volcano status, Kumamoto transport, Kumamoto sightseeing",
+    "mainEntity": {
+      "@type": "TouristInformationCenter",
+      "name": "Japan Visitor Hotline (JNTO)",
+      "description": "24/7 multilingual support for tourist inquiries and emergencies in Japan",
+      "telephone": "+81-50-3816-2787",
+      "availableLanguage": ["English", "Chinese", "Korean", "Japanese"]
+    }
+  }
+  </script>
 </head>
 
 <body>
 
-  <!-- =========================================
-       Hero Section
-  ========================================= -->
+  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <div class="hero-badge">
@@ -1187,7 +1228,6 @@
         and gourmet delights, backed by real-time safety, medical, and transit support.
       </p>
       <div class="hero-buttons">
-        <!-- 観光情報ボタン -->
         <a href="#explore" class="btn-hero btn-hero-green">
           <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
@@ -1195,7 +1235,6 @@
           </svg>
           <span>Explore Sightseeing</span>
         </a>
-        <!-- 防災情報ボタン -->
         <a href="#safety" class="btn-hero btn-hero-blue">
           <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -1208,12 +1247,10 @@
 
   <main class="container">
 
-    <!-- =========================================
-         Follow Kumamoto (Official Social Media)
-    ========================================= -->
-    <section>
+    <!-- Social Links -->
+    <section id="sns" aria-labelledby="sns-heading">
       <div class="section-header">
-        <h2 class="section-title">
+        <h2 id="sns-heading" class="section-title">
           <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -1228,7 +1265,6 @@
       </div>
 
       <div class="sns-container">
-        <!-- 1. Facebook English -->
         <a href="https://www.facebook.com/kumamoto.en" target="_blank" rel="noopener noreferrer"
           class="sns-card sns-card-fb">
           <div>
@@ -1242,7 +1278,6 @@
           </svg>
         </a>
 
-        <!-- 2. Facebook TWHK -->
         <a href="https://www.facebook.com/kumamoto.twhk" target="_blank" rel="noopener noreferrer"
           class="sns-card sns-card-fb">
           <div>
@@ -1256,7 +1291,6 @@
           </svg>
         </a>
 
-        <!-- 3. Facebook TH -->
         <a href="https://www.facebook.com/kumamoto.th.official/" target="_blank" rel="noopener noreferrer"
           class="sns-card sns-card-fb">
           <div>
@@ -1270,7 +1304,6 @@
           </svg>
         </a>
 
-        <!-- 4. Instagram KR -->
         <a href="https://www.instagram.com/kumamotto_kr/" target="_blank" rel="noopener noreferrer"
           class="sns-card sns-card-ig">
           <div>
@@ -1286,12 +1319,9 @@
       </div>
     </section>
 
-    <!-- =========================================
-         Information 3 Columns (Safety, Medical, Transport)
-    ========================================= -->
-    <section class="info-grid">
+    <!-- Information Grid -->
+    <section class="info-grid" aria-label="Safety, Medical and Transportation Information">
 
-      <!-- Column 1: Disaster & Safety -->
       <div id="safety" class="info-col">
         <h3 class="info-col-title info-title-safety">
           <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
@@ -1303,7 +1333,6 @@
           </div>
         </h3>
 
-        <!-- Kumamoto Disaster Portal -->
         <a href="https://portal.bousai.pref.kumamoto.jp/#googtrans(en)" target="_blank" rel="noopener noreferrer"
           class="info-card">
           <div class="info-card-title">
@@ -1323,7 +1352,6 @@
           <span class="btn-card-action">Open Disaster Portal ↗</span>
         </a>
 
-        <!-- Mt. Aso Volcano Center -->
         <a href="https://aso-volcano.jp/eng/index.html" target="_blank" rel="noopener noreferrer" class="info-card">
           <div class="info-card-title">
             Mt. Aso Volcano Alert Info
@@ -1339,26 +1367,8 @@
           <span class="btn-card-action">Check Volcano Status ↗</span>
         </a>
 
-        <!--
-        <a href="https://www.jma.go.jp/bosai/map.html#contents=warning&lang=en" target="_blank"
-          rel="noopener noreferrer" class="info-card">
-          <div class="info-card-title">
-            Weather & Earthquake Warnings
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24" style="width:16px;height:16px;" aria-hidden="true">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </div>
-          <div class="info-card-desc">
-            Live seismic intensity data, tsunami advisories, typhoon tracks, and emergency weather bulletins.
-          </div>
-          <span class="btn-card-action">View JMA Weather Map ↗</span>
-        </a>
-        -->
       </div>
 
-      <!-- Column 2: Medical & Support -->
       <div id="medical" class="info-col">
         <h3 class="info-col-title info-title-medical">
           <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
@@ -1372,7 +1382,6 @@
           </div>
         </h3>
 
-        <!-- Medical Facility Search -->
         <a href="https://www.jnto.go.jp/emergency/eng/mi_guide.html" target="_blank" rel="noopener noreferrer"
           class="info-card medical-card">
           <div class="info-card-title">
@@ -1390,7 +1399,6 @@
           <span class="btn-card-action btn-medical">Find a Hospital ↗</span>
         </a>
 
-        <!-- Japan Visitor Hotline -->
         <div class="hotline-box">
           <h4>Japan Visitor Hotline (JNTO)</h4>
           <p>24/7 Multilingual Support for Tourist Inquiries & Emergencies</p>
@@ -1405,7 +1413,6 @@
 
       </div>
 
-      <!-- Column 3: Transportation Access -->
       <div id="transportation" class="info-col">
         <h3 class="info-col-title info-title-transport">
           <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -1419,7 +1426,6 @@
         </h3>
 
         <ul class="transport-list">
-          <!-- Aso Kumamoto Airport -->
           <li>
             <a href="https://www.kumamoto-airport.co.jp/en/" target="_blank" rel="noopener noreferrer">
               <div class="transport-list-label">
@@ -1433,7 +1439,6 @@
             </a>
           </li>
 
-          <!-- Kyushu Shinkansen (JR Kyushu) -->
           <li>
             <a href="https://www.jrkyushu.co.jp/english/" target="_blank" rel="noopener noreferrer">
               <div class="transport-list-label">
@@ -1447,7 +1452,6 @@
             </a>
           </li>
 
-          <!-- Kumamoto City Tram -->
           <li>
             <a href="https://www.kotsu-kumamoto.jp/" target="_blank" rel="noopener noreferrer">
               <div class="transport-list-label">
@@ -1461,7 +1465,6 @@
             </a>
           </li>
 
-          <!-- Kyushu Sanko Highway Bus -->
           <li>
             <a href="https://www.sankobus.jp/" target="_blank" rel="noopener noreferrer">
               <div class="transport-list-label">
@@ -1475,7 +1478,6 @@
             </a>
           </li>
 
-          <!-- SUNQ Pass (Unlimited Bus Pass) -->
           <li>
             <a href="https://www.sunqpass.jp/en/" target="_blank" rel="noopener noreferrer">
               <div class="transport-list-label">
@@ -1493,17 +1495,14 @@
       </div>
     </section>
 
-    <!-- =========================================
-         Emergency Bottom Banner (Crisis Quick Access)
-    ========================================= -->
-    <section id="emergency" class="emergency-banner">
+    <!-- Emergency Resources -->
+    <section id="emergency" class="emergency-banner" aria-labelledby="emergency-heading">
       <div class="emergency-header">
-        <h3>EMERGENCY RESOURCES</h3>
+        <h3 id="emergency-heading">EMERGENCY RESOURCES</h3>
         <span>Quick Access for Urgent Situations</span>
       </div>
 
       <div class="emergency-items">
-        <!-- 1. Safety Tips App -->
         <div class="em-item">
           <a href="https://www.jnto.go.jp/safety-tips/eng/app.html" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -1515,7 +1514,6 @@
           </a>
         </div>
 
-        <!-- 2. Disaster Safety Guide -->
         <div class="em-item">
           <a href="https://www.jnto.go.jp/safety-tips/eng/emergency/index.html" target="_blank"
             rel="noopener noreferrer">
@@ -1528,7 +1526,6 @@
           </a>
         </div>
 
-        <!-- 3. NHK WORLD-JAPAN -->
         <div class="em-item">
           <a href="https://www3.nhk.or.jp/nhkworld/" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -1540,7 +1537,6 @@
           </a>
         </div>
 
-        <!-- 4. Japan Safe Travel (X) -->
         <div class="em-item">
           <a href="https://x.com/JapanSafeTravel" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -1555,12 +1551,10 @@
       </div>
     </section>
 
-    <!-- =========================================
-         Explore Kumamoto (Sightseeing Highlights)
-    ========================================= -->
-    <section id="explore">
+    <!-- Sightseeing Highlights -->
+    <section id="explore" aria-labelledby="explore-heading">
       <div class="section-header">
-        <h2 class="section-title">
+        <h2 id="explore-heading" class="section-title">
           <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <polygon
               points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
@@ -1574,62 +1568,56 @@
       </div>
 
       <div class="explore-grid">
-        <!-- 1. Sightseeing -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/spots/?_gl=1*mf8a9o*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=en&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/spots/&SLANG=ja&TLANG=en&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover01.jpg" alt="Sightseeing"
-              loading="lazy">
+            <img src="img/pht_discover01.jpg" alt="Sightseeing" width="400" height="300" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">Sightseeing</div>
           </div>
         </a>
 
-        <!-- 2. Hot Springs & accommodations -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/stay/?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=en&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/stay/&SLANG=ja&TLANG=en&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover02.jpg" alt="Onsen Hot Springs"
-              loading="lazy">
+            <img src="img/pht_discover02.jpg" alt="Onsen Hot Springs" width="400" height="300" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">Hot Springs & Accommodations</div>
           </div>
         </a>
 
-        <!-- 3. Local Gourmet -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=en&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/&SLANG=ja&TLANG=en&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover03.jpg" alt="Local Gourmet"
-              loading="lazy">
+            <img src="img/pht_discover03.jpg" alt="Local Gourmet" width="400" height="300" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">Local Gourmet</div>
           </div>
         </a>
 
-        <!-- 4. Souvenirs -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/souvenir.html?_gl=1*1ucy0pp*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=en&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/brand/souvenir.html&SLANG=ja&TLANG=en&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover04.jpg" alt="Souvenirs"
-              loading="lazy">
+            <img src="img/pht_discover04.jpg" alt="Souvenirs" width="400" height="300" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">Souvenirs</div>
           </div>
         </a>
 
-        <!-- 5. Events -->
-        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/events/?_gl=1*pxb7f1*_gcl_au*NzM2NjI3NzUxLjE3ODIyMTg1MTA.*_ga*MTU2OTc0NjUxNi4xNzUyNTg1NTUw*_ga_SE5HQ8NCRH*czE3ODc5Njg2NTkkbzUxJGcxJHQxNzg3OTcwMjIxJGo1NSRsMCRoMA..&SLANG=ja&TLANG=en&XMODE=0&XJSID=0" target="_blank" rel="noopener noreferrer" class="explore-card">
+        <a href="https://honyaku.j-server.com/LUCKMMTPGD/ns/tl.cgi/https://honyaku.j-server.com/LUCKMMTPGD/ns/warning_mess.cgi?url=https%3a//kumamoto.guide/events/&SLANG=ja&TLANG=en&XMODE=0&XJSID=0"
+          target="_blank" rel="noopener noreferrer" class="explore-card">
           <div class="explore-card-img-wrap">
-            <img src="https://kumamoto.guide/english/img/pht_discover05.jpg" alt="Events"
-              loading="lazy">
+            <img src="img/pht_discover05.jpg" alt="Events" width="400" height="300" loading="lazy">
           </div>
           <div class="explore-card-body">
             <div class="explore-card-title">Events</div>
           </div>
         </a>
 
-        <!-- Official Guide Banner -->
         <div class="official-banner">
           <div class="official-banner-tag">Official Tourism Portal</div>
           <h3>Discover More of Kumamoto</h3>
@@ -1646,9 +1634,7 @@
 
   </main>
 
-  <!-- =========================================
-       Footer
-  ========================================= -->
+  <!-- Footer -->
   <footer>
     <div class="footer-inner">
       <div class="footer-main">
@@ -1670,7 +1656,8 @@
             <svg class="svg-icon-stroke footer-lang-icon" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
             </svg>
             <span class="footer-lang-label">Languages</span>
           </div>
