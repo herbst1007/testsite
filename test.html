@@ -187,45 +187,57 @@ main h2.text-heading {
 
 /* ==================================
 	お問い合わせ先（画像のテキスト化）
+	※style.css の「main .content-1 .wrapper dl / dt / dd」（概要ページ用の指定）が
+	  適用されてしまうため、より強いセレクタで上書きしてリセットする
 ================================== */
-.contact-box {
+main .content-1 .wrapper .contact-box {
 	max-width: 800px;
-	margin: 0 auto;
+	margin: 10px auto;
 	padding: 24px 28px;
 	background: #fff;
 	border: 3px solid var(--background-travelagency, #ef9d27);
 	border-radius: 12px;
 }
-.contact-name {
-	margin-bottom: 16px;
+main .content-1 .wrapper .contact-box .contact-name {
+	margin: 0 0 16px 0;
 	font-size: 1.4rem;
 	font-weight: 700;
 	line-height: 1.5;
 	text-align: center;
 }
-.contact-list {
+main .content-1 .wrapper .contact-box dl.contact-list {
 	display: grid;
 	grid-template-columns: 7em 1fr;
+	flex-wrap: nowrap;
 	gap: 12px 16px;
 	align-items: center;
+	width: auto;
+	max-width: 560px;
+	margin: 0 auto;
 	font-size: 1.15rem;
 }
-.contact-list dt {
+main .content-1 .wrapper .contact-box dl.contact-list dt {
+	width: auto;
 	padding: 4px 8px;
 	background: var(--background-content-3, #fadbb9);
 	border-radius: 6px;
+	font-size: 1rem;
 	font-weight: 700;
+	line-height: 1.6;
 	text-align: center;
 }
-.contact-list dd {
+main .content-1 .wrapper .contact-box dl.contact-list dd {
+	width: auto;
+	margin: 0;
+	line-height: 1.6;
 	word-break: break-all;
 }
-.contact-list a {
+main .content-1 .wrapper .contact-box dl.contact-list a {
 	color: #1565c0;
 	text-decoration: underline;
 }
-.contact-note {
-	margin-top: 16px;
+main .content-1 .wrapper .contact-box .contact-note {
+	margin: 16px 0 0 0;
 	font-size: 0.95rem;
 	line-height: 1.6;
 	text-align: center;
@@ -275,22 +287,23 @@ main h2.text-heading {
 	.btn-entry-sub {
 		font-size: 1rem;
 	}
-	.contact-box {
+	main .content-1 .wrapper .contact-box {
 		padding: 16px;
 	}
-	.contact-name {
+	main .content-1 .wrapper .contact-box .contact-name {
 		font-size: 1.15rem;
 	}
-	.contact-list {
+	main .content-1 .wrapper .contact-box dl.contact-list {
 		grid-template-columns: 1fr;
 		gap: 4px;
 		font-size: 1rem;
 	}
-	.contact-list dt {
+	main .content-1 .wrapper .contact-box dl.contact-list dt {
 		justify-self: start;
 		margin-top: 8px;
+		font-size: 0.9rem;
 	}
-	.contact-note {
+	main .content-1 .wrapper .contact-box .contact-note {
 		font-size: 0.85rem;
 		text-align: left;
 	}
