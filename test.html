@@ -133,6 +133,59 @@
 }
 
 /* ==================================
+	テキスト見出し（画像見出しの置き換え／自動翻訳対応）
+	※色は旅行事業者向けページ共通のオレンジ（#ef9d27）
+================================== */
+main h2.text-heading {
+	display: block;
+	margin: 0 0 20px 0;
+	padding: 16px 20px;
+	background: var(--background-travelagency, #ef9d27);	/* 旅行事業者向けのオレンジ（動画見出しと統一） */
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.4;
+	text-align: center;
+	letter-spacing: 0.05em;
+}
+
+/* ==================================
+	参画登録申請ボタン（画像バナーの置き換え）
+================================== */
+.entry-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	max-width: 640px;
+	margin: 10px auto 30px auto;
+}
+.btn-entry {
+	display: block;
+	padding: 20px 16px;
+	border-radius: 50px;
+	background: #d91a2a;
+	border: 3px solid #d91a2a;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	text-align: center;
+	box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-entry-sub {
+	background: #fff;
+	color: #d91a2a;
+	font-size: 1.2rem;
+}
+.btn-entry:hover {
+	opacity: 0.8;
+}
+.btn-entry:focus-visible {
+	outline: 3px solid #1565c0;
+	outline-offset: 3px;
+}
+
+/* ==================================
 	タブパネル内コンテンツの表示調整
 ================================== */
 /* パネル内のセクション同士の間隔 */
@@ -142,10 +195,6 @@
 /* 動画：画面幅に合わせて16:9で伸縮（iPhone等ではみ出さないように） */
 .tab-panel .movie-manual2 {
 	padding: 0 15px;
-}
-.tab-panel .movie-manual2 h2 {
-	margin-bottom: 15px;
-	text-align: center;
 }
 .tab-panel .movie-area2 .youtube {
 	position: relative;
@@ -167,6 +216,18 @@
 	}
 	.tab-panel .movie-manual2 {
 		padding: 0 10px;
+	}
+	main h2.text-heading {
+		margin-bottom: 15px;
+		padding: 12px 10px;
+		font-size: 1.2rem;
+	}
+	.btn-entry {
+		padding: 16px 12px;
+		font-size: 1.1rem;
+	}
+	.btn-entry-sub {
+		font-size: 1rem;
 	}
 }
 
@@ -201,26 +262,6 @@
 				<img src="https://kumamoto-ouenwari.com/1009test/images/head-100-4.png" alt="令和8年9月15日（火）以降、各宿泊施設・旅行事業者で順次予約受付を開始します。" width="1320" height="120">
 			</section>
 
-			<section class="content-1">
-				<h2><img src="https://kumamoto-ouenwari.com/1009test/images/content-55.png" alt="旅行事業者（旅行会社・OTA）とは" width="1320" height="74"></h2>
-				<div class="wrapper">
-					<div class="manual-message2">便乗値上げ等の不適切な価格設定について</div>
-					<div class="manual-message">
-						本事業の実施に伴い、通常の販売価格と比較して不当に宿泊料金・旅行代金を引き上げるなど、いわゆる「便乗値上げ」と認められる行為は厳に慎んでください。<br>
-						事務局において不適切な価格設定が疑われる場合は、販売価格や過去の販売実績等について確認を行い、必要に応じて是正を求める場合があります。<br>
-						<br>
-						１．国内旅行事業者<br>
-						次の登録等をしている者かつ参画登録時点で九州内に事業所を有する者<br>
-						① 第1種旅行業、第2種旅行業、第3種旅行業、地域限定旅行業<br>
-						② 旅行業者代理業、観光圏内限定旅行業者代理業<br>
-						※旅行サービス手配業（ランドオペレーター）、住宅宿泊仲介業は対象外です。<br>
-						<br>
-						２．海外旅行事業者<br>
-						熊本県が指定する、海外の法令にもとづく旅行業の許可を有する者
-					</div>
-				</div>
-			</section>
-
 			<!-- ==============================================
 				タブ切り替えエリア 開始
 			=============================================== -->
@@ -234,14 +275,31 @@
 					<label class="tab-label" for="tab-domestic">国内旅行事業者</label>
 					<label class="tab-label" for="tab-inbound">海外旅行事業者</label>
 				</div>
-
 				<!-- タブパネル群 -->
 				<div class="tab-panels">
 
 					<!-- ▼▼▼ 国内旅行事業者向け パネル ▼▼▼ -->
 					<div id="panel-domestic" class="tab-panel">
+
+			<section class="content-1">
+				<h2 class="text-heading">旅行事業者（旅行会社・OTA）とは</h2>
+				<div class="wrapper">
+					<div class="manual-message2">便乗値上げ等の不適切な価格設定について</div>
+					<div class="manual-message">
+						本事業の実施に伴い、通常の販売価格と比較して不当に宿泊料金・旅行代金を引き上げるなど、いわゆる「便乗値上げ」と認められる行為は厳に慎んでください。<br>
+						事務局において不適切な価格設定が疑われる場合は、販売価格や過去の販売実績等について確認を行い、必要に応じて是正を求める場合があります。<br>
+						<br>国内旅行事業者<br>
+						次の登録等をしている者かつ参画登録時点で九州内に事業所を有する者<br>
+						① 第1種旅行業、第2種旅行業、第3種旅行業、地域限定旅行業<br>
+						② 旅行業者代理業、観光圏内限定旅行業者代理業<br>
+						※旅行サービス手配業（ランドオペレーター）、住宅宿泊仲介業は対象外です。<br>
+					</div>
+				</div>
+			</section>
+
+
 						<section class="content-7">
-							<h2><img src="https://kumamoto-ouenwari.com/1009test/images/content-54.png" alt="要綱・要領マニュアル" width="1320" height="74"></h2>
+							<h2 class="text-heading">要綱・要領マニュアル</h2>
 							<div class="wrapper">
 								<div class="manual-title">取扱要領（旅行事業者用）</div>
 								<div class="pdf-open"><a href="https://kumamoto-ouenwari.com/1009test/yoshiki/travel-agency20261003.pdf" target="_blank" rel="noopener">ダウンロード（PDF）</a></div>
@@ -253,7 +311,7 @@
 						</section>
 
 						<section class="content-7">
-							<h2><img src="https://kumamoto-ouenwari.com/1009test/images/content-51.png" alt="旅行会社向け各種様式" width="1320" height="74"></h2>
+							<h2 class="text-heading">旅行会社向け各種様式</h2>
 							<div class="wrapper">
 								<div class="manual-title">別記様式1号の2 実績内訳シート（旅行事業者用）※【原則】1円未満切り捨て版.xlsm</div>
 								<div class="pdf-open"><a href="https://kumamoto-ouenwari.com/1009test/yoshiki/1001youshiki1-2.xlsm" download>ダウンロード（Excel）</a></div>
@@ -281,7 +339,7 @@
 						</section>
 
 						<section class="movie-manual2">
-							<h2>旅行事業者・OTA向け動画</h2>
+							<h2 class="text-heading">旅行事業者・OTA向け動画</h2>
 							<div class="movie-area2">
 								<div class="youtube">
 									<iframe width="560" height="315" src="https://www.youtube.com/embed/EJGdw2ckcFY?si=cPbfVi5ZpQrp9YQ8" title="旅行事業者・OTA向け説明動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -290,10 +348,12 @@
 						</section>
 
 						<section class="content-1">
+							<h2 class="text-heading">参画登録申請受付</h2>
 							<div class="wrapper">
-								<h2><img src="https://kumamoto-ouenwari.com/1009test/images/content-61.png" alt="参画登録申請受付" width="1320" height="74"></h2>
-								<a href="https://biz.kumamoto-ouenwari-manage.com/travel_agent_mail/entry_travel_agent" target="_blank" rel="noopener"><img src="https://kumamoto-ouenwari.com/1009test/images/content-59.png" alt="参画登録申請はこちら" width="1320" height="252"></a><br>
-								<a href="https://kumamoto-ouenwari.com/1009test/yoshiki/0923sankaku_manual.pdf" target="_blank" rel="noopener"><img src="https://kumamoto-ouenwari.com/1009test/images/content-62.png" alt="参画登録申請マニュアル" width="1320" height="252"></a><br>
+								<div class="entry-buttons">
+									<a href="https://biz.kumamoto-ouenwari-manage.com/travel_agent_mail/entry_travel_agent" class="btn-entry" target="_blank" rel="noopener">参画登録申請はこちら</a>
+									<a href="https://kumamoto-ouenwari.com/1009test/yoshiki/0923sankaku_manual.pdf" class="btn-entry btn-entry-sub" target="_blank" rel="noopener">参画登録申請マニュアル（PDF）</a>
+								</div>
 
 								<div class="company-list-notice">
 									<div class="company-list-notice-title">対象旅行会社一覧への社名掲載について</div>
@@ -311,7 +371,7 @@
 						</section>
 
 						<section class="content-1">
-							<h2><img src="https://kumamoto-ouenwari.com/1009test/images/content-50.png" alt="お問い合わせ先" width="1320" height="74"></h2>
+							<h2 class="text-heading">お問い合わせ先</h2>
 							<div class="wrapper">
 								<img src="https://kumamoto-ouenwari.com/1009test/images/content-21.png" alt="お問い合わせ先" width="1320" height="274">
 							</div>
@@ -320,9 +380,10 @@
 					<!-- ▲▲▲ 国内旅行事業者向け パネル ここまで ▲▲▲ -->
 
 					<!-- ▼▼▼ 海外旅行事業者向け パネル ▼▼▼ -->
+
 					<div id="panel-inbound" class="tab-panel">
 						<section class="content-7">
-							<h2><img src="https://kumamoto-ouenwari.com/1009test/images/content-63.png" alt="海外旅行事業者はこちら" width="1320" height="74"></h2>
+							<h2 class="text-heading">海外旅行事業者はこちら</h2>
 							<div class="wrapper">
 								<div class="manual-title">取扱要領（海外旅行事業者用）</div>
 								<div class="pdf-open"><a href="https://kumamoto-ouenwari.com/1009test/yoshiki/travel-agency20261009.pdf" target="_blank" rel="noopener">ダウンロード（PDF）</a></div>
@@ -332,7 +393,7 @@
 						</section>
 
 						<section class="content-1">
-							<h2><img src="https://kumamoto-ouenwari.com/1009test/images/content-50.png" alt="お問い合わせ先" width="1320" height="74"></h2>
+							<h2 class="text-heading">お問い合わせ先</h2>
 							<div class="wrapper">
 								<img src="https://kumamoto-ouenwari.com/1009test/images/content-21.png" alt="お問い合わせ先" width="1320" height="274">
 							</div>
