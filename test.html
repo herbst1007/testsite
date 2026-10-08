@@ -186,6 +186,52 @@ main h2.text-heading {
 }
 
 /* ==================================
+	お問い合わせ先（画像のテキスト化）
+================================== */
+.contact-box {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 24px 28px;
+	background: #fff;
+	border: 3px solid var(--background-travelagency, #ef9d27);
+	border-radius: 12px;
+}
+.contact-name {
+	margin-bottom: 16px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1.5;
+	text-align: center;
+}
+.contact-list {
+	display: grid;
+	grid-template-columns: 7em 1fr;
+	gap: 12px 16px;
+	align-items: center;
+	font-size: 1.15rem;
+}
+.contact-list dt {
+	padding: 4px 8px;
+	background: var(--background-content-3, #fadbb9);
+	border-radius: 6px;
+	font-weight: 700;
+	text-align: center;
+}
+.contact-list dd {
+	word-break: break-all;
+}
+.contact-list a {
+	color: #1565c0;
+	text-decoration: underline;
+}
+.contact-note {
+	margin-top: 16px;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	text-align: center;
+}
+
+/* ==================================
 	タブパネル内コンテンツの表示調整
 ================================== */
 /* パネル内のセクション同士の間隔 */
@@ -228,6 +274,25 @@ main h2.text-heading {
 	}
 	.btn-entry-sub {
 		font-size: 1rem;
+	}
+	.contact-box {
+		padding: 16px;
+	}
+	.contact-name {
+		font-size: 1.15rem;
+	}
+	.contact-list {
+		grid-template-columns: 1fr;
+		gap: 4px;
+		font-size: 1rem;
+	}
+	.contact-list dt {
+		justify-self: start;
+		margin-top: 8px;
+	}
+	.contact-note {
+		font-size: 0.85rem;
+		text-align: left;
 	}
 }
 
@@ -275,28 +340,28 @@ main h2.text-heading {
 					<label class="tab-label" for="tab-domestic">国内旅行事業者</label>
 					<label class="tab-label" for="tab-inbound">海外旅行事業者</label>
 				</div>
+
 				<!-- タブパネル群 -->
 				<div class="tab-panels">
 
 					<!-- ▼▼▼ 国内旅行事業者向け パネル ▼▼▼ -->
 					<div id="panel-domestic" class="tab-panel">
-
-			<section class="content-1">
-				<h2 class="text-heading">旅行事業者（旅行会社・OTA）とは</h2>
-				<div class="wrapper">
-					<div class="manual-message2">便乗値上げ等の不適切な価格設定について</div>
-					<div class="manual-message">
-						本事業の実施に伴い、通常の販売価格と比較して不当に宿泊料金・旅行代金を引き上げるなど、いわゆる「便乗値上げ」と認められる行為は厳に慎んでください。<br>
-						事務局において不適切な価格設定が疑われる場合は、販売価格や過去の販売実績等について確認を行い、必要に応じて是正を求める場合があります。<br>
-						<br>国内旅行事業者<br>
-						次の登録等をしている者かつ参画登録時点で九州内に事業所を有する者<br>
-						① 第1種旅行業、第2種旅行業、第3種旅行業、地域限定旅行業<br>
-						② 旅行業者代理業、観光圏内限定旅行業者代理業<br>
-						※旅行サービス手配業（ランドオペレーター）、住宅宿泊仲介業は対象外です。<br>
-					</div>
-				</div>
-			</section>
-
+						<section class="content-1">
+							<h2 class="text-heading">旅行事業者（旅行会社・OTA）とは</h2>
+							<div class="wrapper">
+								<div class="manual-message2">便乗値上げ等の不適切な価格設定について</div>
+								<div class="manual-message">
+									本事業の実施に伴い、通常の販売価格と比較して不当に宿泊料金・旅行代金を引き上げるなど、いわゆる「便乗値上げ」と認められる行為は厳に慎んでください。<br>
+									事務局において不適切な価格設定が疑われる場合は、販売価格や過去の販売実績等について確認を行い、必要に応じて是正を求める場合があります。<br>
+									<br>
+									国内旅行事業者<br>
+									次の登録等をしている者かつ参画登録時点で九州内に事業所を有する者<br>
+									① 第1種旅行業、第2種旅行業、第3種旅行業、地域限定旅行業<br>
+									② 旅行業者代理業、観光圏内限定旅行業者代理業<br>
+									※旅行サービス手配業（ランドオペレーター）、住宅宿泊仲介業は対象外です。<br>
+								</div>
+							</div>
+						</section>
 
 						<section class="content-7">
 							<h2 class="text-heading">要綱・要領マニュアル</h2>
@@ -373,14 +438,24 @@ main h2.text-heading {
 						<section class="content-1">
 							<h2 class="text-heading">お問い合わせ先</h2>
 							<div class="wrapper">
-								<img src="https://kumamoto-ouenwari.com/1009test/images/content-21.png" alt="お問い合わせ先" width="1320" height="274">
+								<div class="contact-box">
+									<p class="contact-name">熊本ふっこう応援割事務局</p>
+									<dl class="contact-list">
+										<dt>TEL</dt>
+										<dd><a href="tel:08001119449">0800-111-9449</a></dd>
+										<dt>受付時間</dt>
+										<dd>9：30～17：30</dd>
+										<dt>メール</dt>
+										<dd><a href="mailto:r8-001@kumamoto2026-ouenwari.com">r8-001@kumamoto2026-ouenwari.com</a></dd>
+									</dl>
+								</div>
+								<!-- <img src="images/content-21.png" alt="お問い合わせ先" width="1320" height="274"> -->
 							</div>
 						</section>
 					</div>
 					<!-- ▲▲▲ 国内旅行事業者向け パネル ここまで ▲▲▲ -->
 
 					<!-- ▼▼▼ 海外旅行事業者向け パネル ▼▼▼ -->
-
 					<div id="panel-inbound" class="tab-panel">
 						<section class="content-7">
 							<h2 class="text-heading">海外旅行事業者はこちら</h2>
@@ -393,9 +468,17 @@ main h2.text-heading {
 						</section>
 
 						<section class="content-1">
-							<h2 class="text-heading">お問い合わせ先</h2>
+							<h2 class="text-heading">お問い合わせ先（海外旅行会社向け）</h2>
 							<div class="wrapper">
-								<img src="https://kumamoto-ouenwari.com/1009test/images/content-21.png" alt="お問い合わせ先" width="1320" height="274">
+								<div class="contact-box">
+									<p class="contact-name">熊本ふっこう応援割事務局（海外旅行会社向け）</p>
+									<dl class="contact-list">
+										<dt>メール</dt>
+										<dd><a href="mailto:r8-030@kumamoto2026-ouenwari.com">r8-030@kumamoto2026-ouenwari.com</a></dd>
+									</dl>
+									<p class="contact-note">※海外旅行事業者向けのお問い合わせは、メールのみで受け付けています。</p>
+								</div>
+								<!-- <img src="images/content-21.png" alt="お問い合わせ先" width="1320" height="274"> -->
 							</div>
 						</section>
 					</div>
