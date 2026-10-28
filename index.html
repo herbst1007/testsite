@@ -20,6 +20,10 @@
     <meta property="og:url" content="https://kumamoto.guide/shugaku/">
     <meta property="og:site_name" content="【熊本県公式】熊本県教育旅行サイト">
     <meta property="og:image" content="https://kumamoto.guide/shugaku/img/ogimage.png">
+    <meta property="og:image:alt" content="熊本県教育旅行サイトのメインビジュアル">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#164f38">
+    <link rel="canonical" href="https://kumamoto.guide/shugaku/">
 
     <!-- Favicon -->
     <link rel="icon" href="https://kumamoto.guide/shugaku/favicon.ico" type="image/x-icon">
@@ -2119,6 +2123,853 @@
             color: #7b8f83;
             letter-spacing: 0.03em;
         }
+    
+
+        /* =====================================================================
+           14. RENEWAL REFINEMENTS
+           - Preserve the existing /shugaku/ assets, route structure and content.
+           - Simplify surfaces, tune spacing, and improve mobile/keyboard behavior.
+           ===================================================================== */
+        :root {
+            --color-primary: #176342;
+            --color-primary-light: #2b8058;
+            --color-primary-dark: #123e2c;
+            --color-primary-soft: #edf5ef;
+            --color-primary-subtle: #f6faf7;
+            --color-water: #0b6e82;
+            --color-water-light: #4199ac;
+            --color-water-soft: #edf7f9;
+            --color-accent: #c83d2d;
+            --color-accent-hover: #a92e22;
+            --color-accent-soft: #fff2ef;
+            --color-text-main: #202b25;
+            --color-text-muted: #58665e;
+            --color-text-light: #77847c;
+            --color-bg-body: #f6f8f6;
+            --color-bg-alt: #eef3ef;
+            --color-border: #dfe7e1;
+            --color-border-light: #edf1ee;
+            --container-max: 1280px;
+            --header-height: 80px;
+            --header-height-mobile: 66px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-xl: 24px;
+            --shadow-subtle: 0 2px 5px rgba(20, 49, 33, .035);
+            --shadow-sm: 0 4px 14px rgba(20, 49, 33, .055);
+            --shadow-md: 0 10px 28px rgba(20, 49, 33, .085);
+            --shadow-lg: 0 18px 42px rgba(20, 49, 33, .105);
+            --shadow-xl: 0 24px 54px rgba(20, 49, 33, .14);
+        }
+
+        html {
+            scroll-padding-top: calc(var(--header-height) + 16px);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.8;
+            text-rendering: optimizeLegibility;
+        }
+
+        img {
+            color: transparent;
+        }
+
+        a {
+            text-underline-offset: .2em;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--color-water);
+            outline-offset: 4px;
+        }
+
+        .container {
+            width: min(100% - 40px, var(--container-max));
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .site-header {
+            height: var(--header-height);
+            background: rgba(255, 255, 255, .97);
+            border-bottom-color: rgba(223, 231, 225, .9);
+            box-shadow: 0 1px 0 rgba(17, 55, 36, .025);
+        }
+
+        .site-header.is-scrolled {
+            height: 72px;
+            box-shadow: 0 8px 28px rgba(19, 48, 31, .09);
+        }
+
+        .header-inner {
+            padding-inline: clamp(16px, 2vw, 24px);
+            gap: 20px;
+        }
+
+        .header-logo img {
+            height: 46px;
+        }
+
+        .site-header.is-scrolled .header-logo img {
+            height: 40px;
+        }
+
+        .nav-desktop {
+            flex: 1;
+            justify-content: flex-end;
+            min-width: 0;
+        }
+
+        .gnav-list {
+            gap: 2px;
+        }
+
+        .gnav-link {
+            padding-inline: clamp(8px, .9vw, 14px);
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .gnav-link::after {
+            bottom: 7px;
+            left: 12px;
+            right: 12px;
+        }
+
+        .gnav-item:hover .dropdown-menu,
+        .gnav-item:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-menu {
+            border-radius: 16px;
+            box-shadow: 0 18px 48px rgba(17, 45, 29, .16);
+        }
+
+        .btn-header-cta {
+            border-radius: 10px;
+            box-shadow: none;
+            padding: .72rem 1rem;
+            white-space: nowrap;
+        }
+
+        .btn-header-cta:hover {
+            box-shadow: 0 8px 18px rgba(200, 61, 45, .2);
+        }
+
+        .mobile-menu-btn {
+            border: 1px solid #dbe9df;
+            border-radius: 12px;
+            background: #f3f8f4;
+        }
+
+        .drawer-menu {
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform .35s cubic-bezier(.16, 1, .3, 1), visibility 0s linear .35s;
+            padding-top: max(24px, env(safe-area-inset-top));
+            padding-bottom: max(28px, env(safe-area-inset-bottom));
+        }
+
+        .drawer-menu.is-active {
+            visibility: visible;
+            pointer-events: auto;
+            transition: transform .35s cubic-bezier(.16, 1, .3, 1), visibility 0s;
+        }
+
+        .drawer-header {
+            gap: 16px;
+        }
+
+        .drawer-close-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            flex: 0 0 44px;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            background: #fff;
+            color: var(--color-primary-dark);
+        }
+
+        .drawer-close-btn:hover {
+            background: var(--color-primary-soft);
+        }
+
+        .drawer-nav-item > a,
+        .drawer-accordion-btn {
+            min-height: 48px;
+            border: 1px solid transparent;
+        }
+
+        .drawer-sublist li a {
+            min-height: 42px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section {
+            min-height: 600px;
+            height: min(82vh, 820px);
+            height: min(82svh, 820px);
+            max-height: 820px;
+            background: #153a2a;
+            isolation: isolate;
+        }
+
+        .hero-slide-bg {
+            object-position: center 52%;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(90deg,
+                rgba(8, 35, 23, .78) 0%,
+                rgba(8, 35, 23, .52) 48%,
+                rgba(8, 35, 23, .18) 100%),
+                linear-gradient(0deg, rgba(8, 35, 23, .4), transparent 55%);
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: calc(var(--container-max) + 48px);
+            padding-inline: 24px;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, .13);
+            border-color: rgba(255, 255, 255, .42);
+            letter-spacing: .07em;
+            animation: none;
+        }
+
+        .hero-badge .badge-dot {
+            background: #f0b65c;
+            box-shadow: none;
+        }
+
+        .hero-headline {
+            max-width: 17em;
+            font-size: clamp(2.15rem, 4.5vw, 4rem);
+            line-height: 1.32;
+            letter-spacing: .025em;
+            text-wrap: balance;
+            text-shadow: 0 2px 16px rgba(0, 0, 0, .3);
+        }
+
+        .hero-lead {
+            max-width: 40rem;
+            font-size: clamp(.96rem, 1.25vw, 1.125rem);
+            line-height: 1.9;
+        }
+
+        .btn-modern {
+            min-height: 50px;
+            padding: .82rem 1.45rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .09);
+            white-space: normal;
+        }
+
+        .btn-modern-primary {
+            background: var(--color-primary);
+        }
+
+        .btn-modern-primary:hover {
+            background: var(--color-primary-dark);
+        }
+
+        .btn-modern-accent {
+            background: var(--color-accent);
+        }
+
+        .btn-modern-accent:hover {
+            background: var(--color-accent-hover);
+            box-shadow: 0 7px 18px rgba(200, 61, 45, .25);
+        }
+
+        .hero-indicators {
+            right: clamp(20px, 4vw, 56px);
+            bottom: 32px;
+        }
+
+        .indicator-dot {
+            width: 28px;
+            height: 4px;
+            border-radius: 5px;
+        }
+
+        .indicator-dot.is-active {
+            width: 44px;
+        }
+
+        .about-section,
+        .programs-section,
+        .news-facilities-section,
+        .courses-section,
+        .connect-section {
+            padding-block: clamp(64px, 7.5vw, 104px);
+        }
+
+        .about-section {
+            background: linear-gradient(180deg, #f6f8f6 0%, #f2f7f3 100%);
+        }
+
+        .section-header {
+            margin-bottom: clamp(30px, 4vw, 52px);
+        }
+
+        .section-subtitle-en {
+            padding: 5px 12px;
+            background: transparent;
+            border: 1px solid #d5e6da;
+            color: var(--color-primary);
+            font-size: 11px;
+            letter-spacing: .16em;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.1vw, 2.55rem);
+            font-weight: 800;
+            letter-spacing: .025em;
+            line-height: 1.4;
+            text-wrap: balance;
+        }
+
+        .section-title::after {
+            width: 44px;
+            height: 3px;
+            margin-top: 16px;
+            background: var(--color-primary);
+        }
+
+        .section-desc {
+            max-width: 44rem;
+            font-size: clamp(.9rem, 1.2vw, 1rem);
+        }
+
+        .about-card {
+            border-radius: 24px;
+            border-color: rgba(218, 230, 221, .95);
+            box-shadow: 0 10px 32px rgba(21, 63, 40, .065);
+        }
+
+        .about-text h3 {
+            font-size: clamp(1.45rem, 2.4vw, 2rem);
+            letter-spacing: .01em;
+        }
+
+        .about-text p {
+            color: #4d5c53;
+        }
+
+        .photo-strip-container {
+            padding-block: 12px;
+        }
+
+        .photo-strip-item {
+            border-radius: 16px;
+            box-shadow: 0 8px 22px rgba(18, 45, 29, .12);
+        }
+
+        .programs-section,
+        .courses-section {
+            background: #fff;
+        }
+
+        .programs-grid {
+            gap: clamp(16px, 2vw, 24px);
+        }
+
+        .program-card,
+        .course-card {
+            border-radius: 17px;
+            border-color: #e4ebe5;
+            box-shadow: 0 3px 12px rgba(23, 62, 39, .045);
+        }
+
+        .program-card:hover,
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(23, 62, 39, .11);
+            border-color: #c5ddcd;
+        }
+
+        .program-card-thumb {
+            aspect-ratio: 4 / 3;
+        }
+
+        .program-card-thumb img,
+        .course-thumb img {
+            transition: transform .55s cubic-bezier(.2, .7, .2, 1);
+        }
+
+        .program-badge,
+        .course-tag {
+            border-radius: 6px;
+            background: rgba(18, 62, 44, .88);
+            letter-spacing: .04em;
+            padding: 4px 9px;
+        }
+
+        .program-card-body {
+            padding: 16px 18px;
+        }
+
+        .program-card-title {
+            line-height: 1.55;
+        }
+
+        .program-arrow-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+        }
+
+        .news-facilities-section {
+            background: #f5f8f5;
+        }
+
+        .news-box {
+            border-radius: 22px;
+            border-color: #e1e9e3;
+            box-shadow: 0 6px 22px rgba(23, 62, 39, .045);
+        }
+
+        .news-header {
+            border-bottom-width: 1px;
+        }
+
+        .news-item a {
+            background: #f7f9f7;
+            border: 1px solid #edf1ee;
+        }
+
+        .news-item a:hover {
+            border-color: #c7ddce;
+            transform: translateX(2px);
+        }
+
+        .facility-card {
+            gap: 16px;
+            padding: clamp(18px, 2vw, 28px);
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(23, 62, 39, .045);
+        }
+
+        .facility-card::before {
+            width: 4px;
+        }
+
+        .facility-card:hover::before {
+            width: 6px;
+        }
+
+        .facility-content {
+            gap: clamp(12px, 1.5vw, 20px);
+            min-width: 0;
+        }
+
+        .facility-icon-wrap {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+        }
+
+        .facility-info h4 {
+            line-height: 1.5;
+        }
+
+        .facility-btn-indicator {
+            padding: 8px 12px;
+            border: 1px solid #e8eee9;
+            background: #f8faf8;
+        }
+
+        .courses-grid {
+            gap: clamp(16px, 2vw, 24px);
+        }
+
+        .course-thumb {
+            aspect-ratio: 4 / 3;
+        }
+
+        .course-body {
+            gap: 12px;
+            padding: 18px;
+        }
+
+        .course-title {
+            font-size: .925rem;
+            line-height: 1.7;
+        }
+
+        .omotenashi-box {
+            padding: clamp(36px, 5vw, 64px) 20px 0;
+            background: #f6f8f6;
+        }
+
+        .omotenashi-box > .omotenashi-txt,
+        .omotenashi-box > div {
+            max-width: 1200px;
+            border: 1px solid #e1e9e3;
+            border-radius: 24px;
+            background-color: #fff;
+            background-position: center bottom;
+            background-size: 100% auto;
+            padding: clamp(28px, 4vw, 48px) clamp(20px, 4vw, 48px) clamp(220px, 27vw, 330px);
+            box-shadow: 0 6px 24px rgba(23, 62, 39, .045);
+        }
+
+        .omotenashi-ttl {
+            margin-bottom: 18px;
+            color: var(--color-primary-dark);
+            font-size: clamp(1.35rem, 2.3vw, 2rem);
+            letter-spacing: .04em;
+        }
+
+        .omotenashi-txt p {
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.9;
+        }
+
+        .omotenashi-box a {
+            color: var(--color-primary);
+            font-weight: 700;
+            text-decoration-thickness: 1px;
+        }
+
+        .connect-section {
+            background: #f5f8f5;
+        }
+
+        /* There is no Facebook embed in the supplied markup; use the full row for the two action cards. */
+        .connect-grid {
+            grid-template-columns: minmax(0, 1fr);
+            max-width: 900px;
+            margin-inline: auto;
+        }
+
+        .action-banners {
+            gap: 16px;
+        }
+
+        .action-card {
+            min-height: 116px;
+            padding: clamp(18px, 2.5vw, 28px);
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(23, 62, 39, .05);
+        }
+
+        .action-card.is-document {
+            background: #fff;
+            border-left-width: 4px;
+        }
+
+        .action-card.is-contact {
+            background: #fff;
+            border-left-width: 4px;
+        }
+
+        .action-card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            margin-right: clamp(12px, 2vw, 20px);
+        }
+
+        .action-card-btn {
+            border: 1px solid #e7eee8;
+            border-radius: 8px;
+        }
+
+        .pagetop-btn {
+            width: 50px;
+            height: 50px;
+            right: max(16px, env(safe-area-inset-right));
+            bottom: max(16px, env(safe-area-inset-bottom));
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(12, 40, 24, .16);
+        }
+
+        .site-footer {
+            border-top: 4px solid #2b8058;
+            padding-top: clamp(44px, 6vw, 72px);
+        }
+
+        .footer-nav a,
+        .contact-group address a {
+            text-underline-offset: .2em;
+        }
+
+        .contact-group {
+            border-color: rgba(255, 255, 255, .1);
+            border-radius: 14px;
+        }
+
+        .contact-group address {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 1023px) {
+            .header-inner {
+                padding-inline: 20px;
+                gap: 14px;
+            }
+
+            .gnav-link {
+                padding-inline: 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: min(100% - 32px, var(--container-max));
+            }
+
+            .site-header {
+                height: var(--header-height-mobile);
+            }
+
+            .site-header.is-scrolled {
+                height: var(--header-height-mobile);
+            }
+
+            .header-inner {
+                padding-inline: 16px;
+            }
+
+            .header-logo img,
+            .site-header.is-scrolled .header-logo img {
+                height: 40px;
+                max-width: min(58vw, 230px);
+            }
+
+            .header-actions {
+                gap: 8px;
+            }
+
+            .btn-header-cta {
+                display: none;
+            }
+
+            .hero-section {
+                height: 76vh;
+                height: 76svh;
+                min-height: 540px;
+                max-height: 720px;
+            }
+
+            .hero-overlay {
+                background: linear-gradient(90deg, rgba(8, 35, 23, .72), rgba(8, 35, 23, .28)),
+                    linear-gradient(0deg, rgba(8, 35, 23, .44), transparent 72%);
+            }
+
+            .hero-content {
+                padding-inline: 24px;
+            }
+
+            .hero-headline {
+                font-size: clamp(2rem, 7.7vw, 3.15rem);
+                line-height: 1.38;
+            }
+
+            .hero-lead {
+                font-size: .95rem;
+                line-height: 1.85;
+            }
+
+            .hero-catch-svg-wrap {
+                gap: 10px;
+            }
+
+            .hero-catch-svg-wrap img {
+                max-width: 47%;
+                height: 42px;
+            }
+
+            .hero-actions {
+                width: 100%;
+                gap: 10px;
+            }
+
+            .hero-actions .btn-modern {
+                min-width: 0;
+                flex: 1 1 100%;
+                justify-content: space-between;
+            }
+
+            .hero-indicators {
+                right: 24px;
+                bottom: 22px;
+            }
+
+            .scroll-down {
+                display: none;
+            }
+
+            .about-card {
+                padding: clamp(24px, 6vw, 36px);
+                margin-bottom: 48px;
+            }
+
+            .about-balloon {
+                right: -4px;
+                top: -14px;
+            }
+
+            .photo-strip-item {
+                width: 240px;
+                height: 165px;
+            }
+
+            .facility-card {
+                align-items: center;
+                padding: 18px 16px;
+            }
+
+            .facility-content {
+                flex: 1 1 auto;
+            }
+
+            .facility-btn-indicator {
+                font-size: 0;
+                gap: 0;
+                padding: 9px;
+                flex: 0 0 auto;
+            }
+
+            .facility-btn-indicator svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            .omotenashi-box {
+                padding-inline: 16px;
+            }
+
+            .omotenashi-box > .omotenashi-txt,
+            .omotenashi-box > div {
+                border-radius: 18px;
+                padding: 28px 20px 210px;
+                background-size: auto 205px;
+            }
+
+            .omotenashi-txt p {
+                font-size: .92rem;
+            }
+
+            .action-card {
+                gap: 10px;
+            }
+
+            .action-card-text h4 {
+                font-size: 1rem;
+            }
+
+            .action-card-text p {
+                line-height: 1.6;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .hero-section {
+                min-height: 560px;
+            }
+
+            .hero-badge {
+                font-size: 10px;
+                padding: 7px 10px;
+            }
+
+            .hero-headline {
+                font-size: clamp(1.85rem, 8vw, 2.4rem);
+            }
+
+            .hero-lead br {
+                display: none;
+            }
+
+            .hero-indicators {
+                left: 24px;
+                right: auto;
+            }
+
+            .news-box {
+                padding: 22px 18px;
+            }
+
+            .news-header-title h3 {
+                font-size: 1.2rem;
+            }
+
+            .news-item a {
+                padding: 12px;
+            }
+
+            .facility-info p {
+                font-size: 11px;
+            }
+
+            .action-card {
+                padding: 16px 14px;
+            }
+
+            .action-card-icon {
+                width: 44px;
+                height: 44px;
+                margin-right: 0;
+            }
+
+            .action-card-icon img {
+                width: 26px;
+                height: 26px;
+            }
+
+            .action-card-btn {
+                font-size: 0;
+                gap: 0;
+                padding: 8px;
+                flex: 0 0 auto;
+            }
+
+            .action-card-btn svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+
+            .photo-strip-track {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -2201,7 +3052,7 @@
                     資料ダウンロード
                 </a>
 
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="メニューを開閉" aria-expanded="false"
+                <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="メニューを開閉" aria-expanded="false"
                     aria-controls="drawerMenu">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -2213,16 +3064,22 @@
 
     <!-- Mobile Drawer Overlay & Menu -->
     <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-    <div class="drawer-menu" id="drawerMenu" role="dialog" aria-modal="true" aria-label="モバイルメニュー" aria-hidden="true">
+    <div class="drawer-menu" id="drawerMenu" role="dialog" aria-modal="true" aria-label="モバイルメニュー" aria-hidden="true" inert>
         <div class="drawer-header">
             <span class="drawer-title">メニュー</span>
+            <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="メニューを閉じる">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
         </div>
         <ul class="drawer-nav-list">
             <li class="drawer-nav-item">
                 <a href="https://kumamoto.guide/shugaku/news/">お知らせ</a>
             </li>
             <li class="drawer-nav-item">
-                <button class="drawer-accordion-btn" id="drawerAccordionBtn" aria-expanded="false">
+                <button type="button" class="drawer-accordion-btn" id="drawerAccordionBtn" aria-expanded="false" aria-controls="drawerSublist">
                     <span>学習プラン</span>
                     <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -2271,7 +3128,7 @@
     <!-- ==========================================================================
        MAIN CONTENTS
        ========================================================================== -->
-    <main id="contents">
+    <main id="contents" tabindex="-1">
 
         <!-- HERO SECTION -->
         <section class="hero-section" aria-label="メインビジュアル">
@@ -2279,7 +3136,7 @@
                 <!-- Slide 1 -->
                 <div class="hero-slide is-active">
                     <img src="https://kumamoto.guide/shugaku/img/top/slide01.jpg" alt="雄大な阿蘇の草原とカルデラ"
-                        class="hero-slide-bg" loading="eager" decoding="async"
+                        class="hero-slide-bg" loading="eager" fetchpriority="high" decoding="async"
                         onerror="this.onerror=null; this.src='https://kumamoto.guide/shugaku/img/top/slide01.jpg';">
                 </div>
                 <!-- Slide 2 -->
@@ -2336,10 +3193,10 @@
 
             <!-- Slide Indicators -->
             <div class="hero-indicators" id="heroIndicators" aria-label="スライド切り替え">
-                <button class="indicator-dot is-active" aria-label="スライド1へ"></button>
-                <button class="indicator-dot" aria-label="スライド2へ"></button>
-                <button class="indicator-dot" aria-label="スライド3へ"></button>
-                <button class="indicator-dot" aria-label="スライド4へ"></button>
+                <button type="button" class="indicator-dot is-active" aria-label="スライド1へ" aria-pressed="true"></button>
+                <button type="button" class="indicator-dot" aria-label="スライド2へ" aria-pressed="false"></button>
+                <button type="button" class="indicator-dot" aria-label="スライド3へ" aria-pressed="false"></button>
+                <button type="button" class="indicator-dot" aria-label="スライド4へ" aria-pressed="false"></button>
             </div>
 
             <!-- Scroll Prompt -->
@@ -2886,6 +3743,7 @@
                             FAX：096-385-7077<br>
                             E-MAIL：<a href="mailto:kankoshinko@pref.kumamoto.lg.jp">kankoshinko@pref.kumamoto.lg.jp</a>
                         </address>
+
             <!-- Copyright -->
             <div class="footer-bottom">
                 <p class="footer-copy">Copyright &copy; 2021 Kumamoto Prefectural Tourism Federation. All Rights
@@ -2901,123 +3759,173 @@
         (function () {
             'use strict';
 
-            // 1. Sticky Header Scroll Effect
             const header = document.getElementById('header');
             const pageTopBtn = document.getElementById('pageTopBtn');
-
-            function handleScroll() {
-                const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollY > 40) {
-                    header.classList.add('is-scrolled');
-                } else {
-                    header.classList.remove('is-scrolled');
-                }
-
-                if (scrollY > 300) {
-                    pageTopBtn.classList.add('is-visible');
-                } else {
-                    pageTopBtn.classList.remove('is-visible');
-                }
-            }
-
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll();
-
-            // 2. Mobile Drawer Navigation
             const menuBtn = document.getElementById('mobileMenuBtn');
             const drawerMenu = document.getElementById('drawerMenu');
             const drawerOverlay = document.getElementById('drawerOverlay');
+            const drawerCloseBtn = document.getElementById('drawerCloseBtn');
             const accordionBtn = document.getElementById('drawerAccordionBtn');
             const accordionSublist = document.getElementById('drawerSublist');
-
-            function toggleDrawer(open) {
-                const isOpen = open !== undefined ? open : !drawerMenu.classList.contains('is-active');
-                menuBtn.setAttribute('aria-expanded', isOpen);
-                drawerMenu.setAttribute('aria-hidden', !isOpen);
-                drawerOverlay.setAttribute('aria-hidden', !isOpen);
-
-                if (isOpen) {
-                    drawerMenu.classList.add('is-active');
-                    drawerOverlay.classList.add('is-active');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    drawerMenu.classList.remove('is-active');
-                    drawerOverlay.classList.remove('is-active');
-                    document.body.style.overflow = '';
-                }
-            }
-
-            if (menuBtn) {
-                menuBtn.addEventListener('click', function () {
-                    toggleDrawer();
-                });
-            }
-
-            if (drawerOverlay) {
-                drawerOverlay.addEventListener('click', function () {
-                    toggleDrawer(false);
-                });
-            }
-
-            // Close on ESC key
-            window.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && drawerMenu.classList.contains('is-active')) {
-                    toggleDrawer(false);
-                }
-            });
-
-            // Mobile Accordion
-            if (accordionBtn && accordionSublist) {
-                accordionBtn.addEventListener('click', function () {
-                    const expanded = accordionBtn.getAttribute('aria-expanded') === 'true';
-                    accordionBtn.setAttribute('aria-expanded', !expanded);
-                    accordionSublist.classList.toggle('is-open', !expanded);
-                });
-            }
-
-            // 3. Hero Photo Cross-fade Slider
-            const slides = document.querySelectorAll('.hero-slide');
-            const indicators = document.querySelectorAll('.indicator-dot');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            let previouslyFocusedElement = null;
             let currentSlide = 0;
             let slideInterval = null;
 
+            // Header elevation and back-to-top visibility.
+            function handleScroll() {
+                const scrollY = window.scrollY || document.documentElement.scrollTop;
+                if (header) header.classList.toggle('is-scrolled', scrollY > 40);
+                if (pageTopBtn) pageTopBtn.classList.toggle('is-visible', scrollY > 300);
+            }
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+
+            // Accessible mobile navigation drawer.
+            function getDrawerFocusableElements() {
+                if (!drawerMenu) return [];
+                return Array.from(drawerMenu.querySelectorAll(
+                    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+                )).filter(function (element) {
+                    return !element.hasAttribute('hidden') && element.getAttribute('aria-hidden') !== 'true' && element.getClientRects().length > 0;
+                });
+            }
+
+            function toggleDrawer(open) {
+                if (!menuBtn || !drawerMenu || !drawerOverlay) return;
+                const isOpen = Boolean(open);
+                menuBtn.setAttribute('aria-expanded', String(isOpen));
+                menuBtn.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+                drawerMenu.setAttribute('aria-hidden', String(!isOpen));
+                drawerMenu.inert = !isOpen;
+                drawerOverlay.setAttribute('aria-hidden', String(!isOpen));
+                drawerMenu.classList.toggle('is-active', isOpen);
+                drawerOverlay.classList.toggle('is-active', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+
+                if (isOpen) {
+                    previouslyFocusedElement = document.activeElement;
+                    window.requestAnimationFrame(function () {
+                        if (drawerCloseBtn) drawerCloseBtn.focus();
+                        else {
+                            const focusable = getDrawerFocusableElements();
+                            if (focusable[0]) focusable[0].focus();
+                        }
+                    });
+                } else if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === 'function') {
+                    previouslyFocusedElement.focus();
+                }
+            }
+
+            if (drawerMenu) drawerMenu.inert = true;
+            if (menuBtn) menuBtn.addEventListener('click', function () {
+                toggleDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+            });
+            if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', function () {
+                toggleDrawer(false);
+            });
+            if (drawerOverlay) drawerOverlay.addEventListener('click', function () {
+                toggleDrawer(false);
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (!drawerMenu || !drawerMenu.classList.contains('is-active')) return;
+                if (event.key === 'Escape') {
+                    event.preventDefault();
+                    toggleDrawer(false);
+                    return;
+                }
+                if (event.key === 'Tab') {
+                    const focusable = getDrawerFocusableElements();
+                    if (!focusable.length) {
+                        event.preventDefault();
+                        return;
+                    }
+                    const first = focusable[0];
+                    const last = focusable[focusable.length - 1];
+                    if (event.shiftKey && document.activeElement === first) {
+                        event.preventDefault();
+                        last.focus();
+                    } else if (!event.shiftKey && document.activeElement === last) {
+                        event.preventDefault();
+                        first.focus();
+                    }
+                }
+            });
+
+            if (drawerMenu) {
+                drawerMenu.querySelectorAll('a[href]').forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        toggleDrawer(false);
+                    });
+                });
+            }
+
+            if (accordionBtn && accordionSublist) {
+                accordionBtn.addEventListener('click', function () {
+                    const expanded = accordionBtn.getAttribute('aria-expanded') === 'true';
+                    accordionBtn.setAttribute('aria-expanded', String(!expanded));
+                    accordionSublist.classList.toggle('is-open', !expanded);
+                    accordionSublist.hidden = expanded;
+                });
+                accordionSublist.hidden = true;
+            }
+
+            // Hero slider: manual selection, reduced-motion support, and background-tab pause.
+            const slides = Array.from(document.querySelectorAll('.hero-slide'));
+            const indicators = Array.from(document.querySelectorAll('.indicator-dot'));
+
             function goToSlide(index) {
                 if (!slides.length) return;
-                slides[currentSlide].classList.remove('is-active');
-                if (indicators[currentSlide]) indicators[currentSlide].classList.remove('is-active');
-
                 currentSlide = (index + slides.length) % slides.length;
+                slides.forEach(function (slide, slideIndex) {
+                    const active = slideIndex === currentSlide;
+                    slide.classList.toggle('is-active', active);
+                    slide.setAttribute('aria-hidden', String(!active));
+                });
+                indicators.forEach(function (dot, dotIndex) {
+                    const active = dotIndex === currentSlide;
+                    dot.classList.toggle('is-active', active);
+                    dot.setAttribute('aria-pressed', String(active));
+                });
+            }
 
-                slides[currentSlide].classList.add('is-active');
-                if (indicators[currentSlide]) indicators[currentSlide].classList.add('is-active');
+            function stopSlideShow() {
+                if (slideInterval !== null) {
+                    window.clearInterval(slideInterval);
+                    slideInterval = null;
+                }
             }
 
             function startSlideShow() {
-                if (slideInterval) clearInterval(slideInterval);
-                slideInterval = setInterval(function () {
+                stopSlideShow();
+                if (slides.length < 2 || reduceMotion.matches || document.hidden) return;
+                slideInterval = window.setInterval(function () {
                     goToSlide(currentSlide + 1);
-                }, 5500);
+                }, 6500);
             }
 
-            indicators.forEach(function (dot, idx) {
+            indicators.forEach(function (dot, index) {
                 dot.addEventListener('click', function () {
-                    goToSlide(idx);
+                    goToSlide(index);
                     startSlideShow();
                 });
             });
 
-            if (slides.length > 1) {
-                startSlideShow();
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) stopSlideShow();
+                else startSlideShow();
+            });
+            if (typeof reduceMotion.addEventListener === 'function') {
+                reduceMotion.addEventListener('change', startSlideShow);
             }
+            goToSlide(0);
+            startSlideShow();
 
-            // 4. Smooth Page Top Button
             if (pageTopBtn) {
-                pageTopBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+                pageTopBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
                 });
             }
         })();
