@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ふたつの庭園、ひとつの武家の系譜｜江戸から肥後へ｜熊本県公式観光サイト</title>
+  <meta name="description"
+    content="東京・目白台の肥後細川庭園から、細川家の本拠地・熊本の水前寺成趣園へ。羽田から空路約1時間45分、細川家の系譜をたどる旅をご案内します。">
+
+  <!-- TODO: set the final published URL for canonical and og:url -->
+  <link rel="canonical" href="https://kumamoto.guide/hosokawa-legacy/ja/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ふたつの庭園、ひとつの武家の系譜｜江戸から肥後へ">
+  <meta property="og:description"
+    content="東京の肥後細川庭園から熊本の水前寺成趣園へ。細川家が遺したふたつの庭をめぐり、武家文化の源流をたどる旅。">
+  <meta property="og:url" content="https://kumamoto.guide/hosokawa-legacy/ja/">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <!-- TODO: set the final URLs of both language versions (hreflang + the language switch links in the header) -->
+  <link rel="alternate" hreflang="en" href="https://kumamoto.guide/hosokawa-legacy/">
+  <link rel="alternate" hreflang="ja" href="https://kumamoto.guide/hosokawa-legacy/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://kumamoto.guide/hosokawa-legacy/">
+  <!-- REPLACE WITH ORIGINAL PHOTO: OG / social share image, 1200 x 630 -->
+  <meta property="og:image" content="https://kumamoto.guide/files/084cfc9a-7452-4baf-97ff-d609547dd5a2_l.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2C3E35">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- 日本語版: 見出しは Noto Serif JP、本文は Noto Sans JP（欧文は Plus Jakarta Sans）。Cormorant Garamond はロゴと空港コードなど欧文の装飾のみに使用 -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "inLanguage": "ja",
+  "name": "細川家の系譜をたどる旅：江戸（東京）から肥後（熊本）へ",
+  "description": "細川家ゆかりのふたつの回遊式庭園、東京の肥後細川庭園と熊本の水前寺成趣園を結ぶ文化の旅。",
+  "touristType": ["文化観光", "歴史探訪"],
+  "provider": {"@type": "Organization", "name": "熊本県", "url": "https://kumamoto.guide/"},
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "item": {"@type": "TouristAttraction", "name": "肥後細川庭園", "address": "東京都文京区目白台1-1-22"}},
+      {"@type": "ListItem", "position": 2, "item": {"@type": "TouristAttraction", "name": "熊本城", "address": "熊本県熊本市中央区本丸1-1"}},
+      {"@type": "ListItem", "position": 3, "item": {"@type": "TouristAttraction", "name": "水前寺成趣園", "address": "熊本県熊本市中央区水前寺公園8-1"}}
+    ]
+  }
+}
+</script>
+
+  <style>
+    /* =========================================================
+   Tokens
+   ========================================================= */
+    :root {
+      --moss: #2C3E35;
+      /* Deep matcha / moss green */
+      --moss-deep: #22302A;
+      /* Darker moss for the journey section */
+      --washi: #F8F6F0;
+      /* Warm washi paper */
+      --washi-2: #EFEBE1;
+      /* Slightly deeper washi for alternating sections */
+      --ink: #1E1E1E;
+      /* Charcoal ink */
+      --gold: #B5945B;
+      /* Ochre accent: decorative lines, large type, on dark */
+      --gold-ink: #7D6234;
+      /* Gold darkened for small text on washi (5.3:1) */
+      --gold-light: #C9AE7A;
+      /* Gold lightened for small text on moss (5.3:1) */
+      --stone: #5A5A55;
+      /* Secondary text on washi (6.4:1) */
+      --rule: rgba(44, 62, 53, .18);
+
+      --serif: "Cormorant Garamond", "Iowan Old Style", "Times New Roman", serif;
+      --sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --jp: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+
+      --max: 1240px;
+      --gutter: clamp(20px, 5vw, 72px);
+      --thread-x: clamp(18px, 2.4vw, 36px);
+      --header-h: 72px;
+      --ease: cubic-bezier(.65, 0, .35, 1);
+    }
+
+    /* =========================================================
+   Base
+   ========================================================= */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-h);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--washi);
+      color: var(--ink);
+      font: 400 1.0625rem/1.7 var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    p {
+      margin: 0 0 1.15em;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      z-index: 100;
+      background: var(--gold);
+      color: var(--ink);
+      padding: .75rem 1.25rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: top .2s;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    /* =========================================================
+   Image frames: fixed aspect ratio + object-fit + fallback
+   Swap any <img src> and the layout will not move.
+   ========================================================= */
+    .fig {
+      margin: 0;
+    }
+
+    .frame {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: var(--ratio, 4 / 3);
+      background: var(--moss);
+    }
+
+    .frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Fallback label sits underneath the image; visible only if the image fails */
+    .frame::before {
+      content: attr(data-fallback);
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      text-align: center;
+      font: italic 400 1.125rem/1.4 var(--serif);
+      color: rgba(248, 246, 240, .72);
+    }
+
+    .frame.is-broken img {
+      opacity: 0;
+    }
+
+    .r-16x9 {
+      --ratio: 16 / 9;
+    }
+
+    .r-3x2 {
+      --ratio: 3 / 2;
+    }
+
+    .r-4x3 {
+      --ratio: 4 / 3;
+    }
+
+    .r-4x5 {
+      --ratio: 4 / 5;
+    }
+
+    .r-1x1 {
+      --ratio: 1 / 1;
+    }
+
+    .fig figcaption {
+      margin-top: .75rem;
+      font: italic 400 1rem/1.45 var(--serif);
+      color: var(--stone);
+    }
+
+    /* Shoji-style unveil for selected images (JS adds .is-visible) */
+    .js .unveil .frame {
+      clip-path: inset(0 0 0 100%);
+      transition: clip-path 1.5s var(--ease);
+    }
+
+    .js .unveil.is-visible .frame {
+      clip-path: inset(0 0 0 0);
+    }
+
+    /* =========================================================
+   Shared type
+   ========================================================= */
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      margin: 0 0 1.25rem;
+      font: italic 400 1.25rem/1 var(--serif);
+      color: var(--gold-ink);
+    }
+
+    .kicker::before {
+      content: "";
+      width: 2.5rem;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .h2 {
+      font: 400 clamp(2.25rem, 4.6vw, 3.75rem)/1.06 var(--serif);
+      letter-spacing: -.005em;
+      color: var(--moss);
+      margin-bottom: 1.5rem;
+    }
+
+    .h2 .h2-sub {
+      display: block;
+      font-size: .56em;
+      line-height: 1.3;
+      color: var(--stone);
+      margin-top: .35em;
+    }
+
+    .lead {
+      font: 400 clamp(1.5rem, 2.4vw, 2rem)/1.3 var(--serif);
+      color: var(--moss);
+      max-width: 34ch;
+    }
+
+    .prose {
+      max-width: 38rem;
+    }
+
+    .prose p {
+      color: #33332F;
+    }
+
+    .kanji {
+      font-family: var(--jp);
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: .32em;
+      color: var(--gold);
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* =========================================================
+   Buttons
+   ========================================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.25rem;
+      padding: .9rem 1.65rem;
+      font: 600 .9375rem/1.2 var(--sans);
+      letter-spacing: .02em;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      transition: background-color .3s, color .3s, border-color .3s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+    }
+
+    .btn-ghost {
+      border-color: rgba(248, 246, 240, .55);
+      color: var(--washi);
+    }
+
+    .btn-ghost:hover {
+      background: var(--washi);
+      color: var(--ink);
+      border-color: var(--washi);
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .85rem;
+    }
+
+    /* =========================================================
+   Header
+   ========================================================= */
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      color: var(--washi);
+      transition: background-color .4s, color .4s, box-shadow .4s;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(248, 246, 240, .95);
+      color: var(--ink);
+      box-shadow: 0 1px 0 var(--rule);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      grid-template-areas: "brand nav lang";
+      align-items: center;
+      gap: .35rem 2rem;
+      min-height: var(--header-h);
+    }
+
+    .site-nav {
+      grid-area: nav;
+      justify-self: end;
+    }
+
+    /* Language switch */
+    .lang-switch {
+      grid-area: lang;
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+      padding-left: 1.5rem;
+      border-left: 1px solid rgba(248, 246, 240, .35);
+      transition: border-color .4s;
+    }
+
+    .site-header.is-scrolled .lang-switch {
+      border-left-color: var(--rule);
+    }
+
+    .lang-switch a {
+      font: 500 .8125rem/1 var(--sans);
+      letter-spacing: .02em;
+      text-decoration: none;
+      padding: .5rem .5rem;
+      opacity: .7;
+      border-bottom: 1px solid transparent;
+      transition: opacity .3s, border-color .3s;
+    }
+
+    .lang-switch a:lang(ja) {
+      font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", var(--sans);
+    }
+
+    .lang-switch a:hover {
+      opacity: 1;
+    }
+
+    .lang-switch a[aria-current="page"] {
+      opacity: 1;
+      border-bottom-color: var(--gold);
+      pointer-events: none;
+    }
+
+    .brand {
+      grid-area: brand;
+      display: flex;
+      align-items: baseline;
+      gap: .75rem;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      font: 500 1.6rem/1 var(--serif);
+      letter-spacing: .01em;
+    }
+
+    .brand-sub {
+      font: 400 .75rem/1.3 var(--sans);
+      opacity: .85;
+    }
+
+    .brand-domain {
+      display: block;
+      opacity: .8;
+    }
+
+    .site-nav ul {
+      display: flex;
+      gap: clamp(1rem, 2.5vw, 2.25rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .site-nav a {
+      font: 500 .875rem/1 var(--sans);
+      letter-spacing: .02em;
+      text-decoration: none;
+      padding: .5rem 0;
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s, color .3s;
+    }
+
+    .site-nav a:hover,
+    .site-nav a[aria-current="true"] {
+      border-bottom-color: var(--gold);
+    }
+
+    /* =========================================================
+   Hero
+   ========================================================= */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      color: var(--washi);
+      background: var(--moss);
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 55%;
+    }
+
+    .hero-media.is-broken img {
+      opacity: 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(18, 26, 22, .62) 0%, rgba(18, 26, 22, .3) 28%, rgba(18, 26, 22, .5) 58%, rgba(18, 26, 22, .9) 100%),
+        linear-gradient(90deg, rgba(18, 26, 22, .62) 0%, rgba(18, 26, 22, .2) 68%, rgba(18, 26, 22, .35) 100%);
+    }
+
+    .hero-inner {
+      width: 100%;
+      /* grid items with auto margins shrink to fit; keep the full container width */
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 3rem;
+      padding-top: calc(var(--header-h) + 3rem);
+      padding-bottom: clamp(5.5rem, 12vh, 8rem);
+      text-shadow: 0 1px 20px rgba(10, 16, 13, .45);
+    }
+
+    .hero-inner .btn {
+      text-shadow: none;
+    }
+
+    .hero-kicker {
+      font: italic 400 1.375rem/1 var(--serif);
+      color: var(--gold-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font: 300 clamp(2.9rem, 7.4vw, 6.25rem)/1 var(--serif);
+      letter-spacing: -.012em;
+      margin-bottom: 1.75rem;
+      /* The headline may run past the copy column (over the route card's empty upper area) so it stays on two lines on desktop */
+      width: max-content;
+      max-width: min(calc(100vw - 2 * var(--gutter)), calc(var(--max) - 2 * var(--gutter)));
+    }
+
+    .hero h1 .line {
+      display: block;
+    }
+
+    .hero h1 .line-2 {
+      padding-left: 1.2em;
+    }
+
+    .hero-sub {
+      max-width: 36rem;
+      font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+      color: rgba(248, 246, 240, .9);
+      margin-bottom: 2.25rem;
+    }
+
+    .route-card {
+      border-left: 1px solid rgba(201, 174, 122, .65);
+      padding: .25rem 0 .25rem 1.4rem;
+      font-size: .8125rem;
+      line-height: 1.5;
+      color: rgba(248, 246, 240, .85);
+      min-width: 15rem;
+    }
+
+    .route-card .place {
+      display: block;
+      font: 500 1.375rem/1.15 var(--serif);
+      color: var(--washi);
+    }
+
+    .route-card .coord {
+      display: block;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .route-card .gap {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 1rem 0;
+      font: italic 500 1.25rem/1 var(--serif);
+      color: var(--gold-light);
+    }
+
+    .route-card .gap::before {
+      content: "";
+      width: 1.75rem;
+      height: 1px;
+      background: var(--gold-light);
+    }
+
+    .scroll-cue {
+      position: absolute;
+      left: 50%;
+      bottom: 1.25rem;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .6rem;
+      font: 500 .75rem/1 var(--sans);
+      letter-spacing: .08em;
+      color: rgba(248, 246, 240, .8);
+      text-decoration: none;
+    }
+
+    .scroll-cue .track {
+      position: relative;
+      width: 1px;
+      height: 46px;
+      background: rgba(248, 246, 240, .35);
+      overflow: hidden;
+    }
+
+    .scroll-cue .track::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -40%;
+      width: 1px;
+      height: 40%;
+      background: var(--gold-light);
+      animation: cue 2.4s var(--ease) infinite;
+    }
+
+    @keyframes cue {
+      to {
+        top: 100%;
+      }
+    }
+
+    /* One orchestrated load sequence */
+    .hero-media img {
+      animation: settle 9s cubic-bezier(.2, .6, .2, 1) both;
+    }
+
+    .hero-copy>*,
+    .route-card {
+      animation: rise 1.2s cubic-bezier(.2, .7, .2, 1) both;
+    }
+
+    .hero-copy> :nth-child(1) {
+      animation-delay: .2s;
+    }
+
+    .hero-copy> :nth-child(2) {
+      animation-delay: .35s;
+    }
+
+    .hero-copy> :nth-child(3) {
+      animation-delay: .55s;
+    }
+
+    .hero-copy> :nth-child(4) {
+      animation-delay: .7s;
+    }
+
+    .route-card {
+      animation-delay: .95s;
+    }
+
+    @keyframes settle {
+      from {
+        transform: scale(1.07);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* =========================================================
+   Story wrapper + lineage thread (scroll-drawn gold line)
+   ========================================================= */
+    .story {
+      position: relative;
+    }
+
+    .thread {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--thread-x);
+      width: 1px;
+      background: rgba(181, 148, 91, .22);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .thread-fill {
+      position: absolute;
+      inset: 0;
+      background: var(--gold);
+      transform-origin: top;
+      transform: scaleY(0);
+    }
+
+    html:not(.js) .thread-fill {
+      transform: scaleY(1);
+    }
+
+    .thread-mark {
+      position: absolute;
+      left: var(--thread-x);
+      top: clamp(5rem, 11vw, 8.5rem);
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .75rem;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .thread-mark::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 5px var(--washi);
+    }
+
+    .chapter-tokyo .thread-mark::before,
+    .bridge .thread-mark::before {
+      box-shadow: 0 0 0 5px var(--washi-2);
+    }
+
+    .thread-mark .kanji {
+      font-size: .9375rem;
+      color: var(--gold-ink);
+      letter-spacing: .4em;
+    }
+
+    /* =========================================================
+   Prologue
+   ========================================================= */
+    .prologue {
+      padding-block: clamp(5rem, 12vw, 9rem);
+    }
+
+    .prologue-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: clamp(2.5rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    .prologue .lead {
+      margin-bottom: 2rem;
+    }
+
+    .prologue-aside {
+      position: relative;
+    }
+
+    .prologue-aside .kanji {
+      position: absolute;
+      top: 4.5rem;
+      right: calc(100% + 1.1rem);
+      font-size: clamp(2.25rem, 3.2vw, 3rem);
+    }
+
+    .prologue-aside .fig {
+      margin-top: 4.5rem;
+    }
+
+    .lineage {
+      list-style: none;
+      margin: clamp(3.5rem, 7vw, 5.5rem) 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--rule);
+    }
+
+    .lineage li {
+      position: relative;
+      padding: 1.75rem 1.75rem 0 0;
+    }
+
+    .lineage li::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .lineage .years {
+      display: block;
+      font: 500 .8125rem/1 var(--sans);
+      letter-spacing: .04em;
+      color: var(--gold-ink);
+      font-variant-numeric: tabular-nums;
+      margin-bottom: .75rem;
+    }
+
+    .lineage .name {
+      display: block;
+      font: 500 1.5rem/1.15 var(--serif);
+      color: var(--moss);
+    }
+
+    .lineage .alias {
+      display: block;
+      font: italic 400 1.0625rem/1.3 var(--serif);
+      color: var(--stone);
+      margin-bottom: .6rem;
+    }
+
+    .lineage .role {
+      font-size: .9375rem;
+      line-height: 1.55;
+      color: #3B3B37;
+      margin: 0;
+    }
+
+    .lineage-caption {
+      margin-top: 1.25rem;
+      font-size: .8125rem;
+      color: var(--stone);
+    }
+
+    /* =========================================================
+   Chapters
+   ========================================================= */
+    .chapter {
+      position: relative;
+      padding-block: clamp(5rem, 11vw, 8.5rem);
+    }
+
+    .chapter-tokyo {
+      background: var(--washi-2);
+    }
+
+    .chapter-kumamoto {
+      background: var(--washi);
+      padding-bottom: 0;
+    }
+
+    .chapter-head {
+      max-width: 50rem;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    .chapter-grid.is-reversed {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    }
+
+    .chapter-text {
+      display: flex;
+      gap: clamp(1.25rem, 2.5vw, 2.25rem);
+      align-items: flex-start;
+    }
+
+    .chapter-text .kanji {
+      font-size: clamp(2rem, 3vw, 2.75rem);
+      flex: none;
+      padding-top: .2rem;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 2rem;
+      margin: clamp(3rem, 6vw, 4.5rem) 0 0;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .facts dt {
+      font: italic 400 1.125rem/1.2 var(--serif);
+      color: var(--gold-ink);
+      margin-bottom: .5rem;
+    }
+
+    .facts dd {
+      margin: 0;
+      font-size: .9375rem;
+      line-height: 1.6;
+      color: #33332F;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr);
+      gap: clamp(1rem, 2.5vw, 2rem);
+      align-items: start;
+      margin-top: clamp(3.5rem, 7vw, 5.5rem);
+    }
+
+    .gallery .fig:nth-child(2) {
+      margin-top: clamp(2rem, 5vw, 4rem);
+    }
+
+    /* Kumamoto features */
+    .features {
+      margin-top: clamp(4rem, 8vw, 6.5rem);
+      display: grid;
+      gap: clamp(3rem, 7vw, 5.5rem);
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+
+    .feature.is-flipped {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    }
+
+    .feature h3 {
+      font: 400 clamp(1.75rem, 2.8vw, 2.375rem)/1.12 var(--serif);
+      color: var(--moss);
+      margin-bottom: 1rem;
+    }
+
+    .feature .jp-term {
+      font: italic 400 1.125rem/1.3 var(--serif);
+      color: var(--gold-ink);
+      display: block;
+      margin-bottom: .9rem;
+    }
+
+    /* Tea band */
+    .tea {
+      margin-top: clamp(4.5rem, 9vw, 7rem);
+      background: var(--moss);
+      color: var(--washi);
+    }
+
+    .tea-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+      padding-block: clamp(3rem, 7vw, 5.5rem);
+    }
+
+    .tea h3 {
+      font: 400 clamp(1.875rem, 3vw, 2.625rem)/1.1 var(--serif);
+      margin-bottom: .5rem;
+    }
+
+    .tea .jp-term {
+      display: block;
+      font: italic 400 1.1875rem/1.3 var(--serif);
+      color: var(--gold-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .tea p {
+      color: rgba(248, 246, 240, .88);
+    }
+
+    .tea .fig figcaption {
+      color: rgba(248, 246, 240, .7);
+    }
+
+    /* fallback stays visible on the moss band */
+    .tea .frame {
+      background: var(--moss-deep);
+    }
+
+    .tea-small {
+      display: grid;
+      grid-template-columns: 7.5rem minmax(0, 1fr);
+      gap: 1.25rem;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(201, 174, 122, .35);
+    }
+
+    .tea-small p {
+      font: italic 400 1.125rem/1.4 var(--serif);
+      color: var(--gold-light);
+      margin: 0;
+    }
+
+    /* =========================================================
+   Bridge: Edo refinement vs Higo grandeur
+   ========================================================= */
+    .bridge {
+      position: relative;
+      background: var(--washi-2);
+      padding-block: clamp(5rem, 11vw, 8.5rem);
+    }
+
+    .bridge-head {
+      max-width: 46rem;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .bridge-pair {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+      gap: clamp(1.25rem, 3vw, 2.5rem);
+    }
+
+    .bridge-seam {
+      background: linear-gradient(180deg, var(--gold), rgba(181, 148, 91, .15));
+    }
+
+    .bridge-side h3 {
+      font: 400 clamp(1.75rem, 3vw, 2.5rem)/1.1 var(--serif);
+      color: var(--moss);
+      margin-top: 1.25rem;
+    }
+
+    .bridge-side .where {
+      font-size: .875rem;
+      color: var(--stone);
+      margin-top: .35rem;
+    }
+
+    .compare {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: clamp(2.5rem, 5vw, 3.75rem);
+    }
+
+    .compare th,
+    .compare td {
+      padding: 1.15rem 0;
+      border-top: 1px solid var(--rule);
+      vertical-align: top;
+    }
+
+    .compare thead th {
+      border-top: 0;
+      padding-top: 0;
+      font: 600 .8125rem/1.2 var(--sans);
+      letter-spacing: .04em;
+      color: var(--stone);
+    }
+
+    .compare td {
+      width: calc(50% - 6.5rem);
+      font: 400 1.25rem/1.4 var(--serif);
+      color: var(--ink);
+    }
+
+    .compare td:first-child,
+    .compare thead th:first-child {
+      text-align: right;
+      padding-right: 1.5rem;
+    }
+
+    .compare td:last-child,
+    .compare thead th:last-child {
+      text-align: left;
+      padding-left: 1.5rem;
+    }
+
+    .compare th[scope="row"] {
+      width: 13rem;
+      text-align: center;
+      font: italic 400 1.0625rem/1.4 var(--serif);
+      color: var(--gold-ink);
+    }
+
+    .bridge-close {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+      text-align: center;
+      font: italic 400 clamp(1.375rem, 2.2vw, 1.75rem)/1.35 var(--serif);
+      color: var(--moss);
+    }
+
+    /* =========================================================
+   Journey
+   ========================================================= */
+    .journey {
+      background: var(--moss-deep);
+      color: var(--washi);
+      padding-block: clamp(5rem, 11vw, 8.5rem);
+    }
+
+    .journey .kicker {
+      color: var(--gold-light);
+    }
+
+    .journey .h2 {
+      color: var(--washi);
+    }
+
+    .journey .lead {
+      color: rgba(248, 246, 240, .92);
+      max-width: 40ch;
+    }
+
+    .route {
+      margin: clamp(3rem, 6vw, 4.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: end;
+      gap: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    .route-end {
+      text-align: center;
+    }
+
+    .route-end .code {
+      display: block;
+      font: 300 clamp(2.5rem, 6vw, 4.5rem)/1 var(--serif);
+      letter-spacing: .04em;
+    }
+
+    .route-end .label {
+      display: block;
+      margin-top: .6rem;
+      font-size: .8125rem;
+      color: rgba(248, 246, 240, .8);
+    }
+
+    .route-mid {
+      position: relative;
+      text-align: center;
+      padding-bottom: 2.4rem;
+    }
+
+    .route-mid .time {
+      font: italic 400 clamp(1.375rem, 2.6vw, 2rem)/1 var(--serif);
+      color: var(--gold-light);
+    }
+
+    .route-mid svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: .75rem;
+      overflow: visible;
+    }
+
+    .route-arc path.arc {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 1.4;
+      stroke-dasharray: 4 7;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .route-arc .mask-path {
+      fill: none;
+      stroke: var(--moss-deep);
+      stroke-width: 16;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    }
+
+    .js .route-arc.is-visible .mask-path {
+      stroke-dashoffset: -1000;
+      transition: stroke-dashoffset 2.2s var(--ease) .2s;
+    }
+
+    html:not(.js) .route-arc .mask-path {
+      display: none;
+    }
+
+    .steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid rgba(201, 174, 122, .35);
+      counter-reset: step;
+    }
+
+    .steps li {
+      padding: 1.75rem 2rem 0 0;
+      counter-increment: step;
+    }
+
+    .steps h3 {
+      font: 400 1.75rem/1.1 var(--serif);
+      margin-bottom: .6rem;
+      display: flex;
+      align-items: baseline;
+      gap: .7rem;
+    }
+
+    .steps h3::before {
+      content: counter(step);
+      font: 500 .8125rem/1 var(--sans);
+      color: var(--gold-light);
+    }
+
+    .steps p {
+      font-size: .9688rem;
+      color: rgba(248, 246, 240, .86);
+    }
+
+    .journey-note {
+      margin-top: 1.75rem;
+      font-size: .8125rem;
+      color: rgba(248, 246, 240, .7);
+    }
+
+    .itinerary {
+      margin-top: clamp(4.5rem, 9vw, 7rem);
+    }
+
+    .itinerary-head h3 {
+      font: 400 clamp(2rem, 3.6vw, 3rem)/1.08 var(--serif);
+      margin-bottom: .75rem;
+    }
+
+    .itinerary-head p {
+      color: rgba(248, 246, 240, .85);
+      max-width: 40rem;
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(2rem, 5vw, 4.5rem);
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .day-title {
+      margin: 1.5rem 0 .25rem;
+      font: 400 1.875rem/1.1 var(--serif);
+    }
+
+    .day-title small {
+      display: block;
+      font: 500 .8125rem/1 var(--sans);
+      letter-spacing: .04em;
+      color: var(--gold-light);
+      margin-bottom: .6rem;
+    }
+
+    .day .fig figcaption {
+      color: rgba(248, 246, 240, .7);
+    }
+
+    .slots {
+      margin: 1.25rem 0 0;
+    }
+
+    .slot {
+      display: grid;
+      grid-template-columns: 7.5rem minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-top: 1px solid rgba(201, 174, 122, .28);
+    }
+
+    .slot dt {
+      font: italic 400 1.125rem/1.4 var(--serif);
+      color: var(--gold-light);
+    }
+
+    .slot dd {
+      margin: 0;
+      font-size: .9375rem;
+      line-height: 1.6;
+      color: rgba(248, 246, 240, .88);
+    }
+
+    .slot dd strong {
+      display: block;
+      font: 500 1.0625rem/1.4 var(--sans);
+      color: var(--washi);
+      margin-bottom: .2rem;
+    }
+
+    /* =========================================================
+   Closing CTA + footer
+   ========================================================= */
+    .cta {
+      position: relative;
+      isolation: isolate;
+      color: var(--washi);
+      background: var(--moss);
+      padding-block: clamp(6rem, 14vw, 10rem);
+      overflow: hidden;
+    }
+
+    .cta-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+
+    .cta-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta-media.is-broken img {
+      opacity: 0;
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(100deg, rgba(34, 48, 42, .94) 0%, rgba(34, 48, 42, .82) 55%, rgba(34, 48, 42, .55) 100%);
+    }
+
+    .cta h2 {
+      font: 300 clamp(2.5rem, 6vw, 5rem)/1.04 var(--serif);
+      max-width: 15ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta p {
+      max-width: 36rem;
+      color: rgba(248, 246, 240, .9);
+      margin-bottom: 2.25rem;
+      font-size: 1.125rem;
+    }
+
+    .site-footer {
+      background: var(--ink);
+      color: rgba(248, 246, 240, .78);
+      padding-block: 3.5rem 2.5rem;
+      font-size: .875rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 4fr);
+      gap: 2.5rem;
+    }
+
+    .footer-brand .brand-name {
+      color: var(--washi);
+    }
+
+    .footer-brand p {
+      margin-top: 1rem;
+      max-width: 26rem;
+    }
+
+    .site-footer h2 {
+      font: italic 400 1.1875rem/1.2 var(--serif);
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .site-footer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: .55rem;
+    }
+
+    .site-footer a {
+      text-decoration-color: rgba(201, 174, 122, .5);
+      text-underline-offset: 3px;
+    }
+
+    .site-footer a:hover {
+      color: var(--washi);
+      text-decoration-color: var(--gold);
+    }
+
+    .footer-base {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(248, 246, 240, .14);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: .8125rem;
+      color: rgba(248, 246, 240, .62);
+    }
+
+    /* =========================================================
+   Responsive
+   ========================================================= */
+    @media (max-width: 1080px) {
+
+      .thread,
+      .thread-mark {
+        display: none;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .gallery .fig:nth-child(2) {
+        margin-top: 0;
+      }
+
+      .gallery .fig:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 28rem;
+      }
+
+      .facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --header-h: 96px;
+      }
+
+      .header-inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas: "brand lang" "nav nav";
+        padding-block: .7rem;
+      }
+
+      .site-nav {
+        justify-self: stretch;
+      }
+
+      .lang-switch {
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+      }
+
+      .route-card {
+        min-width: 0;
+      }
+
+      .prologue-grid,
+      .chapter-grid,
+      .chapter-grid.is-reversed,
+      .feature,
+      .feature.is-flipped,
+      .tea-inner,
+      .days {
+        grid-template-columns: 1fr;
+      }
+
+      .chapter-grid.is-reversed>.fig {
+        order: -1;
+      }
+
+      .feature.is-flipped>.fig {
+        order: -1;
+      }
+
+      .prologue-aside .kanji {
+        display: none;
+      }
+
+      .prologue-aside .fig {
+        margin-top: 0;
+        max-width: 30rem;
+      }
+
+      .lineage {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 2rem;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .steps li {
+        padding-right: 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      /* Comparison table becomes stacked rows */
+      .compare thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      .compare,
+      .compare tbody,
+      .compare tr,
+      .compare th,
+      .compare td {
+        display: block;
+        width: 100%;
+      }
+
+      .compare tr {
+        border-top: 1px solid var(--rule);
+        padding: 1.1rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .4rem 1.25rem;
+      }
+
+      .compare th,
+      .compare td {
+        border: 0;
+        padding: 0;
+      }
+
+      .compare th[scope="row"] {
+        grid-column: 1 / -1;
+        order: -1;
+        text-align: left;
+        width: auto;
+      }
+
+      .compare td:first-child,
+      .compare td:last-child {
+        text-align: left;
+        padding: 0;
+        font-size: 1.125rem;
+      }
+
+      .compare td::before {
+        content: attr(data-label);
+        display: block;
+        font: 600 .75rem/1.4 var(--sans);
+        letter-spacing: .04em;
+        color: var(--stone);
+        margin-bottom: .2rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .3rem;
+      }
+
+      .brand-domain {
+        display: none;
+      }
+
+      .brand-sub {
+        font-size: .6875rem;
+      }
+
+      .site-nav ul {
+        justify-content: space-between;
+        gap: .75rem;
+      }
+
+      .site-nav a {
+        font-size: .8125rem;
+      }
+
+      .hero h1 .line-2 {
+        padding-left: .55em;
+      }
+
+      .bridge-pair {
+        grid-template-columns: 1fr;
+      }
+
+      .bridge-seam {
+        height: 1px;
+        background: linear-gradient(90deg, var(--gold), rgba(181, 148, 91, .15));
+      }
+
+      .lineage {
+        grid-template-columns: 1fr;
+      }
+
+      .chapter-text .kanji {
+        font-size: 1.75rem;
+      }
+
+      .route {
+        gap: .75rem;
+        padding-top: 2.75rem;
+      }
+
+      .route-end .code {
+        font-size: 2.25rem;
+      }
+
+      .route-end .label {
+        max-width: 6.5rem;
+        margin-inline: auto;
+      }
+
+      .route-mid {
+        position: static;
+        padding-bottom: 2.6rem;
+      }
+
+      .route-mid .time {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 1.375rem;
+      }
+
+      .route {
+        position: relative;
+      }
+
+      .slot {
+        grid-template-columns: 1fr;
+        gap: .25rem;
+      }
+
+      .tea-small {
+        grid-template-columns: 5.5rem minmax(0, 1fr);
+      }
+
+      .scroll-cue {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .js .unveil .frame {
+        clip-path: none;
+      }
+
+      .route-arc .mask-path {
+        display: none;
+      }
+    }
+
+    /* =========================================================
+   日本語版タイポグラフィ（英語版CSSへの上書き）
+   - 和文にイタリックは使わない
+   - 見出しは明朝（Noto Serif JP）、本文はゴシック（Noto Sans JP）
+   - 字間・行間を和文向けに広げる
+   ========================================================= */
+    :root {
+      --serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      --sans: "Plus Jakarta Sans", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      --latin: "Cormorant Garamond", "Times New Roman", serif;
+    }
+
+    body {
+      font-size: 1rem;
+      line-height: 1.95;
+      letter-spacing: .04em;
+      line-break: strict;
+    }
+
+    .hero h1,
+    .h2,
+    .lead,
+    .cta h2,
+    .feature h3,
+    .tea h3,
+    .bridge-side h3,
+    .itinerary-head h3,
+    .day-title,
+    .steps h3,
+    .lineage .name {
+      font-feature-settings: "palt";
+      letter-spacing: .06em;
+      word-break: auto-phrase;
+    }
+
+    .kicker,
+    .hero-kicker,
+    .fig figcaption,
+    .frame::before,
+    .lineage .alias,
+    .facts dt,
+    .feature .jp-term,
+    .tea .jp-term,
+    .tea-small p,
+    .compare th[scope="row"],
+    .bridge-close,
+    .route-card .gap,
+    .route-mid .time,
+    .slot dt,
+    .site-footer h2 {
+      font-style: normal;
+    }
+
+    .brand-name,
+    .route-end .code {
+      font-family: var(--latin);
+      letter-spacing: .02em;
+    }
+
+    .site-nav a {
+      letter-spacing: .08em;
+    }
+
+    .hero-kicker {
+      font-size: 1.0625rem;
+      letter-spacing: .24em;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5.2vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.32;
+    }
+
+    .hero-sub {
+      font-size: clamp(.9375rem, 1.1vw, 1.0625rem);
+      line-height: 2;
+    }
+
+    .route-card .place {
+      font-size: 1.125rem;
+      letter-spacing: .06em;
+    }
+
+    .route-card .gap {
+      font-size: 1rem;
+    }
+
+    .kicker {
+      font-size: .9375rem;
+      letter-spacing: .24em;
+    }
+
+    .h2 {
+      font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+      line-height: 1.4;
+    }
+
+    .h2 .h2-sub {
+      font-size: .5em;
+      letter-spacing: .08em;
+      margin-top: .6em;
+    }
+
+    .lead {
+      font-size: clamp(1.1875rem, 1.8vw, 1.5rem);
+      line-height: 1.8;
+      max-width: 28em;
+    }
+
+    .prose p,
+    .feature p,
+    .tea p {
+      text-align: justify;
+    }
+
+    .lineage .name {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .lineage .alias {
+      font-size: .875rem;
+    }
+
+    .lineage .role {
+      font-size: .875rem;
+      line-height: 1.8;
+    }
+
+    .facts dt {
+      font-size: .9375rem;
+      letter-spacing: .12em;
+    }
+
+    .facts dd {
+      font-size: .875rem;
+      line-height: 1.85;
+    }
+
+    .fig figcaption {
+      font-size: .8125rem;
+      line-height: 1.7;
+    }
+
+    .frame::before {
+      font-size: .9375rem;
+    }
+
+    .feature h3 {
+      font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+      line-height: 1.5;
+    }
+
+    .feature .jp-term,
+    .tea .jp-term {
+      font-size: .9375rem;
+      letter-spacing: .1em;
+    }
+
+    .tea h3 {
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      line-height: 1.45;
+    }
+
+    .tea-small p {
+      font-size: .9375rem;
+      line-height: 1.85;
+    }
+
+    .bridge-side h3 {
+      font-size: clamp(1.375rem, 2.4vw, 2rem);
+      line-height: 1.45;
+    }
+
+    .compare td {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .compare th[scope="row"] {
+      width: 10rem;
+      font-size: .875rem;
+      letter-spacing: .12em;
+    }
+
+    .bridge-close {
+      font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+      letter-spacing: .08em;
+    }
+
+    .route-mid .time {
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      letter-spacing: .08em;
+    }
+
+    .steps h3 {
+      font-size: 1.375rem;
+    }
+
+    .steps p {
+      font-size: .9375rem;
+    }
+
+    .itinerary-head h3 {
+      font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+      line-height: 1.45;
+    }
+
+    .day-title {
+      font-size: 1.5rem;
+      line-height: 1.45;
+    }
+
+    .slot {
+      grid-template-columns: 6.5rem minmax(0, 1fr);
+    }
+
+    .slot dt {
+      font-size: .9375rem;
+      letter-spacing: .1em;
+    }
+
+    .slot dd {
+      font-size: .875rem;
+      line-height: 1.85;
+    }
+
+    .cta h2 {
+      font-size: clamp(1.875rem, 4.4vw, 3.5rem);
+      line-height: 1.45;
+      max-width: 16em;
+    }
+
+    .cta p {
+      font-size: 1rem;
+      line-height: 2;
+    }
+
+    .site-footer h2 {
+      font-size: 1rem;
+      letter-spacing: .12em;
+    }
+
+    @media (max-width: 860px) {
+      .compare th[scope="row"] {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .slot {
+        grid-template-columns: 1fr;
+      }
+
+      .route-mid .time {
+        font-size: 1.125rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- =========================================================
+     1. Header
+     ========================================================= -->
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="https://kumamoto.guide/" aria-label="熊本県公式観光サイト kumamoto.guide">
+        <span class="brand-name">Kumamoto</span>
+        <span class="brand-sub">熊本県公式観光サイト<span class="brand-domain">kumamoto.guide</span></span>
+      </a>
+      <nav class="site-nav" aria-label="ページ内メニュー">
+        <ul>
+          <li><a href="#story">細川家の物語</a></li>
+          <li><a href="#gardens">ふたつの庭園</a></li>
+          <li><a href="#journey">熊本への旅</a></li>
+        </ul>
+      </nav>
+      <!-- Language switch. TODO: replace the relative hrefs with the final published URLs -->
+      <nav class="lang-switch" aria-label="言語">
+        <a href="hosokawa-legacy-lp.html" lang="en" hreflang="en">English</a>
+        <a href="hosokawa-legacy-lp-ja.html" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+     2. Hero
+     ========================================================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <!-- REPLACE WITH ORIGINAL PHOTO: Hero shot of Suizenji Jojuen Garden: wide landscape of the pond with the miniature Mt. Fuji (tsukiyama), early-morning light. Recommended 16:9 or wider, at least 2400px wide. Keep the focal point near the centre-right; headline sits bottom-left. -->
+        <img src="https://kumamoto.guide/files/084cfc9a-7452-4baf-97ff-d609547dd5a2_l.jpg"
+          alt="熊本・水前寺成趣園の湧水池と、その向こうにそびえる芝に覆われた小さな富士"
+          width="1000" height="750" fetchpriority="high" decoding="async" referrerpolicy="no-referrer"
+          onerror="this.parentElement.classList.add('is-broken')">
+      </div>
+
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">江戸から肥後へ</p>
+          <h1 id="hero-title"><span class="line">ふたつの庭園、</span><span class="line line-2">ひとつの武家の系譜</span></h1>
+          <p class="hero-sub">東京・目白台の高台に、細川家は静かな回遊式庭園を遺しました。そこから南へおよそ900キロ、本拠地・肥後では、湧き水をたたえた池と小さな富士をもつ庭をつくり上げています。ひとつを歩けば、もうひとつの意味が見えてきます。</p>
+          <div class="btn-row">
+            <a class="btn btn-gold" href="#story">物語を読む</a>
+            <a class="btn btn-ghost" href="#journey">旅のプランを見る</a>
+          </div>
+        </div>
+
+        <p class="route-card" aria-label="ふたつの庭園の距離">
+          <span class="place">肥後細川庭園</span>
+          <span class="coord">東京・目白台</span>
+          <span class="coord">北緯35.71° 東経139.72°</span>
+          <span class="gap">約890km</span>
+          <span class="place">水前寺成趣園</span>
+          <span class="coord">熊本市</span>
+          <span class="coord">北緯32.79° 東経130.73°</span>
+        </p>
+      </div>
+
+      <a class="scroll-cue" href="#story" aria-label="物語へスクロール"><span>Scroll</span><span class="track"
+          aria-hidden="true"></span></a>
+    </section>
+
+    <div class="story">
+      <div class="thread" aria-hidden="true">
+        <div class="thread-fill"></div>
+      </div>
+
+      <!-- =========================================================
+       3. Prologue: The Hosokawa Legacy
+       ========================================================= -->
+      <section class="prologue" id="story" aria-labelledby="prologue-title">
+        <div class="wrap">
+          <div class="prologue-grid">
+            <div>
+              <p class="kicker">序章</p>
+              <h2 class="h2" id="prologue-title">細川家が遺したもの</h2>
+              <p class="lead">多くの武家は、何を勝ち取ったかで記憶される。細川家は、何を守り伝えたかで記憶されている。</p>
+              <div class="prose">
+                <p>細川家は長きにわたり日本史の中心近くに身を置き、武将として、為政者として、そして何より文化の担い手として生きてきました。ほかの大名が城を集めたとすれば、細川家が集めたのは知でした。和歌、茶の湯、そして水と石と松を配する作庭の美意識です。</p>
+                <p>細川幽斎は歴戦の武将であると同時に、『古今和歌集』の解釈を口伝で受け継ぐ「古今伝授」の第一人者でした。1600年、居城の田辺城が包囲されると、伝授が途絶えることを惜しんだ朝廷が勅使を遣わし、籠城戦を収めさせたと伝わります。</p>
+                <p>その子・忠興は、茶名の三斎で知られる茶人であり、千利休の高弟「利休七哲」のひとりに数えられます。忠興の子・忠利は1632年に肥後（現在の熊本）へ入国し、以後、細川家は1871年の廃藩置県まで熊本城から肥後を治めました。剣豪・宮本武蔵を熊本へ迎えたのも忠利です。武蔵はこの地で晩年を過ごし、『五輪書』を書き上げました。</p>
+                <p>参勤交代で江戸に長く滞在した藩主たちは、庭を愛する心も江戸へ携えていきました。この旅の舞台となるのは、細川家ゆかりのふたつの庭。ひとつは東京に、ひとつは熊本に。ふたつを合わせて、ひとつの物語になります。</p>
+              </div>
+            </div>
+
+            <aside class="prologue-aside" aria-label="熊本城">
+              <span class="kanji" lang="ja" aria-hidden="true">細川</span>
+              <figure class="fig unveil">
+                <div class="frame r-4x5" data-fallback="熊本城">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Kumamoto Castle main keep (tenshu), portrait orientation 4:5, dramatic sky or dusk light -->
+                  <img src="https://kumamoto.guide/files/ca2fbc82-73c5-4faa-8bfa-4cddc11c1240_l.jpg"
+                    alt="青空を背にそびえる熊本城の黒と白の天守" width="1536" height="1152"
+                    loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+                <figcaption>熊本城。1632年以降、肥後細川家の居城となった。</figcaption>
+              </figure>
+            </aside>
+          </div>
+
+          <ol class="lineage" aria-label="細川家四代の系譜">
+            <li>
+              <span class="years">1534–1610</span>
+              <span class="name">細川幽斎</span>
+              <span class="alias">藤孝</span>
+              <p class="role">武将にして歌人。古今伝授を受け継いだ当代随一の文化人。</p>
+            </li>
+            <li>
+              <span class="years">1563–1646</span>
+              <span class="name">細川忠興</span>
+              <span class="alias">茶名・三斎</span>
+              <p class="role">武将にして茶人。千利休の高弟「利休七哲」のひとり。</p>
+            </li>
+            <li>
+              <span class="years">1586–1641</span>
+              <span class="name">細川忠利</span>
+              <span class="alias">熊本藩細川家 初代藩主</span>
+              <p class="role">1632年に肥後へ入国。のちの水前寺成趣園となる御茶屋を開く。</p>
+            </li>
+            <li>
+              <span class="years">1643–1714</span>
+              <span class="name">細川綱利</span>
+              <span class="alias">熊本藩細川家 三代藩主</span>
+              <p class="role">水前寺を大規模な回遊式庭園に整え、「成趣園」と名づける。</p>
+            </li>
+          </ol>
+          <p class="lineage-caption">歌人の武将から、庭をつくる藩主へ。四代にわたる系譜。</p>
+        </div>
+      </section>
+
+      <div id="gardens">
+
+        <!-- =========================================================
+       4. Chapter I: Tokyo, Higo-Hosokawa Garden
+       ========================================================= -->
+        <section class="chapter chapter-tokyo" id="tokyo" aria-labelledby="tokyo-title">
+          <div class="thread-mark" aria-hidden="true"><span class="kanji" lang="ja">江戸</span></div>
+          <div class="wrap">
+            <header class="chapter-head">
+              <p class="kicker">第一章</p>
+              <h2 class="h2" id="tokyo-title">東京の章<span class="h2-sub">文京区立 肥後細川庭園</span></h2>
+              <p class="lead">早稲田から歩いて数分。都心にひっそりと残る、大名家の庭。</p>
+            </header>
+
+            <div class="chapter-grid">
+              <figure class="fig unveil">
+                <div class="frame r-4x3" data-fallback="肥後細川庭園（東京）">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Higo-Hosokawa Garden overview: the pond, the wooded slope and Shoseikaku pavilion in one frame, 4:3 -->
+                  <img
+                    src="https://higo-hosokawa-bunkyo.jp/wp/wp-content/uploads/2025/06/%E8%82%A5%E5%BE%8C%E7%B4%B0%E5%B7%9D%E5%BA%AD%E5%9C%92%E5%86%85-1.jpeg"
+                    alt="春の木々に囲まれた肥後細川庭園の芝生と池。奥に木造の松聲閣が見える"
+                    width="1086" height="816" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+                <figcaption>目白台の斜面に広がる春の緑と、芝生の奥に建つ松聲閣。</figcaption>
+              </figure>
+
+              <div class="chapter-text">
+                <span class="kanji" lang="ja" aria-hidden="true">肥後細川庭園</span>
+                <div class="prose">
+                  <p>目白台の台地が神田川へと落ち込むあたりでは、崖下から水が湧き出します。幕末、この斜面は肥後熊本藩細川家の下屋敷となり、1882（明治15）年からは細川家の本邸となりました。</p>
+                  <p>遺された庭は、その高低差を生かした池泉回遊式庭園です。斜面の森を山に見立て、湧き水は平安貴族が好んだ「鑓り水（やりみず）」の手法で細い流れとなって下り、池へと注ぎます。</p>
+                  <p>池を見下ろす松聲閣（しょうせいかく）は、細川家の学問所として使われ、大正期の改修を経て一時は住まいにもなった建物です。保存修復を経て2016年に再開し、いまは訪れる人を迎えています。</p>
+                  <p>隣接する永青文庫には、甲冑や茶道具、書画など細川家伝来の品々が収められています。細川家の物語は、ここ目白台から始まります。</p>
+                </div>
+              </div>
+            </div>
+
+            <dl class="facts">
+              <div>
+                <dt>所在地</dt>
+                <dd>東京都文京区目白台1-1-22</dd>
+              </div>
+              <div>
+                <dt>アクセス</dt>
+                <dd>東京さくらトラム（都電荒川線）早稲田駅から徒歩5分／東京メトロ有楽町線 江戸川橋駅から徒歩15分</dd>
+              </div>
+              <div>
+                <dt>入園料</dt>
+                <dd>無料</dd>
+              </div>
+              <div>
+                <dt>見ごろ</dt>
+                <dd>早春の椿、秋の紅葉と夜間ライトアップ、冬の雪吊り</dd>
+              </div>
+            </dl>
+
+            <div class="gallery">
+              <figure class="fig">
+                <div class="frame r-4x3" data-fallback="松聲閣">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Shoseikaku pavilion, front elevation, 4:3 -->
+                  <img
+                    src="https://higo-hosokawa-bunkyo.jp/wp/wp-content/uploads/2025/06/%E6%9D%BE%E8%81%B2%E9%96%A3%E6%AD%A3%E9%9D%A2.jpeg"
+                    alt="晴れた空の下に建つ、瓦屋根の木造二階建て・松聲閣の正面"
+                    width="1086" height="816" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+                <figcaption>細川家の学問所だった松聲閣。</figcaption>
+              </figure>
+              <figure class="fig">
+                <div class="frame r-3x2" data-fallback="秋の夜間ライトアップ">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Seasonal scenery: autumn foliage light-up at Higo-Hosokawa Garden, reflections on the pond, 3:2 -->
+                  <img src="https://higo-hosokawa-bunkyo.jp/wp/wp-content/uploads/2025/03/02-1.jpg"
+                    alt="夜の池に映るライトアップされた紅葉と、木々の間に光る雪吊り"
+                    width="500" height="334" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+                <figcaption>池の上に紅葉が照らし出される、秋の宵。</figcaption>
+              </figure>
+              <figure class="fig">
+                <div class="frame r-4x3" data-fallback="湧水の池">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Detail of the spring-fed pond and stone edging, 4:3 -->
+                  <img src="https://higo-hosokawa-bunkyo.jp/wp/wp-content/uploads/2026/09/higo.jpg"
+                    alt="石組みと緑に縁どられた、肥後細川庭園の静かな湧水の池" width="1440"
+                    height="1080" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+                <figcaption>斜面のふもとに集まる湧き水。</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+       5. Chapter II: Kumamoto, Suizenji Jojuen Garden
+       ========================================================= -->
+        <section class="chapter chapter-kumamoto" id="kumamoto" aria-labelledby="kumamoto-title">
+          <div class="thread-mark" aria-hidden="true"><span class="kanji" lang="ja">肥後</span></div>
+          <div class="wrap">
+            <header class="chapter-head">
+              <p class="kicker">第二章</p>
+              <h2 class="h2" id="kumamoto-title">熊本の章<span class="h2-sub">熊本市 水前寺成趣園</span></h2>
+              <p class="lead">本拠地・肥後の名園。池を満たすのは、阿蘇に降った雨。</p>
+            </header>
+
+            <div class="chapter-grid is-reversed">
+              <div class="chapter-text">
+                <span class="kanji" lang="ja" aria-hidden="true">水前寺成趣園</span>
+                <div class="prose">
+                  <p>肥後に入国して間もない細川忠利は、清らかな水が湧き出る地を見いだし、1630年代にそのほとりに水前寺と御茶屋を建てました。孫にあたる三代藩主・綱利が大規模な回遊式庭園へと整え、陶淵明の「帰去来辞」の一節にちなんで「成趣園」と名づけました。</p>
+                  <p>桃山式の庭は、広々とした湧水池を巡りながら景色が移り変わるように構成されています。園路は江戸と京を結ぶ東海道五十三次を模したともいわれ、国の西の果てに、将軍の時代の旅路を小さく写しとっています。</p>
+                  <p>1929（昭和4）年に国の名勝・史跡に指定。園内には、1878（明治11）年に歴代藩主を祀るために創建された出水神社も鎮座しています。</p>
+                </div>
+              </div>
+
+              <figure class="fig unveil">
+                <div class="frame r-4x3" data-fallback="水前寺成趣園（熊本）">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Suizenji Jojuen Garden: pond, pines and miniature Fuji with cherry blossoms, 4:3 -->
+                  <img src="https://kumamoto.guide/files/c85cf5ec-2edc-4bc7-9d1e-0cce912b7766_l.jpg"
+                    alt="春の水前寺成趣園。池のまわりに仕立てられた松と桜、その奥に小さな富士"
+                    width="1000" height="750" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+                <figcaption>早春の松と桜、そして小さな富士。</figcaption>
+              </figure>
+            </div>
+
+            <div class="features">
+              <article class="feature">
+                <figure class="fig">
+                  <div class="frame r-4x3" data-fallback="水前寺の富士">
+                    <!-- REPLACE WITH ORIGINAL PHOTO: Miniature Mt. Fuji (Suizenji Fuji) seen across the pond, calm reflection, 4:3 -->
+                    <img src="https://kumamoto.guide/files/ed8a6c29-25bc-439a-b9b3-13f1d9639423_l.jpg"
+                      alt="池越しに見る、富士山の形に整えられたなだらかな芝の築山"
+                      width="1000" height="750" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                      onerror="this.parentElement.classList.add('is-broken')">
+                  </div>
+                </figure>
+                <div>
+                  <h3>わが庭の富士</h3>
+                  <span class="jp-term">富士をかたどった築山</span>
+                  <p>池の向こうに、左右対称のなだらかな芝の山が立ち上がります。その稜線は、まぎれもなく富士山。本物の富士から遠く離れた九州の地で、藩主は御茶屋から日本一の霊峰を眺めることができました。その眺めは、いまも変わりません。</p>
+                </div>
+              </article>
+
+              <article class="feature is-flipped">
+                <div>
+                  <h3>阿蘇から届く水</h3>
+                  <span class="jp-term">火山が育てた庭</span>
+                  <p>広大な阿蘇カルデラに降った雨は、火山性の地層にしみ込み、長い時間をかけて地下を流れ、この地で湧き出します。池の底まで手が届きそうなほどの透明度です。熊本市は水道水のほぼすべてを、この地下水でまかなっています。園内の出水神社では、いまも「長寿の水」を汲む人の姿が見られます。</p>
+                </div>
+                <figure class="fig">
+                  <div class="frame r-4x3" data-fallback="澄んだ湧水と石橋">
+                    <!-- REPLACE WITH ORIGINAL PHOTO: Clear spring water: close view of the stone bridge and transparent pond, 4:3 -->
+                    <img src="https://kumamoto.guide/files/8ee451ff-f455-4adf-a3dd-73d4558c8fa0_l.jpg"
+                      alt="水前寺成趣園の澄んだ青い池に架かる石の太鼓橋。遠くに小さな富士"
+                      width="1000" height="750" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                      onerror="this.parentElement.classList.add('is-broken')">
+                  </div>
+                </figure>
+              </article>
+            </div>
+          </div>
+
+          <div class="tea">
+            <div class="wrap tea-inner">
+              <figure class="fig unveil">
+                <div class="frame r-3x2" data-fallback="古今伝授の間からの眺め">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Kokin Denju-no-Ma interior: view from the tatami room out to the garden and pond, 3:2 -->
+                  <img src="https://kumamoto.guide/files/37cb2908-b275-463e-b637-87ec41bd0dd3_l.jpg"
+                    alt="古今伝授の間の開け放たれた障子と黒い柱越しに望む、庭園と池"
+                    width="720" height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+                <figcaption>畳の間から眺める庭。</figcaption>
+              </figure>
+              <div>
+                <h3>古今伝授の間</h3>
+                <span class="jp-term">秘伝の和歌が授けられた建物</span>
+                <p>正門を入ってすぐ右手に建つ茅葺きの建物には、特別な来歴があります。もとは京都御所内の八条宮智仁親王の邸にあり、1600年に細川幽斎が親王へ古今伝授を行った、まさにその部屋と伝えられています。</p>
+                <p>1912（大正元）年に水前寺へ移築され、2010年の修復を経て一般公開されています。畳に座り、熊本の和菓子とともに一服の抹茶を。目の前の庭が、ゆっくりとその姿を見せてくれます。</p>
+                <div class="tea-small">
+                  <div class="frame r-1x1" data-fallback="抹茶">
+                    <!-- REPLACE WITH ORIGINAL PHOTO: Traditional tea experience: matcha and wagashi served at Kokin Denju-no-Ma, 1:1 close-up -->
+                    <img src="https://kumamoto.guide/files/b7b32785-5438-49fe-81d5-9ae9c9f3e9c8_l.jpg"
+                      alt="赤い毛氈の上に置かれた鮮やかな緑の抹茶と小さな和菓子" width="720"
+                      height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                      onerror="this.parentElement.classList.add('is-broken')">
+                  </div>
+                  <p>熊本に伝わる茶道「肥後古流」は、千利休の点前作法をおよそ400年にわたり、手を加えることなく受け継いでいます。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================
+       6. Bridge: Edo refinement vs Higo grandeur
+       ========================================================= -->
+        <section class="bridge" id="compare" aria-labelledby="bridge-title">
+          <div class="wrap">
+            <header class="bridge-head">
+              <p class="kicker">幕間</p>
+              <h2 class="h2" id="bridge-title">江戸の洗練、肥後の雄大</h2>
+              <p class="prose">同じ家の、同じ美意識。それでいて趣はまったく異なります。どちらも湧き水を引き、山を抱いた池泉回遊式庭園。違うのは、そのスケールと光です。</p>
+            </header>
+
+            <div class="bridge-pair">
+              <div class="bridge-side">
+                <figure class="fig">
+                  <div class="frame r-4x3" data-fallback="秋の肥後細川庭園">
+                    <!-- REPLACE WITH ORIGINAL PHOTO: Higo-Hosokawa Garden in autumn: red maples with Shoseikaku, 4:3 (pair with the Suizenji photo on the right: match horizon height and tone) -->
+                    <img src="https://higo-hosokawa-bunkyo.jp/wp/wp-content/uploads/2026/10/DSC_8974-scaled.jpg"
+                      alt="東京の庭園建築の黒い軒先と、赤や橙に色づいたもみじ"
+                      width="2560" height="1738" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                      onerror="this.parentElement.classList.add('is-broken')">
+                  </div>
+                </figure>
+                <h3>江戸の洗練</h3>
+                <p class="where">肥後細川庭園（東京）</p>
+              </div>
+
+              <div class="bridge-seam" aria-hidden="true"></div>
+
+              <div class="bridge-side">
+                <figure class="fig">
+                  <div class="frame r-4x3" data-fallback="春の水前寺成趣園">
+                    <!-- REPLACE WITH ORIGINAL PHOTO: Suizenji Jojuen in spring: open pond view with cherry blossoms, 4:3 (pair with the Tokyo photo on the left) -->
+                    <img src="https://kumamoto.guide/files/be544d09-dbfe-4470-9dae-cf35bc6c9022_l.jpg"
+                      alt="春の水前寺成趣園。池とゆるやかな芝の起伏、対岸に咲く桜"
+                      width="1000" height="750" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                      onerror="this.parentElement.classList.add('is-broken')">
+                  </div>
+                </figure>
+                <h3>肥後の雄大</h3>
+                <p class="where">水前寺成趣園（熊本）</p>
+              </div>
+            </div>
+
+            <table class="compare">
+              <caption class="visually-hidden">東京の肥後細川庭園と熊本の水前寺成趣園の比較</caption>
+              <thead>
+                <tr>
+                  <th scope="col">東京</th>
+                  <th scope="col"><span class="visually-hidden">項目</span></th>
+                  <th scope="col">熊本</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="東京">神田川を見下ろす、目白台の森の斜面</td>
+                  <th scope="row">立地</th>
+                  <td data-label="熊本">熊本城の南東に開けた、明るい平地</td>
+                </tr>
+                <tr>
+                  <td data-label="東京">崖下の湧き水を、細い流れで池へ</td>
+                  <th scope="row">水</th>
+                  <td data-label="熊本">阿蘇の伏流水が湧く、広々とした池</td>
+                </tr>
+                <tr>
+                  <td data-label="東京">自然の斜面を、森の山に見立てて</td>
+                  <th scope="row">山</th>
+                  <td data-label="熊本">富士をかたどった築山</td>
+                </tr>
+                <tr>
+                  <td data-label="東京">細川家の学問所・松聲閣</td>
+                  <th scope="row">象徴の建物</th>
+                  <td data-label="熊本">京都から移築された古今伝授の間</td>
+                </tr>
+                <tr>
+                  <td data-label="東京">こぢんまりと、静かに、思索的に</td>
+                  <th scope="row">趣</th>
+                  <td data-label="熊本">伸びやかに、明るく、晴れやかに</td>
+                </tr>
+                <tr>
+                  <td data-label="東京">秋の紅葉と冬の雪吊り</td>
+                  <th scope="row">見ごろ</th>
+                  <td data-label="熊本">春の桜と初夏の深い緑</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="bridge-close">東京でひとつめを歩けば、ふたつめは、帰郷のように感じられるはずです。</p>
+          </div>
+        </section>
+
+      </div><!-- /#gardens -->
+    </div><!-- /.story -->
+
+    <!-- =========================================================
+     7. The Journey: Tokyo to Kumamoto
+     ========================================================= -->
+    <section class="journey" id="journey" aria-labelledby="journey-title">
+      <div class="wrap">
+        <p class="kicker">旅のしかた</p>
+        <h2 class="h2" id="journey-title">東京から熊本へ</h2>
+        <p class="lead">地図で見るより、ずっと近い。朝食のあとに羽田を発てば、昼過ぎには水前寺の池のほとりを歩いています。</p>
+
+        <div class="route" role="img"
+          aria-label="羽田空港（HND）から阿蘇くまもと空港（KMJ）までの空路、約1時間45分">
+          <div class="route-end"><span class="code">HND</span><span class="label">羽田空港</span></div>
+          <div class="route-mid">
+            <span class="time">約1時間45分</span>
+            <svg class="route-arc" viewBox="0 0 600 90" aria-hidden="true" focusable="false">
+              <path class="arc" d="M6 84 C 160 -12, 440 -12, 594 84" />
+              <path class="mask-path" d="M6 84 C 160 -12, 440 -12, 594 84" />
+              <circle cx="6" cy="84" r="4" fill="#B5945B" />
+              <circle cx="594" cy="84" r="4" fill="#B5945B" />
+            </svg>
+          </div>
+          <div class="route-end"><span class="code">KMJ</span><span class="label">阿蘇くまもと空港</span></div>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <h3>空路で</h3>
+            <p>羽田空港から阿蘇くまもと空港まで約1時間45分。ANA・JAL・ソラシドエアが終日運航しています。</p>
+          </li>
+          <li>
+            <h3>バスで</h3>
+            <p>空港リムジンバスで、熊本市中心部まで約50分。</p>
+          </li>
+          <li>
+            <h3>市電で</h3>
+            <p>熊本市電が市中心部、熊本城、水前寺公園電停を結び、約20分で到着します。</p>
+          </li>
+        </ol>
+        <p class="journey-note">所要時間・運航ダイヤは季節や航空会社により異なります。ご旅行前に各航空会社でご確認ください。</p>
+
+        <div class="itinerary">
+          <div class="itinerary-head">
+            <h3>細川家の国をめぐる、2日間</h3>
+            <p>急がず、ゆっくり味わいたい方のための、はじめの一歩となるモデルプランです。</p>
+          </div>
+
+          <div class="days">
+            <article class="day">
+              <figure class="fig">
+                <div class="frame r-16x9" data-fallback="春の熊本城">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Kumamoto Castle with cherry blossoms, 16:9 -->
+                  <img src="https://kumamoto.guide/files/1eb032bb-5fa1-4b12-a2cd-8fffc8f5d33b_l.jpg"
+                    alt="満開の桜と大きな緑の木の上にそびえる熊本城の天守" width="1000"
+                    height="750" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+              </figure>
+              <h4 class="day-title"><small>1日目</small>城下町をめぐる</h4>
+              <dl class="slots">
+                <div class="slot">
+                  <dt>午前</dt>
+                  <dd><strong>羽田から空路で南へ</strong>阿蘇くまもと空港に到着後、バスで市内へ。</dd>
+                </div>
+                <div class="slot">
+                  <dt>午後</dt>
+                  <dd><strong>熊本城</strong>2016年の熊本地震から復旧し、2021年に公開が再開された天守閣へ。細川家がおよそ240年にわたって治めた城下を一望します。</dd>
+                </div>
+                <div class="slot">
+                  <dt>夕方</dt>
+                  <dd><strong>桜の馬場 城彩苑</strong>城のふもとの城下町エリアで、熊本の味や工芸品を楽しみます。</dd>
+                </div>
+                <div class="slot">
+                  <dt>夜</dt>
+                  <dd><strong>肥後の味をいただく</strong>藩主・忠利の滋養のために考案されたと伝わる「からし蓮根」をぜひ。</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="day">
+              <figure class="fig">
+                <div class="frame r-16x9" data-fallback="古今伝授の間">
+                  <!-- REPLACE WITH ORIGINAL PHOTO: Kokin Denju-no-Ma exterior, thatched roof among trees, 16:9 -->
+                  <img src="https://kumamoto.guide/files/0915ea54-8538-4d7e-9d27-77a22322724e_l.jpg"
+                    alt="水前寺成趣園の池のほとり、木々の間に見える古今伝授の間の茅葺き屋根"
+                    width="720" height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                    onerror="this.parentElement.classList.add('is-broken')">
+                </div>
+              </figure>
+              <h4 class="day-title"><small>2日目</small>庭園を味わう</h4>
+              <dl class="slots">
+                <div class="slot">
+                  <dt>朝</dt>
+                  <dd><strong>開園直後の水前寺成趣園</strong>池が静まり、園路も人の少ない朝のうちに、ぐるりと一周。</dd>
+                </div>
+                <div class="slot">
+                  <dt>昼前</dt>
+                  <dd><strong>古今伝授の間で一服</strong>小さな富士を眺めながら、抹茶と季節の和菓子を。</dd>
+                </div>
+                <div class="slot">
+                  <dt>午後</dt>
+                  <dd><strong>名品か、水の源か</strong>熊本城そばの熊本県立美術館で細川コレクションを鑑賞するか、庭の水が生まれる阿蘇のカルデラへ足をのばして。</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     8. Closing CTA
+     ========================================================= -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta-media" aria-hidden="true">
+        <!-- REPLACE WITH ORIGINAL PHOTO: Closing background: wide, calm Suizenji panorama (sits under a dark green overlay; detail is not critical), 16:9 or wider -->
+        <img src="https://kumamoto.guide/files/191c4675-255b-481e-9597-62ef71f3ac34_l.jpg" alt="" width="1200"
+          height="800" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+          onerror="this.parentElement.classList.add('is-broken')">
+      </div>
+      <div class="wrap">
+        <h2 id="cta-title">物語の続きは、熊本で。</h2>
+        <p>東京の肥後細川庭園をすでに歩いた方も、これから訪れる方も。細川家の物語が根を下ろした地へ。観光スポット、宿泊、季節のイベント、交通情報は熊本県公式観光サイトでご覧いただけます。</p>
+        <div class="btn-row">
+          <a class="btn btn-gold" href="https://kumamoto.guide/">熊本の旅を計画する</a>
+          <a class="btn btn-ghost" href="https://www.suizenji.or.jp/">水前寺成趣園 公式サイト</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Kumamoto</span>
+          <p>江戸から肥後へ：細川家の系譜をたどる旅。熊本県公式観光サイトの特集ページです。</p>
+        </div>
+        <div>
+          <h2>熊本で</h2>
+          <ul>
+            <li><a href="https://kumamoto.guide/spots/detail/12351">水前寺成趣園</a></li>
+            <li><a href="https://kumamoto.guide/spots/detail/12882">古今伝授の間</a></li>
+            <li><a href="https://kumamoto.guide/spots/detail/12303">熊本城</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>東京で</h2>
+          <ul>
+            <li><a href="https://higo-hosokawa-bunkyo.jp/" rel="noopener">文京区立肥後細川庭園（公式サイト）</a></li>
+            <li><a href="https://www.eiseibunko.com/" rel="noopener">永青文庫</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <!-- TODO: confirm the copyright holder and year, and replace the photo credit once original photography is in place -->
+        <p>© 2026 Kumamoto Prefecture. All rights reserved.</p>
+        <p>写真：熊本県公式観光サイト、文京区立肥後細川庭園（レイアウト確認用の仮画像）</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var header = document.querySelector('.site-header');
+      var story = document.querySelector('.story');
+      var fill = document.querySelector('.thread-fill');
+      var ticking = false;
+
+      // Header state + lineage thread progress (scroll-linked, so it follows the reader)
+      function update() {
+        ticking = false;
+        header.classList.toggle('is-scrolled', window.scrollY > 40);
+        if (story && fill) {
+          var r = story.getBoundingClientRect();
+          var p = (window.innerHeight * 0.55 - r.top) / r.height;
+          p = Math.min(1, Math.max(0, p));
+          fill.style.transform = 'scaleY(' + p.toFixed(4) + ')';
+        }
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+      }, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+
+      // Shoji-style image unveils and the flight-arc draw
+      var items = document.querySelectorAll('.unveil, .route-arc');
+      if (reduce || !('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+          });
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.2 });
+        items.forEach(function (el) { io.observe(el); });
+      }
+
+      // Highlight the nav link for the section in view
+      if ('IntersectionObserver' in window) {
+        var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+        var map = {};
+        links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+        var navIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              links.forEach(function (a) { a.removeAttribute('aria-current'); });
+              var link = map[e.target.id];
+              if (link) link.setAttribute('aria-current', 'true');
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        Object.keys(map).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) navIO.observe(el);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>
